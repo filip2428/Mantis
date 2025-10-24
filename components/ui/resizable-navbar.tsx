@@ -371,7 +371,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-8 py-1 text-sm font-normal text-black"
     >
-      <img src="/SiglaMantis.png" alt="logo" width={80} height={80} />
+      <img src="/SiglaMantisVerde.png" alt="logo" width={80} height={80} />
       {/* <span className="font-medium text-black dark:text-white">Home</span> */}
     </a>
   );

@@ -30,8 +30,8 @@ export default function NavbarSite({
       link: "/programe-educationale",
       children: [
         { name: "Programe școli", link: "/programe-educationale" },
-        { name: "Ateliere weekend", link: "/ateliere" },
-        { name: "Resurse profesori", link: "/resurse" },
+        { name: "Ateliere weekend", link: "#ateliere" },
+        { name: "Resurse profesori", link: "#resurse" },
       ],
     },
     {
