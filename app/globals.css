@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -126,3 +129,32 @@
   /* Setează culoarea săgeților la alb (#FFFFFF) */
   --swiper-navigation-color: #000000;
 }
+
+/* Stilizează Paginarea (Punctele/Dots) din Modal */
+.swiper-nav-modal .swiper-pagination-bullet {
+  /* Schimbă culoarea de fundal a punctelor */
+  background: #4f46e5 !important; /* Tailwind indigo-600 */
+  opacity: 0.7;
+}
+
+.swiper-nav-modal .swiper-pagination-bullet-active {
+  /* Punctul activ să fie opac */
+  opacity: 1 !important;
+}
+
+/* Styling pentru Săgețile Sliderului din Modal */
+.swiper-nav-modal .swiper-button-next,
+.swiper-nav-modal .swiper-button-prev {
+  /* Schimbă culoarea săgeților la negru (sau la culoarea ta indigo) */
+  color: #374151 !important; /* Tailwind gray-700 / Dark Gray */
+
+  /* Mărește puțin săgețile și adaugă umbră pentru vizibilitate */
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Umbră albă subtilă */
+
+  /* CRUCIAL: Z-index mare pentru a fi deasupra imaginii */
+  z-index: 20;
+}
+
+/* ... (stilurile pentru paginare rămân neschimbate) ... */

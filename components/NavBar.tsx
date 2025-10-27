@@ -29,18 +29,21 @@ export default function NavbarSite({
       name: "Educație",
       link: "/programe-educationale",
       children: [
-        { name: "Programe școli", link: "/programe-educationale" },
-        { name: "Ateliere weekend", link: "#ateliere" },
-        { name: "Resurse profesori", link: "#resurse" },
+        { name: "Programe educaționale", link: "/programe-educationale" },
+        {
+          name: "Centrul educațional Mantis",
+          link: "/centrul-educational-mantis",
+        },
+        // { name: "Resurse profesori", link: "#resurse" },
       ],
     },
     {
       name: "Conservare",
-      link: "#conservare",
+      link: "/conservare",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/contact",
     },
   ];
 

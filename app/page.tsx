@@ -13,7 +13,7 @@ export default function Home() {
         <AboutUs />
         <ProgrameSlider />
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="SiglaMantis+slogan.jpg" />
+      <Footer brandName="Mantis" logoSrc="SiglaMantis+slogan.png" />
     </>
   );
 }
