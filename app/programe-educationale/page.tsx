@@ -4,8 +4,8 @@ import { useState } from "react";
 import NavbarSite from "@/components/NavBar";
 import ProgramEducational from "@/components/ProgramEducational";
 import Footer from "@/components/Footer";
-import AnimatedPageHeader from "@/components/AnimatedPageHeader"; // Import pentru animație antet
-import { motion } from "framer-motion"; // Import pentru animația cardurilor
+import AnimatedPageHeader from "@/components/AnimatedPageHeader";
+import { motion } from "framer-motion";
 
 // =======================================================
 // VARIANTE DE ANIMAȚIE (Scroll Reveal pentru Carduri)
@@ -16,7 +16,7 @@ const cardContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Decalaj subtil între apariția cardurilor
+      staggerChildren: 0.1,
     },
   },
 };
@@ -36,7 +36,7 @@ export default function ProgrameEducaționale() {
   return (
     <>
       <NavbarSite>
-        {/* NOU: Antetul Animă */}
+        {/* Antetul Animă */}
         <AnimatedPageHeader
           title="Programe Educaționale"
           description="Aici vei găsi informații despre programele educaționale oferite de Mantis. Explorează opțiunile noastre pentru a descoperi noi orizonturi!"
@@ -54,11 +54,13 @@ export default function ProgrameEducaționale() {
           <motion.div
             className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             initial="hidden"
-            whileInView="visible" // Se declanșează la intrarea în viewport
+            whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={cardContainerVariants}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* NOTE: Cardurile folosesc deja componenta ProgramEducational, care va fi stilizată. */}
+
               {/* CARD 1 */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
@@ -87,7 +89,7 @@ export default function ProgrameEducaționale() {
                 />
               </motion.div>
 
-              {/* CARD 3 */}
+              {/* ... (restul cardurilor - doar structura este necesară aici) ... */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P3: Vânătorii de Insecte"
@@ -101,7 +103,6 @@ export default function ProgrameEducaționale() {
                 />
               </motion.div>
 
-              {/* CARD 4 */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P4: Supraviețuire & Munte"
@@ -115,7 +116,6 @@ export default function ProgrameEducaționale() {
                 />
               </motion.div>
 
-              {/* CARD 5 */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P5: Explorări Litorale"
@@ -129,7 +129,6 @@ export default function ProgrameEducaționale() {
                 />
               </motion.div>
 
-              {/* CARD 6 */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P6: Detectivii Pădurii"

@@ -120,41 +120,33 @@
     @apply border-border outline-ring/50;
   }
   body {
+    /* bg-background și text-foreground sunt preluate din sistemul tău de teme */
     @apply bg-background text-foreground;
   }
 }
 
-/* Custom style to change Swiper navigation color */
+/* Custom style to change Swiper navigation color (folosit în ProgrameSlider) */
 .swiper-nav-white {
-  /* Setează culoarea săgeților la alb (#FFFFFF) */
+  /* Setăm culoarea săgeților la negru pentru vizibilitate pe fundal alb al Hero-ului */
   --swiper-navigation-color: #000000;
-}
-
-/* Stilizează Paginarea (Punctele/Dots) din Modal */
-.swiper-nav-modal .swiper-pagination-bullet {
-  /* Schimbă culoarea de fundal a punctelor */
-  background: #4f46e5 !important; /* Tailwind indigo-600 */
-  opacity: 0.7;
-}
-
-.swiper-nav-modal .swiper-pagination-bullet-active {
-  /* Punctul activ să fie opac */
-  opacity: 1 !important;
 }
 
 /* Styling pentru Săgețile Sliderului din Modal */
 .swiper-nav-modal .swiper-button-next,
 .swiper-nav-modal .swiper-button-prev {
-  /* Schimbă culoarea săgeților la negru (sau la culoarea ta indigo) */
   color: #374151 !important; /* Tailwind gray-700 / Dark Gray */
-
-  /* Mărește puțin săgețile și adaugă umbră pentru vizibilitate */
-  width: 2.5rem; /* w-10 */
-  height: 2.5rem; /* h-10 */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Umbră albă subtilă */
-
-  /* CRUCIAL: Z-index mare pentru a fi deasupra imaginii */
+  width: 2.5rem;
+  height: 2.5rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   z-index: 20;
 }
 
-/* ... (stilurile pentru paginare rămân neschimbate) ... */
+/* Stilizează Paginarea (Punctele/Dots) din Modal */
+.swiper-nav-modal .swiper-pagination-bullet {
+  background: #4f46e5 !important; /* Tailwind indigo-600 */
+  opacity: 0.7;
+}
+
+.swiper-nav-modal .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}

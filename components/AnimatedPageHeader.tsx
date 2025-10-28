@@ -1,3 +1,4 @@
+// components/AnimatedPageHeader.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,7 +10,6 @@ interface AnimatedPageHeaderProps {
   onAnimationComplete?: () => void;
 }
 
-// Variante de animație preluate de la Hero
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -48,14 +48,15 @@ export default function AnimatedPageHeader({
       >
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-6xl font-extrabold text-indigo-700 dark:text-indigo-400 mb-4"
+          // APLICARE TEMA: font-heading & mantis-green
+          className="text-5xl md:text-6xl font-heading font-extrabold text-mantis-green-700 dark:text-mantis-green-400 mb-4"
         >
           {title}
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="mt-4 max-w-4xl text-lg text-gray-700 dark:text-gray-300 px-4"
+          className="mt-4 max-w-4xl text-lg text-gray-700 dark:text-gray-300 px-4 font-sans"
         >
           {description}
         </motion.p>

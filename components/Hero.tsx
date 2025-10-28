@@ -1,10 +1,10 @@
+// components/Hero.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
 export default function Hero() {
-  // variante de animație (compatibile cu TS)
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -34,7 +34,7 @@ export default function Hero() {
         >
           <motion.h1
             variants={item}
-            // APLICARE TEMA: font-heading (Poppins)
+            // APLICARE TEMA: font-heading
             className="text-4xl font-heading font-extrabold tracking-tight text-neutral-900 md:text-6xl"
           >
             Asociația Mantis
@@ -42,7 +42,7 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            // APLICARE TEMA: font-sans (Nunito)
+            // APLICARE TEMA: font-sans
             className="mt-10 max-w-2xl text-base text-neutral-600 md:text-lg font-sans"
           >
             Cultivăm curiozitatea și caracterul prin experiențe reale în natură
@@ -56,8 +56,8 @@ export default function Hero() {
           >
             <a href="/programe-educationale">
               <InteractiveHoverButton
-                // APLICARE TEMA: Culoarea de acțiune (Indigo)
-                className="mt-5 bg-mantis-action-600 hover:bg-mantis-action-700 text-black"
+                // APLICARE TEMA: Culoarea de acțiune (Verde Mantis)
+                className="mt-5 bg-mantis-green-600 hover:bg-mantis-green-700 text-white"
               >
                 Vezi programele
               </InteractiveHoverButton>
