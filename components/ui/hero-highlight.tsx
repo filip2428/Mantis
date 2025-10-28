@@ -12,8 +12,8 @@ export const HeroHighlight = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
   // SVG patterns for different states and themes
   const dotPatterns = {
@@ -33,7 +33,7 @@ export const HeroHighlight = ({
     clientY,
   }: React.MouseEvent<HTMLDivElement>) {
     if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -123,8 +123,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        // verde (emerald/lime) în loc de indigo/purple
-        "relative inline-block rounded-lg bg-gradient-to-r from-emerald-300 to-lime-300 px-1 pb-1 dark:from-emerald-500 dark:to-lime-500",
+        "relative inline-block rounded-lg bg-gradient-to-r from-mantis-leaf-200 to-mantis-leaf-400 px-1 pb-1",
         className
       )}
     >
