@@ -9,6 +9,25 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-mantis-cream: #f6f1e4;
+  --color-mantis-sand: #e5d8b9;
+  --color-mantis-bark: #243627;
+  --color-mantis-green: #2d6843;
+  --color-mantis-green-50: #eef5ef;
+  --color-mantis-green-100: #dbe9df;
+  --color-mantis-green-200: #b6d3c0;
+  --color-mantis-green-300: #8ebea1;
+  --color-mantis-green-400: #5d9d77;
+  --color-mantis-green-500: #3f825d;
+  --color-mantis-green-600: #2d6843;
+  --color-mantis-green-700: #1f5031;
+  --color-mantis-green-800: #143921;
+  --color-mantis-green-900: #0b2515;
+  --color-mantis-leaf-100: #d8eac6;
+  --color-mantis-leaf-200: #c0e09c;
+  --color-mantis-leaf-300: #a8d372;
+  --color-mantis-leaf-400: #8bc04d;
+  --color-mantis-leaf-500: #6fa93f;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
