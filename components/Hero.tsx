@@ -34,14 +34,16 @@ export default function Hero() {
         >
           <motion.h1
             variants={item}
-            className="text-4xl font-extrabold tracking-tight text-neutral-900 md:text-6xl"
+            // APLICARE TEMA: font-heading (Poppins)
+            className="text-4xl font-heading font-extrabold tracking-tight text-neutral-900 md:text-6xl"
           >
             Asociația Mantis
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-10 max-w-2xl text-base text-neutral-600 md:text-lg"
+            // APLICARE TEMA: font-sans (Nunito)
+            className="mt-10 max-w-2xl text-base text-neutral-600 md:text-lg font-sans"
           >
             Cultivăm curiozitatea și caracterul prin experiențe reale în natură
             — programe pentru profesori și elevi care transformă lecțiile în
@@ -53,7 +55,10 @@ export default function Hero() {
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
             <a href="/programe-educationale">
-              <InteractiveHoverButton className="mt-5">
+              <InteractiveHoverButton
+                // APLICARE TEMA: Culoarea de acțiune (Indigo)
+                className="mt-5 bg-mantis-action-600 hover:bg-mantis-action-700 text-black"
+              >
                 Vezi programele
               </InteractiveHoverButton>
             </a>
