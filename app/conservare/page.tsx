@@ -113,20 +113,20 @@ export default function ConservarePage() {
           transition={{ duration: 0.7 }}
           className="pb-20"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Secțiunea 1: Viziunea Mantis (Text cu Animație) */}
             <motion.section
-              className="mb-20 pt-8 max-w-4xl mx-auto text-center"
+              className="mx-auto mb-20 max-w-4xl rounded-3xl bg-white/80 p-8 text-center shadow-mantis-card backdrop-blur-sm"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={containerVariants}
             >
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+              <h2 className="mb-4 text-3xl font-bold text-mantis-bark dark:text-white">
                 Misiunea noastră pentru un viitor verde
               </h2>
               <motion.p
-                className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                className="text-xl leading-relaxed text-mantis-bark/80 dark:text-gray-300"
                 variants={itemVariants}
               >
                 Conservarea nu este doar despre protejarea mediului; este despre
@@ -140,17 +140,17 @@ export default function ConservarePage() {
 
             {/* Secțiunea 2: Grid-ul de Proiecte (Carduri Modale) */}
             <motion.section
-              className="mb-20"
+              className="mb-20 rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={containerVariants}
             >
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8 border-b pb-2">
+              <h2 className="mb-8 border-b border-mantis-green-100 pb-2 text-3xl font-bold text-mantis-bark dark:text-white">
                 Proiecte Active
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {CONSERVATION_PROJECTS.map((project, index) => (
+                {CONSERVATION_PROJECTS.map((project) => (
                   <motion.div key={project.title} variants={itemVariants}>
                     <ConservationProjectCard
                       title={project.title}

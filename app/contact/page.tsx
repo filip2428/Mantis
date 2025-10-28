@@ -47,16 +47,16 @@ export default function ContactPage() {
           transition={{ duration: 0.7 }}
           className="pb-20"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Secțiunea 1: Fondatorul și Contact Direct */}
             <motion.section
-              className="mb-20 pt-8"
+              className="mb-20 rounded-3xl bg-white/80 p-8 shadow-mantis-card backdrop-blur-sm"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={containerVariants}
             >
-              <h2 className="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-6 border-b pb-2">
+              <h2 className="mb-6 border-b border-mantis-green-100 pb-2 text-3xl font-heading font-bold text-mantis-bark dark:text-white">
                 Echipa Mantis vă răspunde
               </h2>
 
@@ -92,37 +92,37 @@ export default function ContactPage() {
                   className="md:w-2/3 space-y-6 pt-4 font-sans"
                   variants={itemVariants}
                 >
-                  <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                    "Ne face plăcere să auzim de la voi! Fie că doriți să
+                  <p className="text-xl leading-relaxed text-mantis-bark/80 dark:text-gray-300">
+                    „Ne face plăcere să auzim de la voi! Fie că doriți să
                     înscrieți o clasă la un program sau să propuneți o
                     colaborare, sunt aici pentru a vă oferi rapid toate
                     detaliile necesare. Suntem dedicați educației și
-                    conservării."
+                    conservării.”
                   </p>
 
                   <div className="space-y-3 pt-4">
-                    <div className="flex items-center text-lg text-gray-800 dark:text-gray-200">
-                      <Mail className="w-5 h-5 mr-3 text-mantis-green-600" />
+                    <div className="flex items-center text-lg text-mantis-bark dark:text-gray-200">
+                      <Mail className="mr-3 h-5 w-5 text-mantis-green-600" />
                       Email:{" "}
                       <a
                         href={`mailto:${DATE_CONTACT.EMAIL}`}
-                        className="ml-2 font-semibold hover:text-mantis-green-700"
+                        className="ml-2 font-semibold text-mantis-green-700 hover:text-mantis-green-600"
                       >
                         {DATE_CONTACT.EMAIL}
                       </a>
                     </div>
-                    <div className="flex items-center text-lg text-gray-800 dark:text-gray-200">
-                      <Phone className="w-5 h-5 mr-3 text-mantis-green-600" />
+                    <div className="flex items-center text-lg text-mantis-bark dark:text-gray-200">
+                      <Phone className="mr-3 h-5 w-5 text-mantis-green-600" />
                       Telefon:{" "}
                       <a
                         href={`tel:${DATE_CONTACT.TELEFON.replace(/\s/g, "")}`}
-                        className="ml-2 font-semibold hover:text-mantis-green-700"
+                        className="ml-2 font-semibold text-mantis-green-700 hover:text-mantis-green-600"
                       >
                         {DATE_CONTACT.TELEFON}
                       </a>
                     </div>
-                    <div className="flex items-start text-lg text-gray-800 dark:text-gray-200">
-                      <MapPin className="w-5 h-5 mr-3 mt-1 text-mantis-green-600 flex-shrink-0" />
+                    <div className="flex items-start text-lg text-mantis-bark dark:text-gray-200">
+                      <MapPin className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-mantis-green-600" />
                       Adresă Corespondență:{" "}
                       <span className="ml-2">
                         {DATE_CONTACT.ADRESA_POSTALA}
@@ -139,14 +139,14 @@ export default function ContactPage() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={itemVariants}
-              className="max-w-3xl mx-auto pt-16"
+              className="mx-auto max-w-3xl pt-16"
             >
-              <h2 className="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-6 border-b pb-2 text-center">
+              <h2 className="mb-6 border-b border-mantis-green-100 pb-2 text-center text-3xl font-heading font-bold text-mantis-bark dark:text-white">
                 Trimite un Mesaj Rapid
               </h2>
               <form
                 action={"https://formspree.io/f/xanlqbee"}
-                className="space-y-6 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg font-sans"
+                className="space-y-6 rounded-3xl bg-white/90 p-8 font-sans shadow-mantis-card backdrop-blur-sm dark:bg-[#143921]"
                 method="POST"
               >
                 {/* ... (Câmpurile formularului) ... */}

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Mail, Facebook, Instagram, MapPin } from "lucide-react";
 
 interface FooterProps {
@@ -27,20 +28,20 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
   ];
 
   return (
-    <footer className="bg-gray-800 dark:bg-gray-900 mt-20 border-t border-gray-700">
+    <footer className="mt-20 border-t border-mantis-green-900/40 bg-gradient-to-br from-mantis-green-700 via-mantis-green-600 to-mantis-green-500 text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {/* GRILA PRINCIPALĂ */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 pb-10 border-b border-gray-700/50">
+        <div className="grid grid-cols-2 gap-12 border-b border-white/20 pb-10 md:grid-cols-4 lg:grid-cols-5">
           {/* Coloana 1: Logo și Viziune Scurtă */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2 flex flex-col space-y-4">
-            <a href="/" className="inline-block">
+            <Link href="/" className="inline-block">
               <img
                 className="h-40 w-auto"
                 src={logoSrc}
                 alt={`${brandName} Logo`}
               />
-            </a>
-            <p className="text-sm text-gray-400 dark:text-gray-500 max-w-xs pt-2 font-sans">
+            </Link>
+            <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
               în natură.
             </p>
@@ -48,18 +49,18 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
 
           {/* Coloana 2: Link-uri Rapide (Navigație) */}
           <div className="col-span-1">
-            <h3 className="text-base font-heading font-semibold text-white mb-4">
+            <h3 className="mb-4 text-base font-heading font-semibold text-white/95">
               Navigare Rapidă
             </h3>
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-mantis-green-500 transition-colors font-sans"
+                    className="text-sm font-sans text-white/80 transition-colors hover:text-white/100"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -67,12 +68,12 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
 
           {/* Coloana 3: Social Media & Contact rapid */}
           <div className="col-span-1">
-            <h3 className="text-base font-heading font-semibold text-white mb-4">
+            <h3 className="mb-4 text-base font-heading font-semibold text-white/95">
               Conectează-te
             </h3>
 
             {/* Link-uri Social Media */}
-            <div className="flex space-x-4 mb-4">
+            <div className="mb-4 flex space-x-4 text-white/95">
               {SOCIAL_LINKS.map((link) => (
                 <a
                   key={link.name}
@@ -80,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   // APLICARE TEMA: Text verde
-                  className="text-gray-400 hover:text-mantis-green-500 transition-colors"
+                  className="transition-colors hover:text-mantis-leaf-100"
                   aria-label={link.name}
                 >
                   <link.icon className="w-6 h-6" />
@@ -89,17 +90,16 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
             </div>
 
             {/* Adresă/Contact rapid */}
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-gray-400 font-sans">
-                {/* APLICARE TEMA: Iconițe verzi */}
-                <MapPin className="w-4 h-4 mr-2 text-mantis-green-500 flex-shrink-0" />
+            <div className="space-y-2 text-white/85">
+              <div className="flex items-center text-sm font-sans">
+                <MapPin className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-100" />
                 <span>Șiștarovăț, Arad</span>
               </div>
-              <div className="flex items-center text-sm text-gray-400 font-sans">
-                <Mail className="w-4 h-4 mr-2 text-mantis-green-500 flex-shrink-0" />
+              <div className="flex items-center text-sm font-sans">
+                <Mail className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-100" />
                 <a
                   href="mailto:contact@mantis.ro"
-                  className="hover:text-mantis-green-500"
+                  className="transition-colors hover:text-mantis-leaf-100"
                 >
                   contact@mantis.ro
                 </a>
@@ -108,31 +108,31 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
           </div>
 
           {/* Coloana 4: Contact/Rezervare */}
-          <div className="col-span-2 lg:col-span-1 space-y-4">
-            <h3 className="text-base font-heading font-semibold text-white mb-4">
+          <div className="col-span-2 space-y-4 lg:col-span-1">
+            <h3 className="mb-4 text-base font-heading font-semibold text-white/95">
               Rezervă-ți Locul!
             </h3>
-            <p className="text-sm text-gray-400 font-sans">
+            <p className="text-sm font-sans text-white/85">
               Înscrie un grup și combină învățarea în natură cu distracția!
             </p>
-            <a
+            <Link
               href="/contact"
               // APLICARE TEMA: Buton CTA verde
-              className="inline-flex items-center px-4 py-2 bg-mantis-green-600 text-white font-medium text-sm rounded-lg hover:bg-mantis-green-700 transition duration-300"
+              className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-mantis-green-700 shadow-sm transition duration-300 hover:bg-mantis-leaf-100/80"
             >
               Contactează-ne
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Secțiunea Copyright */}
-        <div className="flex justify-between items-center pt-8 flex-col md:flex-row space-y-3 md:space-y-0">
-          <p className="text-sm text-gray-500 font-sans">
+        <div className="flex flex-col items-center justify-between space-y-3 pt-8 font-sans text-sm text-white/80 md:flex-row md:space-y-0">
+          <p>
             {/* APLICARE TEMA: Textul de brand folosește culoarea Mantis Green */}
-            <span className="text-mantis-green-600">Mantis</span>, dedicată
+            <span className="font-semibold text-white">Mantis</span>, dedicată
             conservării și educației.
           </p>
-          <p className="text-sm text-gray-400 dark:text-gray-500 font-sans">
+          <p>
             &copy; {currentYear} {brandName}. Toate drepturile rezervate.
           </p>
         </div>
