@@ -34,9 +34,12 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
         <div className="grid grid-cols-2 gap-12 border-b border-white/20 pb-10 md:grid-cols-4 lg:grid-cols-5">
           {/* Coloana 1: Logo și Viziune Scurtă */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2 flex flex-col space-y-4">
-            <Link href="/" className="inline-block">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-2xl bg-white/12 p-4 shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
+            >
               <img
-                className="h-40 w-auto"
+                className="h-32 w-auto"
                 src={logoSrc}
                 alt={`${brandName} Logo`}
               />

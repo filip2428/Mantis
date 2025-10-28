@@ -78,15 +78,17 @@ export default function ConservationProjectCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md z-50"
           />
           {/* Fereastra Modalului */}
           <motion.div
             key="modal-window-cons"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, y: 48, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 48, scale: 0.95 }}
+            transition={{ type: "spring", damping: 22, stiffness: 250 }}
             className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-4xl md:max-h-[90vh] overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] z-50 flex flex-col"
           >
             <div className="relative flex-shrink-0">
