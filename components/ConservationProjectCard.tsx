@@ -43,9 +43,9 @@ export default function ConservationProjectCard({
         whileHover={{ y: -5 }}
         transition={{ duration: 0.2 }}
         onClick={() => setIsOpen(true)}
-        className="h-full w-full cursor-pointer bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow flex flex-col"
+        className="h-full w-full cursor-pointer overflow-hidden rounded-3xl bg-white shadow-mantis-card transition-shadow hover:shadow-mantis-soft dark:bg-[#143921] flex flex-col border border-mantis-green-100/60"
       >
-        <div className="relative h-56 w-full overflow-hidden bg-gray-200 dark:bg-gray-700 flex-shrink-0">
+        <div className="relative h-56 w-full overflow-hidden bg-mantis-cream flex-shrink-0">
           <Image
             src={mainImageSrc}
             alt={title}
@@ -55,15 +55,15 @@ export default function ConservationProjectCard({
             loading="lazy"
           />
         </div>
-        <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+        <div className="flex flex-grow flex-col p-6">
+          <h3 className="mb-3 text-2xl font-bold text-mantis-bark dark:text-white">
             {title}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 flex-grow">
+          <p className="mb-4 flex-grow text-mantis-bark/80 dark:text-gray-200 line-clamp-3">
             {shortDescription}
           </p>
-          <div className="mt-auto flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">
-            <BookOpenText className="w-5 h-5 mr-1" />
+          <div className="mt-auto flex items-center text-mantis-green-600 font-semibold">
+            <BookOpenText className="mr-1 h-5 w-5" />
             Citește Proiectul
           </div>
         </div>
@@ -87,26 +87,26 @@ export default function ConservationProjectCard({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-4xl md:max-h-[90vh] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col"
+            className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-4xl md:max-h-[90vh] overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] z-50 flex flex-col"
           >
             <div className="relative flex-shrink-0">
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4 p-2 bg-white/90 dark:bg-gray-800/90 rounded-full hover:bg-white dark:hover:bg-gray-800 transition-colors z-10"
+                className="absolute top-4 right-4 z-10 rounded-full bg-white/90 p-2 text-mantis-bark shadow-sm transition-colors hover:bg-white dark:bg-[#102a1b]/80 dark:text-white"
               >
-                <X className="w-6 h-6 text-gray-800 dark:text-white" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
-            <div className="overflow-y-auto p-6 md:p-8 flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <div className="flex-1 overflow-y-auto p-6 md:p-8">
+              <h2 className="mb-4 text-3xl font-heading font-bold text-mantis-bark md:text-4xl dark:text-white">
                 {title}
               </h2>
 
               {/* Mini-Carusel de Previzualizare Orizontal */}
               {galleryImages.length > 0 && (
                 <div className="mb-8 space-y-4">
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 border-b pb-1">
+                  <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
                     Galerie Proiect
                   </h3>
 
@@ -150,11 +150,11 @@ export default function ConservationProjectCard({
               )}
 
               {/* Secțiunea DESCRIERE PROIECT */}
-              <div className="prose max-w-none dark:prose-invert mt-8">
-                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 border-b pb-1">
+              <div className="prose mt-8 max-w-none text-mantis-bark/80 prose-headings:text-mantis-bark dark:prose-invert">
+                <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
                   Detalii Proiect
                 </h3>
-                <p className="text-lg text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                <p className="text-lg whitespace-pre-line">
                   {fullDescription}
                 </p>
               </div>
@@ -198,6 +198,7 @@ export default function ConservationProjectCard({
                   <SwiperSlide key={index}>
                     <div className="relative w-full h-full flex items-center justify-center">
                       {/* Folosim <img> cu data-src și clasa Swiper pentru Lazy Loading Scalabil */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         // Folosim src ca fallback, dar Swiper se bazează pe data-src
                         src={src}
