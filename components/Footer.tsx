@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
   ];
 
   return (
-    <footer className="mt-20 border-t border-mantis-green-800/40 bg-gradient-to-br from-mantis-green-600 via-mantis-green-500 to-mantis-leaf-300 text-white">
+    <footer className="mt-20 border-t border-mantis-green-700/40 bg-mantis-green-700 text-mantis-cream">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {/* GRILA PRINCIPALĂ */}
         <div className="grid grid-cols-2 gap-12 border-b border-white/20 pb-10 md:grid-cols-4 lg:grid-cols-5">
@@ -41,7 +41,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
                 alt={`${brandName} Logo`}
               />
             </Link>
-            <p className="max-w-xs pt-2 text-sm text-white/80 font-sans">
+            <p className="max-w-xs pt-2 text-sm text-mantis-cream/80 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
               în natură.
             </p>
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm font-sans text-white/80 transition-colors hover:text-white"
+                    className="text-sm font-sans text-mantis-cream/80 transition-colors hover:text-mantis-leaf-200"
                   >
                     {link.name}
                   </Link>
@@ -90,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
             </div>
 
             {/* Adresă/Contact rapid */}
-            <div className="space-y-2 text-white/80">
+            <div className="space-y-2 text-mantis-cream/80">
               <div className="flex items-center text-sm font-sans">
                 <MapPin className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-200" />
                 <span>Șiștarovăț, Arad</span>
@@ -112,7 +112,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
             <h3 className="mb-4 text-base font-heading font-semibold text-white">
               Rezervă-ți Locul!
             </h3>
-            <p className="text-sm font-sans text-white/80">
+            <p className="text-sm font-sans text-mantis-cream/80">
               Înscrie un grup și combină învățarea în natură cu distracția!
             </p>
             <Link
@@ -126,7 +126,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
         </div>
 
         {/* Secțiunea Copyright */}
-        <div className="flex flex-col items-center justify-between space-y-3 pt-8 font-sans text-sm text-white/75 md:flex-row md:space-y-0">
+        <div className="flex flex-col items-center justify-between space-y-3 pt-8 font-sans text-sm text-mantis-cream/80 md:flex-row md:space-y-0">
           <p>
             {/* APLICARE TEMA: Textul de brand folosește culoarea Mantis Green */}
             <span className="font-semibold text-white">Mantis</span>, dedicată
