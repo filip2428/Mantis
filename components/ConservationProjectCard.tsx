@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, BookOpenText } from "lucide-react";
 import Image from "next/image";
@@ -23,6 +23,28 @@ export default function ConservationProjectCard({
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+
+  const shouldLockScroll = isOpen || activeImageIndex !== null;
+
+  useEffect(() => {
+    if (!shouldLockScroll) {
+      return;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
+    };
+  }, [shouldLockScroll]);
 
   const mainImageSrc = galleryImages[0] || "/placeholder.jpg";
 
@@ -78,18 +100,18 @@ export default function ConservationProjectCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-50"
+            className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm"
           />
           {/* Fereastra Modalului */}
           <motion.div
             key="modal-window-cons"
-            initial={{ opacity: 0, y: 48, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 48, scale: 0.95 }}
-            transition={{ type: "spring", damping: 22, stiffness: 250 }}
-            className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-4xl md:max-h-[90vh] overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] z-50 flex flex-col"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-4 z-[210] flex flex-col overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] md:inset-auto md:left-1/2 md:top-1/2 md:m-auto md:h-auto md:w-full md:max-h-[90vh] md:max-w-4xl md:-translate-x-1/2 md:-translate-y-1/2"
           >
             <div className="relative flex-shrink-0">
               <button
@@ -173,7 +195,7 @@ export default function ConservationProjectCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/95 flex items-center justify-center z-[60]"
+            className="fixed inset-0 z-[220] flex items-center justify-center bg-black/95"
           >
             {/* CONTAINER SLIDER */}
             <motion.div

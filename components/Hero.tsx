@@ -9,7 +9,7 @@ export default function Hero() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.52, delayChildren: 0.5 },
+      transition: { staggerChildren: 0.18, delayChildren: 0.12 },
     },
   } as const;
 
@@ -19,7 +19,7 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] }, // easeOut curve
+      transition: { duration: 0.5, ease: [0.25, 1, 0.5, 1] },
     },
   } as const;
 
