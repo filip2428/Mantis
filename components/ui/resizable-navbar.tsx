@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -26,15 +27,6 @@ interface NavBodyProps {
   visible?: boolean;
 }
 
-interface NavItemsProps {
-  items: {
-    name: string;
-    link: string;
-  }[];
-  className?: string;
-  onItemClick?: () => void;
-}
-
 interface MobileNavProps {
   children: React.ReactNode;
   className?: string;
@@ -50,7 +42,6 @@ interface MobileNavMenuProps {
   children: React.ReactNode;
   className?: string;
   isOpen: boolean;
-  onClose: () => void;
 }
 
 export const Navbar = ({ children, className }: NavbarProps) => {
@@ -108,7 +99,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
         className
       )}
     >
@@ -135,7 +126,7 @@ export const NavItems = ({
   return (
     <div
       className={cn(
-        "hidden lg:flex flex-1 items-center justify-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-800",
+        "hidden lg:flex flex-1 items-center justify-center gap-2 text-sm font-medium text-mantis-green-700",
         className
       )}
     >
@@ -159,7 +150,7 @@ export const NavItems = ({
                 type="button"
                 aria-haspopup="menu"
                 aria-expanded={open === idx}
-                className="group relative z-20 flex items-center gap-1.5 rounded-full px-4 py-2 text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                className="group relative z-20 flex items-center gap-1.5 rounded-full px-4 py-2 text-mantis-green-700 transition-colors hover:bg-mantis-cream/80 hover:text-mantis-green-800 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
                 onFocus={() => setOpen(idx)}
               >
                 <span>{item.name}</span>
@@ -173,13 +164,13 @@ export const NavItems = ({
                 />
               </button>
             ) : (
-              <a
+              <Link
                 href={item.link}
                 onClick={onItemClick}
-                className="relative z-20 rounded-full px-4 py-2 text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                className="relative z-20 rounded-full px-4 py-2 text-mantis-green-700 transition-colors hover:bg-mantis-cream/80 hover:text-mantis-green-800 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
               >
                 {item.name}
-              </a>
+              </Link>
             )}
 
             {/* Dropdown */}
@@ -192,7 +183,7 @@ export const NavItems = ({
                 role="menu"
                 className={cn(
                   // poziționare + hover-bridge (elimină “golul”)
-                  "absolute left-1/2 top-full z-[200] w-56 -translate-x-1/2 overflow-hidden rounded-xl border border-neutral-200/70 bg-white p-1.5 shadow-lg dark:border-neutral-800 dark:bg-neutral-950 pointer-events-auto",
+                  "absolute left-1/2 top-full z-[200] w-56 -translate-x-1/2 overflow-hidden rounded-xl border border-mantis-green-100/70 bg-white p-1.5 shadow-xl shadow-mantis-card/40 dark:border-[#1b3525] dark:bg-[#102a1b] pointer-events-auto",
                   // creează o zonă invizibilă de 8px deasupra, ca să nu se închidă când treci de pe buton pe meniu
                   "before:absolute before:-top-2 before:left-0 before:h-2 before:w-full before:content-['']"
                 )}
@@ -203,20 +194,19 @@ export const NavItems = ({
                 }}
               >
                 {item.children!.map((child, cIdx) => (
-                  <a
+                  <Link
                     key={cIdx}
                     href={child.link}
                     role="menuitem"
                     onClick={(e) => {
                       onItemClick?.();
-                      // prevenim închiderea prematură de la blur înainte de click
                       e.currentTarget.blur();
                       setOpen(null);
                     }}
-                    className="block rounded-md px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                    className="block rounded-md px-3 py-2 text-sm text-mantis-green-700 hover:bg-mantis-cream/70 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
                   >
                     {child.name}
-                  </a>
+                  </Link>
                 ))}
               </motion.div>
             )}
@@ -248,7 +238,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
         className
       )}
     >
@@ -287,7 +277,7 @@ export const MobileAccordion = ({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between rounded-md px-2 py-2 text-left text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+        className="flex w-full items-center justify-between rounded-md px-2 py-2 text-left text-mantis-green-700 transition-colors hover:bg-mantis-cream/80 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
       >
         <span>{item.name}</span>
         <svg
@@ -309,14 +299,14 @@ export const MobileAccordion = ({
           >
             <div className="mt-1 flex flex-col gap-1">
               {item.children!.map((child, i) => (
-                <a
+                <Link
                   key={i}
                   href={child.link}
                   onClick={onClose}
-                  className="block rounded-md px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                  className="block rounded-md px-2 py-1.5 text-sm text-mantis-green-700 hover:bg-mantis-cream/80 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
                 >
                   {child.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -330,7 +320,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -340,7 +329,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mantis-cream px-4 py-8 shadow-mantis-card dark:bg-[#102a1b]",
             className
           )}
         >
@@ -359,21 +348,29 @@ export const MobileNavToggle = ({
   onClick: () => void;
 }) => {
   return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
+    <IconX className="text-mantis-bark dark:text-white" onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    <IconMenu2 className="text-mantis-bark dark:text-white" onClick={onClick} />
   );
 };
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-8 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
-      <img src="/SiglaMantisVerde.png" alt="logo" width={80} height={80} />
-      {/* <span className="font-medium text-black dark:text-white">Home</span> */}
-    </a>
+      <img
+        src="/SiglaMantisVerde.png"
+        alt="logo"
+        width={68}
+        height={68}
+        className="drop-shadow-[0_12px_20px_rgba(47,109,71,0.25)]"
+      />
+      <span className="hidden text-base font-heading tracking-tight text-mantis-green-700 sm:inline">
+        Asociația Mantis
+      </span>
+    </Link>
   );
 };
 
@@ -395,15 +392,14 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<"button">
 )) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    "px-4 py-2 rounded-full border border-mantis-green-200 bg-mantis-cream text-mantis-green-700 text-sm font-semibold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary:
-      "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-    secondary: "bg-transparent shadow-none dark:text-white",
-    dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+    primary: "bg-mantis-green-600 text-white shadow-mantis-soft border-transparent hover:bg-mantis-green-700",
+    secondary: "bg-transparent text-mantis-green-700 shadow-none hover:bg-mantis-cream/70",
+    dark: "bg-mantis-bark text-white shadow-mantis-soft",
     gradient:
-      "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+      "bg-gradient-to-b from-mantis-leaf-300 to-mantis-leaf-500 text-mantis-bark shadow-[0px_2px_0px_0px_rgba(255,255,255,0.4)_inset]",
   };
 
   return (
