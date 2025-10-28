@@ -28,7 +28,7 @@ export default function Author({
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-2xl bg-white p-0 shadow-sm ring-1 ring-neutral-200/60 dark:bg-neutral-950 dark:ring-neutral-800 md:grid-cols-12 min-h-[40vh]"
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-3xl bg-mantis-cream/70 p-0 shadow-mantis-card ring-1 ring-mantis-green-100 dark:bg-[#102a1b] dark:ring-[#1b3525] md:grid-cols-12 min-h-[40vh]"
       >
         {/* Coloana stângă: POZA (ocupă stânga) */}
         <div className="relative md:col-span-5">
@@ -49,10 +49,11 @@ export default function Author({
             <DirectionAwareHover
               className={clsx(
                 "object-cover",
-                "md:rounded-none", // muchie dreaptă comună
-                "rounded-t-2xl md:rounded-l-2xl" // colțuri pe mobil & stânga
+                "md:rounded-none",
+                "rounded-t-2xl md:rounded-l-2xl"
               )}
-              imageUrl="/paul-hac.jpeg"
+              imageUrl={imageSrc}
+              imageAlt={imageAlt}
             >
               <p>Paul Hac</p>
             </DirectionAwareHover>
@@ -60,14 +61,14 @@ export default function Author({
         </div>
 
         {/* Coloana dreaptă: TEXT */}
-        <div className="md:col-span-7 flex flex-col justify-center p-6 md:p-8">
-          <h2 className="text-2xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-50">
+        <div className="md:col-span-7 flex flex-col justify-center p-6 md:p-10">
+          <h2 className="text-2xl font-extrabold tracking-tight text-mantis-bark dark:text-neutral-50">
             {name}
           </h2>
-          <p className="mt-1 text-sm font-medium text-emerald-700 dark:text-emerald-400">
+          <p className="mt-1 text-sm font-medium text-mantis-leaf-500 dark:text-mantis-leaf-300">
             {role}
           </p>
-          <p className="mt-4 text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
+          <p className="mt-4 text-base leading-relaxed text-mantis-bark/80 dark:text-neutral-300">
             {bio}
           </p>
         </div>

@@ -2,17 +2,20 @@
 
 import { useRef, useState } from "react";
 
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const DirectionAwareHover = ({
   imageUrl,
+  imageAlt,
   children,
   childrenClassName,
   imageClassName,
   className,
 }: {
   imageUrl: string;
+  imageAlt?: string;
   children: React.ReactNode | string;
   childrenClassName?: string;
   imageClassName?: string;
@@ -30,7 +33,6 @@ export const DirectionAwareHover = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
     switch (direction) {
       case 0:
         setDirection("top");
@@ -86,15 +88,16 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
           >
-            <img
-              alt="image"
+            <Image
+              src={imageUrl}
+              alt={imageAlt ?? "Imagine"}
+              fill
               className={cn(
-                "h-full w-full object-cover scale-[1.15]",
+                "h-full w-full scale-[1.15] object-cover",
                 imageClassName
               )}
-              width="1000"
-              height="1000"
-              src={imageUrl}
+              sizes="(max-width: 768px) 80vw, 400px"
+              priority={false}
             />
           </motion.div>
           <motion.div
