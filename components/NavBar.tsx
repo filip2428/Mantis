@@ -53,7 +53,7 @@ export default function NavbarSite({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-gradient-to-b from-white via-white to-transparent">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
