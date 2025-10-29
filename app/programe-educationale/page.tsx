@@ -6,6 +6,7 @@ import ProgramEducational from "@/components/ProgramEducational";
 import Footer from "@/components/Footer";
 import AnimatedPageHeader from "@/components/AnimatedPageHeader";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // =======================================================
 // VARIANTE DE ANIMAȚIE (Scroll Reveal pentru Carduri)
@@ -28,6 +29,8 @@ const cardItemVariants = {
 
 export default function ProgrameEducaționale() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
+  const contactCtaMessage =
+    "Bună ziua! Sunt interesat(ă) de programele educaționale Mantis și aș dori mai multe detalii despre înscriere și colaborare.";
 
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
@@ -73,6 +76,7 @@ export default function ProgrameEducaționale() {
                     duration: "6 Săptămâni",
                     targetAudience: "Elevi de liceu",
                   }}
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Conservarea Biodiversității” pentru un grup de elevi de liceu. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de 6 săptămâni și cu pașii de înscriere?"
                 />
               </motion.div>
 
@@ -87,6 +91,7 @@ export default function ProgrameEducaționale() {
                     duration: "4 Săptămâni",
                     targetAudience: "Elevi de gimnaziu",
                   }}
+                  contactMessage="Bună ziua! Sunt interesat(ă) de programul „P2: Ecologia Urbană” pentru elevi de gimnaziu. Ați putea să-mi trimiteți programul complet pentru cele 4 săptămâni și condițiile de participare?"
                 />
               </motion.div>
 
@@ -101,6 +106,7 @@ export default function ProgrameEducaționale() {
                     duration: "8 Sesiuni",
                     targetAudience: "Elevi de școală primară",
                   }}
+                  contactMessage="Salut! Mi-ar plăcea să programez activitatea „P3: Vânătorii de Insecte” pentru o clasă de școală primară. Îmi puteți spune ce date sunt disponibile pentru cele 8 sesiuni și ce materiale trebuie pregătite?"
                 />
               </motion.div>
 
@@ -114,6 +120,7 @@ export default function ProgrameEducaționale() {
                     duration: "3 Zile (Weekend)",
                     targetAudience: "Elevi de liceu și adulți",
                   }}
+                  contactMessage="Bună! Aș vrea să rezerv programul „P4: Supraviețuire & Munte” pentru un grup mixt de liceeni și adulți, pe durata unui weekend. Ce perioade libere aveți și care sunt condițiile logistice?"
                 />
               </motion.div>
 
@@ -127,6 +134,7 @@ export default function ProgrameEducaționale() {
                     duration: "5 Zile (Tabără)",
                     targetAudience: "Gimnaziu & Liceu",
                   }}
+                  contactMessage="Bună ziua! Suntem interesați de tabăra „P5: Explorări Litorale” pentru elevi de gimnaziu și liceu. Ne puteți oferi detalii despre calendarul disponibil pentru cele 5 zile și costurile implicate?"
                 />
               </motion.div>
 
@@ -140,9 +148,34 @@ export default function ProgrameEducaționale() {
                     duration: "4 Sesiuni",
                     targetAudience: "Elevi de școală primară",
                   }}
+                  contactMessage="Salutare! Aș dori să rezerv programul „P6: Detectivii Pădurii” pentru elevi de școală primară. Ce perioade aveți disponibile pentru cele 4 sesiuni și care sunt pașii următori pentru confirmare?"
                 />
               </motion.div>
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mt-12 max-w-4xl rounded-3xl bg-mantis-green-50/80 p-10 text-center shadow-mantis-card"
+          >
+            <h2 className="text-3xl font-heading font-bold text-mantis-bark mb-4">
+              Pregătit să colaborăm?
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-mantis-bark/80">
+              Spune-ne ce program te interesează și îți oferim rapid toate detaliile despre calendar, logistică și pașii de înscriere.
+            </p>
+            <Link
+              href={{
+                pathname: "/contact",
+                query: { message: contactCtaMessage },
+              }}
+              className="inline-flex items-center justify-center rounded-xl bg-mantis-green-600 px-8 py-3 text-lg font-semibold text-white shadow-mantis-soft transition hover:bg-mantis-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mantis-green-500"
+            >
+              Contactează-ne acum
+            </Link>
           </motion.div>
         </motion.div>
       </NavbarSite>
