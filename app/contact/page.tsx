@@ -162,7 +162,7 @@ export default function ContactPage() {
           </div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="SiglaMantis+slogan.png" />
+      <Footer brandName="Mantis" logoSrc="/SiglaMantis+slogan.png" />
     </>
   );
 }

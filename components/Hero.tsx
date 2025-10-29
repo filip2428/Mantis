@@ -25,8 +25,6 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-mantis-cream via-mantis-cream/80 to-white py-10">
-      <div className="absolute -left-32 -top-32 hidden size-[420px] rounded-full bg-mantis-leaf-100 blur-3xl md:block" />
-      <div className="absolute -right-24 top-20 hidden size-[260px] rounded-full bg-mantis-leaf-200 blur-3xl md:block" />
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-24">
         <motion.div
           variants={container}

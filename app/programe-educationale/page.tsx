@@ -146,7 +146,7 @@ export default function ProgrameEducaționale() {
           </motion.div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="SiglaMantis+slogan.png" />
+      <Footer brandName="Mantis" logoSrc="/SiglaMantis+slogan.png" />
     </>
   );
 }
