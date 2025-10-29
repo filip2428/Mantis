@@ -99,7 +99,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
+        visible &&
+          "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
         className
       )}
     >
@@ -238,7 +239,8 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
+        visible &&
+          "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
         className
       )}
     >
@@ -272,7 +274,7 @@ export const MobileAccordion = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -329,7 +331,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mantis-cream px-4 py-8 shadow-mantis-card dark:bg-[#102a1b]",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-white px-4 py-8 shadow-mantis-card dark:bg-[#102a1b]",
             className
           )}
         >
@@ -358,18 +360,18 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
+      className="relative z-20 mr-2 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
       <img
         src="/SiglaMantisVerde.png"
         alt="logo"
-        width={68}
-        height={68}
+        width={62}
+        height={62}
         className="drop-shadow-[0_12px_20px_rgba(47,109,71,0.25)]"
       />
-      <span className="hidden text-base font-heading tracking-tight text-mantis-green-700 sm:inline">
+      {/* <span className="hidden text-base font-heading tracking-tight text-mantis-green-700 sm:inline">
         Asociația Mantis
-      </span>
+      </span> */}
     </Link>
   );
 };
@@ -395,8 +397,10 @@ export const NavbarButton = ({
     "px-4 py-2 rounded-full border border-mantis-green-200 bg-mantis-cream text-mantis-green-700 text-sm font-semibold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary: "bg-mantis-green-600 text-white shadow-mantis-soft border-transparent hover:bg-mantis-green-700",
-    secondary: "bg-transparent text-mantis-green-700 shadow-none hover:bg-mantis-cream/70",
+    primary:
+      "bg-mantis-green-600 text-white shadow-mantis-soft border-transparent hover:bg-mantis-green-700",
+    secondary:
+      "bg-transparent text-mantis-green-700 shadow-none hover:bg-mantis-cream/70",
     dark: "bg-mantis-bark text-white shadow-mantis-soft",
     gradient:
       "bg-gradient-to-b from-mantis-leaf-300 to-mantis-leaf-500 text-mantis-bark shadow-[0px_2px_0px_0px_rgba(255,255,255,0.4)_inset]",

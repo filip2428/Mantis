@@ -4,7 +4,7 @@ import Author from "./AboutPaul";
 export default function AboutUs() {
   return (
     <>
-      <div className="container mx-auto rounded-3xl bg-white/80 p-8 pt-24 shadow-mantis-card backdrop-blur-sm">
+      <div className="container mx-auto rounded-3xl bg-mantis-green-200 p-8 pt-24 shadow-mantis-card backdrop-blur-sm">
         <h1 className="mb-4 text-center text-3xl font-bold text-mantis-bark">
           Fă cunoștință cu
           <Highlight>Asociația Mantis</Highlight>

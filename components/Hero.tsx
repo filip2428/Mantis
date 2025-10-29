@@ -59,7 +59,7 @@ export default function Hero() {
             <a href="/programe-educationale">
               <InteractiveHoverButton
                 // APLICARE TEMA: Culoarea de acțiune (Verde Mantis)
-                className="mt-5 rounded-full border-transparent bg-mantis-green-600 px-10 py-3 text-white shadow-mantis-soft hover:bg-mantis-green-700"
+                className="mt-5 rounded-full border-transparent px-10 py-3 text-mantis-green-700 shadow-mantis-soft hover:bg-mantis-green-700"
               >
                 Vezi programele
               </InteractiveHoverButton>

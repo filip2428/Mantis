@@ -33,7 +33,8 @@ export default function ConservationProjectCard({
 
     const originalOverflow = document.body.style.overflow;
     const originalPaddingRight = document.body.style.paddingRight;
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
 
     document.body.style.overflow = "hidden";
     if (scrollbarWidth > 0) {
@@ -217,6 +218,8 @@ export default function ConservationProjectCard({
                 lazy={"true"} // Deși eroarea TS a fost fixată prin eliminarea din module, l-am lăsat ca string pentru a evita warning-urile HTML/React
                 className="w-full h-full"
                 loop={true}
+                // arrowkeys={true}
+                // color="green"
               >
                 {galleryImages.map((src, index) => (
                   <SwiperSlide key={index}>

@@ -116,7 +116,7 @@ export default function ConservarePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Secțiunea 1: Viziunea Mantis (Text cu Animație) */}
             <motion.section
-              className="mx-auto mb-20 max-w-4xl rounded-3xl bg-white/80 p-8 text-center shadow-mantis-card backdrop-blur-sm"
+              className="mx-auto mb-20 max-w-4xl rounded-3xl bg-white/80 p-8 text-center shadow-mantis-card "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -140,7 +140,7 @@ export default function ConservarePage() {
 
             {/* Secțiunea 2: Grid-ul de Proiecte (Carduri Modale) */}
             <motion.section
-              className="mb-20 rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
+              className="mb-20 rounded-3xl bg-white/80 p-6 shadow-mantis-card sm:p-10"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
