@@ -14,7 +14,7 @@ const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.3, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.16, delayChildren: 0.08 },
   },
 } as const;
 
@@ -24,7 +24,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.45, ease: [0.25, 1, 0.5, 1] },
   },
 } as const;
 
@@ -34,7 +34,7 @@ export default function AnimatedPageHeader({
   onAnimationComplete,
 }: AnimatedPageHeaderProps) {
   return (
-    <div className="mx-auto max-w-6xl px-6 pt-16 pb-10 md:pt-24 md:pb-16">
+    <div className="mx-auto max-w-6xl rounded-3xl bg-mantis-cream/80 px-6 pt-16 pb-10 shadow-mantis-card backdrop-blur-sm md:pt-24 md:pb-16">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -56,7 +56,7 @@ export default function AnimatedPageHeader({
 
         <motion.p
           variants={itemVariants}
-          className="mt-4 max-w-4xl text-lg text-gray-700 dark:text-gray-300 px-4 font-sans"
+          className="mt-4 max-w-4xl px-4 font-sans text-lg text-mantis-bark/80 dark:text-gray-200"
         >
           {description}
         </motion.p>

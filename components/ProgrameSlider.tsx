@@ -7,7 +7,6 @@ import ProgramEducational from "@/components/ProgramEducational";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/navigation"; // <-- 1. Importă useRouter
 
 export default function ProgrameSlider() {
