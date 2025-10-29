@@ -272,7 +272,7 @@ export const MobileAccordion = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
