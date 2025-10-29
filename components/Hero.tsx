@@ -45,20 +45,12 @@ export default function Hero() {
   return (
     <section
       id="acasa"
-      className="relative overflow-hidden bg-mantis-cream pb-32 pt-20 sm:pt-28"
+      className="relative overflow-hidden pb-32 pt-20 sm:pt-28"
     >
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div
-          className="absolute inset-0 opacity-80"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(93, 157, 119, 0.16) 1px, transparent 0)",
-            backgroundSize: "46px 46px",
-          }}
-        />
         <div className="absolute -left-32 -bottom-24 hidden h-[420px] w-[420px] rounded-full bg-mantis-green-200/25 blur-3xl md:block" />
         <div className="absolute -right-40 top-14 hidden h-[360px] w-[360px] rounded-full bg-mantis-leaf-100/35 blur-3xl lg:block" />
         <div className="absolute left-1/2 top-10 h-72 w-72 -translate-x-1/2 rounded-full border border-white/60 bg-white/50 shadow-[0_28px_60px_rgba(45,104,67,0.18)]" />
