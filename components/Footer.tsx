@@ -36,15 +36,15 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
           <div className="col-span-2 md:col-span-2 lg:col-span-2 flex flex-col space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-2xl bg-white/70  shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
+              className="inline-flex items-center justify-center rounded-2xl bg-white/12 p-4 shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
             >
               <img
-                className="h-50 w-auto"
+                className="h-32 w-auto"
                 src={logoSrc}
                 alt={`${brandName} Logo`}
               />
             </Link>
-            {/* <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
+            <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
               în natură.
             </p> */}
@@ -132,8 +132,8 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
         <div className="flex flex-col items-center justify-between space-y-3 pt-8 font-sans text-sm text-white/80 md:flex-row md:space-y-0">
           <p>
             {/* APLICARE TEMA: Textul de brand folosește culoarea Mantis Green */}
-            <span className="font-semibold text-white">Mantis</span>, pasiune
-            pentru cunoaștere.
+            <span className="font-semibold text-white">Mantis</span>, dedicată
+            conservării și educației.
           </p>
           <p>
             &copy; {currentYear} {brandName}. Toate drepturile rezervate.

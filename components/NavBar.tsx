@@ -23,6 +23,10 @@ export default function NavbarSite({
     {
       name: "Acasă",
       link: "/",
+      children: [
+        { name: "Acasă", link: "/" },
+        { name: "Despre noi", link: "/#despre" },
+      ],
     },
     {
       name: "Educație",

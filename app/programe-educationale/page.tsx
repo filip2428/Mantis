@@ -52,8 +52,7 @@ export default function ProgrameEducaționale() {
         >
           {/* Secțiunea de Carduri: Grid responsiv */}
           <motion.div
-            className="mx-auto mt-8 max-w-7xl rounded-3xl bg-white/80 p-6 shadow-mantis-card  sm:p-10"
-            // className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            className="mx-auto mt-8 max-w-7xl rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}

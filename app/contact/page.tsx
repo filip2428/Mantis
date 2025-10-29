@@ -1,13 +1,14 @@
 // app/contact/page.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState, type ChangeEvent } from "react";
 import NavbarSite from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AnimatedPageHeader from "@/components/AnimatedPageHeader";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 // ... (Animații și DATE_CONTACT) ...
 const containerVariants = {
@@ -27,6 +28,45 @@ const DATE_CONTACT = {
 
 export default function ContactPage() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
+  const searchParams = useSearchParams();
+  const programFromQuery = searchParams.get("program");
+  const defaultPrefill = useMemo(() => {
+    if (!programFromQuery) {
+      return "";
+    }
+
+    return `Bună, aș dori să rezerv programul "${programFromQuery}" și să discutăm despre pașii următori.`;
+  }, [programFromQuery]);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    organization: "",
+    message: defaultPrefill,
+  });
+
+  useEffect(() => {
+    if (!programFromQuery) {
+      return;
+    }
+
+    setFormData((prev) => {
+      if (prev.message.trim().length > 0) {
+        return prev;
+      }
+
+      return { ...prev, message: defaultPrefill };
+    });
+  }, [programFromQuery, defaultPrefill]);
+
+  const handleChange = (
+    field: "name" | "email" | "phone" | "organization" | "message"
+  ) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { value } = event.target;
+      setFormData((prev) => ({ ...prev, [field]: value }));
+    };
 
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
@@ -149,11 +189,84 @@ export default function ContactPage() {
                 className="space-y-6 rounded-3xl bg-white/90 p-8 font-sans shadow-mantis-card backdrop-blur-sm dark:bg-[#143921]"
                 method="POST"
               >
-                {/* ... (Câmpurile formularului) ... */}
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                  <label className="flex flex-col gap-1 text-left text-sm font-medium text-mantis-bark dark:text-gray-200">
+                    Nume complet
+                    <input
+                      type="text"
+                      name="Nume complet"
+                      autoComplete="name"
+                      value={formData.name}
+                      onChange={handleChange("name")}
+                      required
+                      className="w-full rounded-xl border border-mantis-green-100/70 bg-white px-4 py-2.5 text-base text-mantis-bark shadow-sm transition placeholder:text-mantis-bark/40 focus:border-mantis-green-400 focus:outline-none focus:ring-2 focus:ring-mantis-green-200 dark:border-[#1b3525] dark:bg-[#102a1b] dark:text-white dark:placeholder:text-gray-400"
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1 text-left text-sm font-medium text-mantis-bark dark:text-gray-200">
+                    Adresă de email
+                    <input
+                      type="email"
+                      name="Email"
+                      autoComplete="email"
+                      value={formData.email}
+                      onChange={handleChange("email")}
+                      required
+                      className="w-full rounded-xl border border-mantis-green-100/70 bg-white px-4 py-2.5 text-base text-mantis-bark shadow-sm transition placeholder:text-mantis-bark/40 focus:border-mantis-green-400 focus:outline-none focus:ring-2 focus:ring-mantis-green-200 dark:border-[#1b3525] dark:bg-[#102a1b] dark:text-white dark:placeholder:text-gray-400"
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1 text-left text-sm font-medium text-mantis-bark dark:text-gray-200">
+                    Telefon de contact
+                    <input
+                      type="tel"
+                      name="Telefon"
+                      autoComplete="tel"
+                      value={formData.phone}
+                      onChange={handleChange("phone")}
+                      className="w-full rounded-xl border border-mantis-green-100/70 bg-white px-4 py-2.5 text-base text-mantis-bark shadow-sm transition placeholder:text-mantis-bark/40 focus:border-mantis-green-400 focus:outline-none focus:ring-2 focus:ring-mantis-green-200 dark:border-[#1b3525] dark:bg-[#102a1b] dark:text-white dark:placeholder:text-gray-400"
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1 text-left text-sm font-medium text-mantis-bark dark:text-gray-200">
+                    Școala / Organizația
+                    <input
+                      type="text"
+                      name="Organizație"
+                      autoComplete="organization"
+                      value={formData.organization}
+                      onChange={handleChange("organization")}
+                      className="w-full rounded-xl border border-mantis-green-100/70 bg-white px-4 py-2.5 text-base text-mantis-bark shadow-sm transition placeholder:text-mantis-bark/40 focus:border-mantis-green-400 focus:outline-none focus:ring-2 focus:ring-mantis-green-200 dark:border-[#1b3525] dark:bg-[#102a1b] dark:text-white dark:placeholder:text-gray-400"
+                    />
+                  </label>
+                </div>
+
+                {programFromQuery && (
+                  <div className="rounded-2xl border border-mantis-green-100/80 bg-mantis-cream/60 px-4 py-3 text-sm text-mantis-bark dark:border-[#1b3525] dark:bg-[#102a1b]/60 dark:text-gray-200">
+                    <strong className="font-semibold text-mantis-green-700 dark:text-mantis-green-300">
+                      Program selectat:
+                    </strong>{" "}
+                    {programFromQuery}. Am precompletat mesajul tău pentru a economisi timp.
+                  </div>
+                )}
+
+                <label className="flex flex-col gap-2 text-left text-sm font-medium text-mantis-bark dark:text-gray-200">
+                  Mesajul tău
+                  <textarea
+                    name="Mesaj"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange("message")}
+                    placeholder="Spune-ne cum te putem ajuta"
+                    required
+                    className="w-full rounded-2xl border border-mantis-green-100/70 bg-white px-4 py-3 text-base text-mantis-bark shadow-sm transition placeholder:text-mantis-bark/40 focus:border-mantis-green-400 focus:outline-none focus:ring-2 focus:ring-mantis-green-200 dark:border-[#1b3525] dark:bg-[#102a1b] dark:text-white dark:placeholder:text-gray-400"
+                  />
+                </label>
+
+                {programFromQuery && (
+                  <input type="hidden" name="Program Mantis" value={programFromQuery} />
+                )}
+
                 <button
                   type="submit"
-                  // APLICARE TEMA: Culoarea de acțiune (Verde Mantis)
-                  className="w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-mantis-green-600 hover:bg-mantis-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mantis-green-500 transition duration-150"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-transparent bg-mantis-green-600 px-6 py-3 text-base font-semibold text-white shadow-mantis-soft transition hover:bg-mantis-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mantis-green-500"
                 >
                   Trimite Cererea
                 </button>
