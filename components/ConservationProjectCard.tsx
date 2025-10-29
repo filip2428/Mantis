@@ -217,6 +217,8 @@ export default function ConservationProjectCard({
                 lazy={"true"} // Deși eroarea TS a fost fixată prin eliminarea din module, l-am lăsat ca string pentru a evita warning-urile HTML/React
                 className="w-full h-full"
                 loop={true}
+                // arrowkeys={true}
+                // color="green"
               >
                 {galleryImages.map((src, index) => (
                   <SwiperSlide key={index}>

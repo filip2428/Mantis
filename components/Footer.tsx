@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
             <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
               în natură.
-            </p>
+            </p> */}
           </div>
 
           {/* Coloana 2: Link-uri Rapide (Navigație) */}
