@@ -45,18 +45,23 @@ export default function Hero() {
   return (
     <section
       id="acasa"
-      className="relative overflow-hidden pb-32 pt-20 sm:pt-28"
+      className="relative overflow-hidden bg-mantis-cream pb-32 pt-20 sm:pt-28"
     >
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(213,234,217,0.35),transparent_58%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f3eddc] via-[#f6f1e4] to-[#f3eddc]" />
-        <div className="absolute -left-24 -top-20 hidden h-[420px] w-[420px] rounded-full bg-mantis-green-200/35 blur-3xl md:block" />
-        <div className="absolute -right-32 top-32 hidden h-[380px] w-[380px] rounded-full bg-mantis-leaf-100/45 blur-3xl lg:block" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-white/8 blur-3xl" />
-        <div className="absolute inset-x-0 bottom-[-180px] h-[280px] bg-gradient-to-b from-transparent via-[#f6f1e4] to-[#f6f1e4]" />
+        <div
+          className="absolute inset-0 opacity-80"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgba(93, 157, 119, 0.16) 1px, transparent 0)",
+            backgroundSize: "46px 46px",
+          }}
+        />
+        <div className="absolute -left-32 -bottom-24 hidden h-[420px] w-[420px] rounded-full bg-mantis-green-200/25 blur-3xl md:block" />
+        <div className="absolute -right-40 top-14 hidden h-[360px] w-[360px] rounded-full bg-mantis-leaf-100/35 blur-3xl lg:block" />
+        <div className="absolute left-1/2 top-10 h-72 w-72 -translate-x-1/2 rounded-full border border-white/60 bg-white/50 shadow-[0_28px_60px_rgba(45,104,67,0.18)]" />
       </div>
       <div className="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col items-center px-6 pb-24">
         <motion.div
@@ -110,7 +115,7 @@ export default function Hero() {
             onClick={handleScrollCue}
             animate={{ y: [0, 12, 0] }}
             transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
-            className="mt-3 inline-flex items-center justify-center rounded-full border border-mantis-green-200/70 bg-mantis-cream/80 p-2 text-mantis-green-600 shadow-mantis-card outline-none transition-colors hover:border-mantis-green-300 focus-visible:ring-2 focus-visible:ring-mantis-green-400"
+            className="mt-3 inline-flex items-center justify-center rounded-full border border-mantis-green-200/70 bg-white/80 p-2 text-mantis-green-600 shadow-mantis-card outline-none transition-colors hover:border-mantis-green-300 focus-visible:ring-2 focus-visible:ring-mantis-green-400"
           >
             <ArrowDown className="h-5 w-5" />
           </motion.button>
