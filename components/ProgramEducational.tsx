@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image"; // NOU: Componenta Next.js Image pentru performanță
+import Link from "next/link";
 
 interface ProgramCardProps {
   title: string;
@@ -17,6 +18,8 @@ interface ProgramCardProps {
     activities?: string[];
   };
   disableModal?: boolean;
+  contactMessage?: string;
+  contactCtaLabel?: string;
 }
 
 export default function ProgramCard({
@@ -26,6 +29,8 @@ export default function ProgramCard({
   imageSrc,
   details,
   disableModal = false,
+  contactMessage,
+  contactCtaLabel = "Rezervă programul",
 }: ProgramCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -85,10 +90,23 @@ export default function ProgramCard({
           <p className="flex-grow text-mantis-bark/80 dark:text-gray-200 line-clamp-3">
             {description}
           </p>
-          {/* Textul butonului rămâne, dar acțiunea e dată de onClick-ul general */}
-          <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-mantis-green-600">
-            Află mai multe →
-          </span>
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-mantis-green-600">
+              Află mai multe →
+            </span>
+            {contactMessage && (
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: { message: contactMessage },
+                }}
+                onClick={(event) => event.stopPropagation()}
+                className="inline-flex items-center justify-center rounded-lg bg-mantis-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-mantis-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mantis-green-500"
+              >
+                {contactCtaLabel}
+              </Link>
+            )}
+          </div>
         </div>
       </motion.div>
 
