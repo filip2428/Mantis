@@ -9,7 +9,9 @@ export default function Home() {
     <>
       <NavbarSite>
         <Hero />
-        <TextReveal>Pasiune pentru cunoaștere</TextReveal>
+        <div id="hero-scroll-stop" className="scroll-mt-40">
+          <TextReveal>Pasiune pentru cunoaștere</TextReveal>
+        </div>
         <AboutUs />
         <ProgrameSlider />
       </NavbarSite>

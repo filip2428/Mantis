@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarSite from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -43,6 +43,20 @@ export default function CentrulEducationalMantisPage() {
     setIsHeaderLoaded(true);
   };
 
+  useEffect(() => {
+    if (isHeaderLoaded) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsHeaderLoaded(true);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [isHeaderLoaded]);
+
   return (
     <>
       <NavbarSite>
@@ -57,17 +71,17 @@ export default function CentrulEducationalMantisPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: isHeaderLoaded ? 1 : 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"
+          className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8"
         >
           {/* Secțiunea 1: Galerie Foto (Vizual) */}
           <motion.section
-            className="mb-12" // M-am asigurat că este mai mult spațiu înainte de galeria foto
+            className="mb-12 rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
           >
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 border-b pb-2">
+            <h2 className="mb-6 border-b border-mantis-green-100 pb-2 text-3xl font-bold text-mantis-bark dark:text-white">
               Spațiul Nostru
             </h2>
             <motion.div
@@ -118,17 +132,17 @@ export default function CentrulEducationalMantisPage() {
 
           {/* NOUA SECȚIUNE: Detalii Facilități */}
           <motion.section
-            className="mb-20 pt-8" // Spațiu suplimentar
+            className="mb-20 rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
           >
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 border-b pb-2">
+            <h2 className="mb-6 border-b border-mantis-green-100 pb-2 text-3xl font-bold text-mantis-bark dark:text-white">
               Facilități și Echipamente
             </h2>
             <motion.div
-              className="text-lg text-gray-700 dark:text-gray-300 space-y-4 md:flex md:gap-12"
+              className="space-y-4 text-lg text-mantis-bark/80 dark:text-gray-300 md:flex md:gap-12"
               variants={containerVariants}
             >
               <motion.p className="md:w-1/2" variants={itemVariants}>
@@ -139,36 +153,36 @@ export default function CentrulEducationalMantisPage() {
               </motion.p>
 
               <motion.div className="md:w-1/2" variants={itemVariants}>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-mantis-bark dark:text-white">
                   Echipamente cheie:
                 </h3>
-                <ul className="list-disc list-inside space-y-2 text-indigo-700 dark:text-indigo-400 marker:text-indigo-500">
+                <ul className="list-disc list-inside space-y-2 text-mantis-green-700 marker:text-mantis-leaf-400 dark:text-mantis-leaf-300">
                   <li>
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <span className="text-mantis-bark/80 dark:text-gray-300">
                       Sălă de clasă dotată cu **tehnologie interactivă** și
                       Wi-Fi.
                     </span>
                   </li>
                   <li>
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <span className="text-mantis-bark/80 dark:text-gray-300">
                       Echipamente de **observație în natură** (binocluri, lupe,
                       seturi de colectare).
                     </span>
                   </li>
                   <li>
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <span className="text-mantis-bark/80 dark:text-gray-300">
                       Acces la **laborator de microscopie** pentru studiul
                       detaliat al probelor.
                     </span>
                   </li>
                   <li>
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <span className="text-mantis-bark/80 dark:text-gray-300">
                       Curte spațioasă și proximitatea pădurii pentru
                       **activități de teren**.
                     </span>
                   </li>
                   <li>
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <span className="text-mantis-bark/80 dark:text-gray-300">
                       Spații de cazare și masă (la cerere).
                     </span>
                   </li>
@@ -183,8 +197,9 @@ export default function CentrulEducationalMantisPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
+            className="rounded-3xl bg-white/80 p-6 shadow-mantis-card backdrop-blur-sm sm:p-10"
           >
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 border-b pb-2">
+            <h2 className="mb-6 border-b border-mantis-green-100 pb-2 text-3xl font-bold text-mantis-bark dark:text-white">
               Unde Ne Găsiți
             </h2>
 
@@ -197,11 +212,11 @@ export default function CentrulEducationalMantisPage() {
                 className="md:w-1/2 space-y-4"
                 variants={itemVariants}
               >
-                <h3 className="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 flex items-center">
+                <h3 className="flex items-center text-2xl font-semibold text-mantis-green-700 dark:text-mantis-leaf-300">
                   <MapPin className="w-6 h-6 mr-2" />
                   Adresa Completă:
                 </h3>
-                <address className="not-italic text-lg text-gray-700 dark:text-gray-300">
+                <address className="not-italic text-lg text-mantis-bark/80 dark:text-gray-300">
                   {LOCATIE_MANTIS.ADRESA}
                 </address>
 
@@ -210,7 +225,7 @@ export default function CentrulEducationalMantisPage() {
                   href={LOCATIE_MANTIS.LINK_GMAPS}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md mt-4"
+                  className="mt-4 inline-flex items-center rounded-full bg-mantis-green-600 px-6 py-3 text-white shadow-mantis-soft transition duration-300 hover:bg-mantis-green-700"
                 >
                   Navighează pe Google Maps
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -233,7 +248,7 @@ export default function CentrulEducationalMantisPage() {
                   className="object-cover cursor-pointer"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                  <span className="text-white text-xl font-bold p-4 bg-indigo-600/80 rounded-lg">
+                  <span className="rounded-lg bg-mantis-green-600/80 p-4 text-xl font-bold text-white">
                     Click pentru Navigare
                   </span>
                 </div>
