@@ -5,14 +5,13 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
   MobileAccordion,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { SocialIcon } from "react-social-icons";
+import Link from "next/link";
 import SocialBar from "./SocialBar";
 
 export default function NavbarSite({
@@ -24,6 +23,10 @@ export default function NavbarSite({
     {
       name: "Acasă",
       link: "/",
+      children: [
+        { name: "Acasă", link: "/" },
+        { name: "Despre noi", link: "/#despre" },
+      ],
     },
     {
       name: "Educație",
@@ -50,7 +53,7 @@ export default function NavbarSite({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-gradient-to-b from-mantis-cream/95 via-mantis-cream/80 to-transparent">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
@@ -74,22 +77,19 @@ export default function NavbarSite({
             />
           </MobileNavHeader>
 
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          >
+          <MobileNavMenu isOpen={isMobileMenuOpen}>
             {navItems.map((item, idx) => {
               const hasChildren = !!item.children?.length;
               if (!hasChildren) {
                 return (
-                  <a
+                  <Link
                     key={`m-${idx}`}
                     href={item.link}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full rounded-md px-2 py-2 text-left text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                    className="w-full rounded-md px-2 py-2 text-left text-mantis-green-700 transition-colors hover:bg-mantis-cream/80 hover:text-mantis-green-800 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 );
               }
 
