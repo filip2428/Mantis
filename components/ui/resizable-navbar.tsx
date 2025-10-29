@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -360,7 +361,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
-      <img
+      <Image
         src="/SiglaMantisVerde.png"
         alt="logo"
         width={68}

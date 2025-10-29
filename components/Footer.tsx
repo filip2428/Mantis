@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Facebook, Instagram, MapPin } from "lucide-react";
 
 interface FooterProps {
@@ -38,16 +39,18 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
               href="/"
               className="inline-flex items-center justify-center rounded-2xl bg-white/12 p-4 shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
             >
-              <img
+              <Image
                 className="h-32 w-auto"
                 src={logoSrc}
                 alt={`${brandName} Logo`}
+                width={128}
+                height={128}
               />
             </Link>
             <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
               în natură.
-            </p> */}
+            </p>
           </div>
 
           {/* Coloana 2: Link-uri Rapide (Navigație) */}
