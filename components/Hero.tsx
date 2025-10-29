@@ -31,7 +31,8 @@ export default function Hero() {
     const pasiuneSection = document.getElementById("pasiune-pentru-cunoastere");
     const aboutSection = document.getElementById("about-us");
 
-    if (!pasiuneSection && !aboutSection) {
+    if (!pasiuneSection || !aboutSection) {
+      // Modificăm condiția pentru a verifica ambele secțiuni
       return;
     }
 
@@ -39,11 +40,35 @@ export default function Hero() {
       window.clearTimeout(scrollTimeoutRef.current);
     }
 
-    pasiuneSection?.scrollIntoView({ behavior: "smooth", block: "center" });
+    // PASUL 1: Primul Scroll (rămâne neschimbat)
+    // Se derulează la secțiunea "pasiune-pentru-cunoastere", centrat
+    pasiuneSection.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // PASUL 2: Al Doilea Scroll (modificare)
+    // Folosim setTimeout pentru a aștepta primul scroll și animația
+    const ANIMATION_DURATION_MS = 1500; // Poți ajusta această valoare.
 
     scrollTimeoutRef.current = window.setTimeout(() => {
-      aboutSection?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 2400);
+      // 1. Calculăm poziția secțiunii "about-us"
+      const rect = aboutSection.getBoundingClientRect();
+
+      // 2. Calculăm poziția absolută de scroll
+      // window.scrollY este poziția curentă de scroll a ferestrei
+      // rect.top este distanța de la partea de sus a viewport-ului la secțiune
+      const targetScrollPosition = window.scrollY + rect.top;
+
+      // 3. Adăugăm un OFFSET (decalaj) în pixeli pentru a opri scroll-ul mai jos
+      // De exemplu, un offset de 50 de pixeli va opri scroll-ul 50px deasupra
+      // poziției inițiale de "start" a secțiunii.
+      // Daca vrei sa se opreasca exact la sfarsitul textului, va trebui
+      // sa experimentezi cu aceasta valoare (pozitivă sau negativă).
+      const OFFSET_PX = -100; // Încearcă 0, apoi +30, -20 etc.
+
+      window.scrollTo({
+        top: targetScrollPosition + OFFSET_PX,
+        behavior: "smooth",
+      });
+    }, ANIMATION_DURATION_MS); // Durata pentru a permite animația + primul scroll
   }, []);
 
   useEffect(() => {
@@ -108,7 +133,11 @@ export default function Hero() {
               aria-hidden="true"
               className="mt-3 inline-flex h-12 w-12 items-center justify-center rounded-full border border-mantis-green-500/60 bg-white/80 shadow-mantis-soft"
               animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
               <svg
                 className="h-5 w-5 text-mantis-green-700"
