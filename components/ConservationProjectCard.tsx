@@ -92,100 +92,100 @@ export default function ConservationProjectCard({
       </motion.div>
 
       {/* MODALUL CU DETALII (și GALERIE PREVIZUALIZARE) */}
-      {isOpen && (
-        <AnimatePresence>
-          {/* Overlay */}
-          <motion.div
-            key="modal-overlay-cons"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm"
-          />
-          {/* Fereastra Modalului */}
-          <motion.div
-            key="modal-window-cons"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-4 z-[210] flex flex-col overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] md:inset-auto md:left-1/2 md:top-1/2 md:m-auto md:h-auto md:w-full md:max-h-[90vh] md:max-w-4xl md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div className="relative flex-shrink-0">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4 z-10 rounded-full bg-white/90 p-2 text-mantis-bark shadow-sm transition-colors hover:bg-white dark:bg-[#102a1b]/80 dark:text-white"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-
-            <div className="flex-1 overflow-y-auto p-6 md:p-8">
-              <h2 className="mb-4 text-3xl font-heading font-bold text-mantis-bark md:text-4xl dark:text-white">
-                {title}
-              </h2>
-
-              {/* Mini-Carusel de Previzualizare Orizontal */}
-              {galleryImages.length > 0 && (
-                <div className="mb-8 space-y-4">
-                  <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
-                    Galerie Proiect
-                  </h3>
-
-                  <div className="w-full">
-                    <Swiper
-                      modules={[FreeMode, Autoplay]}
-                      slidesPerView={5} // Ajustat pentru a arăta 5 imagini complete
-                      spaceBetween={8}
-                      freeMode={true} // Scrolling fluid
-                      autoplay={{
-                        delay: 1500,
-                        disableOnInteraction: false,
-                      }}
-                      className="w-full"
-                    >
-                      {galleryImages.map((src, index) => (
-                        <SwiperSlide key={index}>
-                          <div
-                            onClick={() => openLightbox(index)} // Deschide Lightbox-ul Full-Screen
-                            className="relative h-24 w-36 overflow-hidden rounded-lg shadow-md cursor-pointer group flex-shrink-0"
-                          >
-                            <Image
-                              src={src}
-                              alt={`${title} imagine ${index + 1}`}
-                              fill
-                              sizes="30vw"
-                              className="object-cover transition-transform duration-300 group-hover:scale-110"
-                              loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                              <span className="text-white text-xs font-bold">
-                                Zoom
-                              </span>
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  </div>
-                </div>
-              )}
-
-              {/* Secțiunea DESCRIERE PROIECT */}
-              <div className="prose mt-8 max-w-none text-mantis-bark/80 prose-headings:text-mantis-bark dark:prose-invert">
-                <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
-                  Detalii Proiect
-                </h3>
-                <p className="text-lg whitespace-pre-line">
-                  {fullDescription}
-                </p>
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              key="modal-overlay-cons"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm"
+            />
+            {/* Fereastra Modalului */}
+            <motion.div
+              key="modal-window-cons"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="fixed inset-4 z-[210] flex flex-col overflow-hidden rounded-3xl bg-mantis-cream shadow-mantis-soft dark:bg-[#143921] md:inset-auto md:left-1/2 md:top-1/2 md:m-auto md:h-auto md:w-full md:max-h-[90vh] md:max-w-4xl md:-translate-x-1/2 md:-translate-y-1/2"
+            >
+              <div className="relative flex-shrink-0">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-mantis-bark shadow-sm transition-colors hover:bg-white dark:bg-[#102a1b]/80 dark:text-white"
+                >
+                  <X className="h-6 w-6" />
+                </button>
               </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      )}
+
+              <div className="flex-1 overflow-y-auto p-6 md:p-8">
+                <h2 className="mb-4 text-3xl font-heading font-bold text-mantis-bark md:text-4xl dark:text-white">
+                  {title}
+                </h2>
+
+                {/* Mini-Carusel de Previzualizare Orizontal */}
+                {galleryImages.length > 0 && (
+                  <div className="mb-8 space-y-4">
+                    <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
+                      Galerie Proiect
+                    </h3>
+
+                    <div className="w-full">
+                      <Swiper
+                        modules={[FreeMode, Autoplay]}
+                        slidesPerView={5} // Ajustat pentru a arăta 5 imagini complete
+                        spaceBetween={8}
+                        freeMode={true} // Scrolling fluid
+                        autoplay={{
+                          delay: 1500,
+                          disableOnInteraction: false,
+                        }}
+                        className="w-full"
+                      >
+                        {galleryImages.map((src, index) => (
+                          <SwiperSlide key={index}>
+                            <div
+                              onClick={() => openLightbox(index)} // Deschide Lightbox-ul Full-Screen
+                              className="group relative h-24 w-36 cursor-pointer overflow-hidden rounded-lg shadow-md flex-shrink-0"
+                            >
+                              <Image
+                                src={src}
+                                alt={`${title} imagine ${index + 1}`}
+                                fill
+                                sizes="30vw"
+                                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                                loading="lazy"
+                              />
+                              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+                                <span className="text-xs font-bold text-white">
+                                  Zoom
+                                </span>
+                              </div>
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </div>
+                  </div>
+                )}
+
+                {/* Secțiunea DESCRIERE PROIECT */}
+                <div className="prose mt-8 max-w-none text-mantis-bark/80 prose-headings:text-mantis-bark dark:prose-invert">
+                  <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
+                    Detalii Proiect
+                  </h3>
+                  <p className="whitespace-pre-line text-lg">
+                    {fullDescription}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* LIGHTBOX / SLIDER FULL-SCREEN (Performant și Scalabil) */}
       <AnimatePresence>
