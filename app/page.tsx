@@ -9,8 +9,12 @@ export default function Home() {
     <>
       <NavbarSite>
         <Hero />
-        <TextReveal>Pasiune pentru cunoaștere</TextReveal>
-        <AboutUs />
+        <section id="pasiune-pentru-cunoastere">
+          <TextReveal>Pasiune pentru cunoaștere</TextReveal>
+        </section>
+        <section id="about-us">
+          <AboutUs />
+        </section>
         <ProgrameSlider />
       </NavbarSite>
       <Footer brandName="Mantis" logoSrc="/SiglaMantis+slogan.png" />
