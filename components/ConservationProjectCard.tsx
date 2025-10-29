@@ -223,15 +223,13 @@ export default function ConservationProjectCard({
               >
                 {galleryImages.map((src, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      {/* Folosim <img> cu data-src și clasa Swiper pentru Lazy Loading Scalabil */}
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        // Folosim src ca fallback, dar Swiper se bazează pe data-src
+                    <div className="relative flex h-full w-full items-center justify-center">
+                      <Image
                         src={src}
                         alt={`${title} imagine mărită ${index + 1}`}
-                        data-src={src} // CRUCIAL: Swiper preia imaginea de aici
-                        className="object-contain swiper-lazy w-auto h-full max-h-full max-w-full"
+                        fill
+                        sizes="100vw"
+                        className="h-full w-full max-h-full max-w-full object-contain"
                         loading="lazy"
                       />
 
