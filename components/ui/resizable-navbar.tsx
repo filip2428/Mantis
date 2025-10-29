@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -362,12 +363,13 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-2 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
-      <img
+      <Image
         src="/SiglaMantisVerde.png"
         alt="logo"
         width={62}
         height={62}
         className="drop-shadow-[0_12px_20px_rgba(47,109,71,0.25)]"
+        priority
       />
       {/* <span className="hidden text-base font-heading tracking-tight text-mantis-green-700 sm:inline">
         Asociația Mantis

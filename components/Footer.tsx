@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, Facebook, Instagram, MapPin } from "lucide-react";
 
@@ -38,11 +39,16 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
               href="/"
               className="inline-flex items-center justify-center rounded-2xl bg-white/70  shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
             >
-              <img
-                className="h-50 w-auto"
-                src={logoSrc}
-                alt={`${brandName} Logo`}
-              />
+              <div className="relative h-20 w-40">
+                <Image
+                  src={logoSrc}
+                  alt={`${brandName} Logo`}
+                  fill
+                  sizes="160px"
+                  className="h-full w-full object-contain"
+                  priority
+                />
+              </div>
             </Link>
             {/* <p className="max-w-xs pt-2 text-sm text-white/85 font-sans">
               Mantis: Cultivăm curiozitatea și caracterul prin experiențe reale
