@@ -47,6 +47,20 @@ export default function ContactPage() {
   });
 
   useEffect(() => {
+    if (isHeaderLoaded) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsHeaderLoaded(true);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [isHeaderLoaded]);
+
+  useEffect(() => {
     if (!programFromQuery) {
       return;
     }

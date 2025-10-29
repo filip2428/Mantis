@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarSite from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -42,6 +42,20 @@ export default function CentrulEducationalMantisPage() {
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
   };
+
+  useEffect(() => {
+    if (isHeaderLoaded) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsHeaderLoaded(true);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [isHeaderLoaded]);
 
   return (
     <>

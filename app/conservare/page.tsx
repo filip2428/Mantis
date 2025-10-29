@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarSite from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AnimatedPageHeader from "@/components/AnimatedPageHeader";
@@ -95,6 +95,20 @@ export default function ConservarePage() {
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
   };
+
+  useEffect(() => {
+    if (isHeaderLoaded) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsHeaderLoaded(true);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [isHeaderLoaded]);
 
   return (
     <>

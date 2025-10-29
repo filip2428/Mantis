@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarSite from "@/components/NavBar";
 import ProgramEducational from "@/components/ProgramEducational";
 import Footer from "@/components/Footer";
@@ -32,6 +32,20 @@ export default function ProgrameEducaționale() {
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
   };
+
+  useEffect(() => {
+    if (isHeaderLoaded) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsHeaderLoaded(true);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [isHeaderLoaded]);
 
   return (
     <>
