@@ -76,6 +76,7 @@ export default function ProgrameEducaționale() {
                     duration: "6 Săptămâni",
                     targetAudience: "Elevi de liceu",
                   }}
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Conservarea Biodiversității” pentru un grup de elevi de liceu. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de 6 săptămâni și cu pașii de înscriere?"
                 />
               </motion.div>
 
@@ -90,6 +91,7 @@ export default function ProgrameEducaționale() {
                     duration: "4 Săptămâni",
                     targetAudience: "Elevi de gimnaziu",
                   }}
+                  contactMessage="Bună ziua! Sunt interesat(ă) de programul „P2: Ecologia Urbană” pentru elevi de gimnaziu. Ați putea să-mi trimiteți programul complet pentru cele 4 săptămâni și condițiile de participare?"
                 />
               </motion.div>
 
@@ -104,6 +106,7 @@ export default function ProgrameEducaționale() {
                     duration: "8 Sesiuni",
                     targetAudience: "Elevi de școală primară",
                   }}
+                  contactMessage="Salut! Mi-ar plăcea să programez activitatea „P3: Vânătorii de Insecte” pentru o clasă de școală primară. Îmi puteți spune ce date sunt disponibile pentru cele 8 sesiuni și ce materiale trebuie pregătite?"
                 />
               </motion.div>
 
@@ -117,6 +120,7 @@ export default function ProgrameEducaționale() {
                     duration: "3 Zile (Weekend)",
                     targetAudience: "Elevi de liceu și adulți",
                   }}
+                  contactMessage="Bună! Aș vrea să rezerv programul „P4: Supraviețuire & Munte” pentru un grup mixt de liceeni și adulți, pe durata unui weekend. Ce perioade libere aveți și care sunt condițiile logistice?"
                 />
               </motion.div>
 
@@ -130,6 +134,7 @@ export default function ProgrameEducaționale() {
                     duration: "5 Zile (Tabără)",
                     targetAudience: "Gimnaziu & Liceu",
                   }}
+                  contactMessage="Bună ziua! Suntem interesați de tabăra „P5: Explorări Litorale” pentru elevi de gimnaziu și liceu. Ne puteți oferi detalii despre calendarul disponibil pentru cele 5 zile și costurile implicate?"
                 />
               </motion.div>
 
@@ -143,6 +148,7 @@ export default function ProgrameEducaționale() {
                     duration: "4 Sesiuni",
                     targetAudience: "Elevi de școală primară",
                   }}
+                  contactMessage="Salutare! Aș dori să rezerv programul „P6: Detectivii Pădurii” pentru elevi de școală primară. Ce perioade aveți disponibile pentru cele 4 sesiuni și care sunt pașii următori pentru confirmare?"
                 />
               </motion.div>
             </div>
