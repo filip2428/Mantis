@@ -6,6 +6,7 @@ import ProgramEducational from "@/components/ProgramEducational";
 import Footer from "@/components/Footer";
 import AnimatedPageHeader from "@/components/AnimatedPageHeader";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // =======================================================
 // VARIANTE DE ANIMAȚIE (Scroll Reveal pentru Carduri)
@@ -28,6 +29,8 @@ const cardItemVariants = {
 
 export default function ProgrameEducaționale() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
+  const contactCtaMessage =
+    "Bună ziua! Sunt interesat(ă) de programele educaționale Mantis și aș dori mai multe detalii despre înscriere și colaborare.";
 
   const handleHeaderAnimationComplete = () => {
     setIsHeaderLoaded(true);
@@ -143,6 +146,30 @@ export default function ProgrameEducaționale() {
                 />
               </motion.div>
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mt-12 max-w-4xl rounded-3xl bg-mantis-green-50/80 p-10 text-center shadow-mantis-card"
+          >
+            <h2 className="text-3xl font-heading font-bold text-mantis-bark mb-4">
+              Pregătit să colaborăm?
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-mantis-bark/80">
+              Spune-ne ce program te interesează și îți oferim rapid toate detaliile despre calendar, logistică și pașii de înscriere.
+            </p>
+            <Link
+              href={{
+                pathname: "/contact",
+                query: { message: contactCtaMessage },
+              }}
+              className="inline-flex items-center justify-center rounded-xl bg-mantis-green-600 px-8 py-3 text-lg font-semibold text-white shadow-mantis-soft transition hover:bg-mantis-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mantis-green-500"
+            >
+              Contactează-ne acum
+            </Link>
           </motion.div>
         </motion.div>
       </NavbarSite>
