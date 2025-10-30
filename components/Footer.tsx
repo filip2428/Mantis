@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
               href="/"
               className="inline-flex items-center justify-center rounded-2xl bg-white/70  shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
             >
-              <div className="relative h-20 w-40">
+              <div className="relative h-48 w-40">
                 <Image
                   src={logoSrc}
                   alt={`${brandName} Logo`}

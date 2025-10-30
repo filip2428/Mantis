@@ -42,27 +42,24 @@ export default function Hero() {
 
     // PASUL 1: Primul Scroll (rămâne neschimbat)
     // Se derulează la secțiunea "pasiune-pentru-cunoastere", centrat
-    pasiuneSection.scrollIntoView({ behavior: "smooth", block: "center" });
+    const rectPasiune = pasiuneSection.getBoundingClientRect();
+    const targetScrollPositionPasiune = window.scrollY + rectPasiune.top;
+    const offsetPasiune = 930; // Ajustează offset-ul după necesitate
+    window.scrollTo({
+      top: targetScrollPositionPasiune + offsetPasiune,
+      behavior: "smooth",
+    });
 
     // PASUL 2: Al Doilea Scroll (modificare)
     // Folosim setTimeout pentru a aștepta primul scroll și animația
-    const ANIMATION_DURATION_MS = 1500; // Poți ajusta această valoare.
+    const ANIMATION_DURATION_MS = 2000; // Poți ajusta această valoare.
 
     scrollTimeoutRef.current = window.setTimeout(() => {
       // 1. Calculăm poziția secțiunii "about-us"
       const rect = aboutSection.getBoundingClientRect();
 
-      // 2. Calculăm poziția absolută de scroll
-      // window.scrollY este poziția curentă de scroll a ferestrei
-      // rect.top este distanța de la partea de sus a viewport-ului la secțiune
       const targetScrollPosition = window.scrollY + rect.top;
-
-      // 3. Adăugăm un OFFSET (decalaj) în pixeli pentru a opri scroll-ul mai jos
-      // De exemplu, un offset de 50 de pixeli va opri scroll-ul 50px deasupra
-      // poziției inițiale de "start" a secțiunii.
-      // Daca vrei sa se opreasca exact la sfarsitul textului, va trebui
-      // sa experimentezi cu aceasta valoare (pozitivă sau negativă).
-      const OFFSET_PX = -100; // Încearcă 0, apoi +30, -20 etc.
+      const OFFSET_PX = -200; // Ajustează offset-ul după necesitate
 
       window.scrollTo({
         top: targetScrollPosition + OFFSET_PX,
