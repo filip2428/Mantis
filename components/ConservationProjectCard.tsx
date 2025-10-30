@@ -215,7 +215,7 @@ export default function ConservationProjectCard({
                 pagination={{ clickable: true }}
                 // Setări Lazy Loading Swiper
                 // preloadImages={false}
-                lazy={"true"} // Deși eroarea TS a fost fixată prin eliminarea din module, l-am lăsat ca string pentru a evita warning-urile HTML/React
+                // lazy={"true"} // Deși eroarea TS a fost fixată prin eliminarea din module, l-am lăsat ca string pentru a evita warning-urile HTML/React
                 className="w-full h-full"
                 loop={true}
                 // arrowkeys={true}
