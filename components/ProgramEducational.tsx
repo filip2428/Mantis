@@ -71,15 +71,16 @@ export default function ProgramCard({
         className="h-full w-full cursor-pointer overflow-hidden rounded-3xl bg-white shadow-mantis-card transition-shadow hover:shadow-mantis-soft dark:bg-[#143921] flex flex-col border border-mantis-green-100/60"
       >
         {imageSrc && (
-          <div className="relative h-48 w-full overflow-hidden bg-mantis-cream flex-shrink-0">
+          <div className="relative h-48 w-full overflow-hidden bg-mantis-cream flex-shrink-0 flex items-center justify-center">
+            {" "}
             <Image
               src={imageSrc}
-              alt={title}
-              // Proprietățile fill și sizes sunt esențiale pentru <Image>
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full h-full object-cover"
-              loading="lazy" // Lazy loading activat pentru cardurile din Grid
+              alt={title} // fill // <--- SE ȘTERGE ACEASTĂ PROPRIETATE
+              width={192} // Latimea maximă dorită (ex: 192px = 48 * 4)
+              height={192} // Inaltimea maximă dorită
+              sizes="(max-width: 768px) 100vw, 33vw" // Păstrează sizes
+              className="max-w-[100%] max-h-100%] object-contain" // <-- Modificat: max-w, max-h, object-contain
+              loading="lazy"
             />
           </div>
         )}
@@ -134,14 +135,15 @@ export default function ProgramCard({
           >
             <div className="relative flex-shrink-0">
               {imageSrc && (
-                <div className="h-64 w-full overflow-hidden bg-mantis-cream">
+                <div className="h-64 w-full overflow-hidden bg-white flex items-center justify-center">
                   <Image
                     src={imageSrc}
-                    alt={title}
-                    fill
+                    alt={title} // fill // <--- SE ȘTERGE ACEASTĂ PROPRIETATE
+                    width={256} // Latimea maximă dorită (ex: 256px = 64 * 4)
+                    height={256} // Inaltimea maximă dorită
                     sizes="50vw"
-                    className="w-full h-full object-cover"
-                    priority // Prioritate mare pentru imaginea din modal
+                    className="max-w-[120%] max-h-[120%] object-contain" // <-- Modificat: max-w, max-h, object-contain
+                    priority
                   />
                 </div>
               )}

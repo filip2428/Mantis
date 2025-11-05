@@ -63,92 +63,45 @@ export default function ProgrameEducaționale() {
             variants={cardContainerVariants}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* NOTE: Cardurile folosesc deja componenta ProgramEducational, care va fi stilizată. */}
-
-              {/* CARD 1 */}
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
-                  title="P1: Conservarea Biodiversității"
+                  title="P1: Biodivers - Exploratorii lumii vii"
                   description="Program axat pe studiul ecosistemelor locale, metode practice de conservare și monitorizarea faunei."
                   fullDescription="Participanții vor învăța tehnici de monitorizare a faunei, vor lua parte la expediții de teren în arii protejate și vor dezvolta proiecte de reîmpădurire. Ideal pentru viitorii biologi și ecologi."
-                  imageSrc="/poze-mantis/2.JPG"
+                  imageSrc="/logo-programe/P1.png"
                   details={{
-                    duration: "6 Săptămâni",
-                    targetAudience: "Elevi de liceu",
+                    duration: "1/2/3 zile",
+                    targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Conservarea Biodiversității” pentru un grup de elevi de liceu. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de 6 săptămâni și cu pașii de înscriere?"
-                />
-              </motion.div>
-
-              {/* CARD 2 */}
-              <motion.div variants={cardItemVariants}>
-                <ProgramEducational
-                  title="P2: Ecologia Urbană"
-                  description="Descoperă natura ascunsă în orașul tău! Program destinat elevilor de gimnaziu, axat pe impactul uman asupra mediului construit."
-                  fullDescription="Vom explora parcurile urbane, vom analiza calitatea aerului și a apei în zonele locuite și vom învăța cum să creăm spații verzi verticale și grădini comunitare."
-                  imageSrc="/poze-mantis/4.JPG"
-                  details={{
-                    duration: "4 Săptămâni",
-                    targetAudience: "Elevi de gimnaziu",
-                  }}
-                  contactMessage="Bună ziua! Sunt interesat(ă) de programul „P2: Ecologia Urbană” pentru elevi de gimnaziu. Ați putea să-mi trimiteți programul complet pentru cele 4 săptămâni și condițiile de participare?"
-                />
-              </motion.div>
-
-              {/* ... (restul cardurilor - doar structura este necesară aici) ... */}
-              <motion.div variants={cardItemVariants}>
-                <ProgramEducational
-                  title="P3: Vânătorii de Insecte"
-                  description="O introducere distractivă în lumea entomologiei. Participanții de școală primară învață despre rolul vital al micilor viețuitoare."
-                  fullDescription="Copiii vor învăța despre rolul vital al insectelor, vor construi hoteluri pentru albine și fluturi și vor folosi microscoape simple pentru a studia micro-organismele din sol."
-                  imageSrc="/poze-mantis/30.JPG"
-                  details={{
-                    duration: "8 Sesiuni",
-                    targetAudience: "Elevi de școală primară",
-                  }}
-                  contactMessage="Salut! Mi-ar plăcea să programez activitatea „P3: Vânătorii de Insecte” pentru o clasă de școală primară. Îmi puteți spune ce date sunt disponibile pentru cele 8 sesiuni și ce materiale trebuie pregătite?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Biodivers - Exploratorii lumii vii” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
                 />
               </motion.div>
 
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
-                  title="P4: Supraviețuire & Munte"
-                  description="Excursii și ateliere practice de orientare, prim-ajutor și supraviețuire pe termen scurt în medii montane diverse."
-                  fullDescription="Învață să navighezi fără GPS, să amenajezi un adăpost de urgență și să filtrezi apa. Program intensiv de dezvoltare a abilităților practice și a respectului pentru natură."
-                  imageSrc="/poze-mantis/31.JPG"
+                  title="P2: Viața în inele - Tainele copacilor"
+                  description="Program dedicat înțelegerii rolului copacilor în ecosisteme, tehnici de plantare și îngrijire a pădurilor."
+                  fullDescription="Participanții vor învăța despre importanța copacilor, vor participa la sesiuni practice de plantare și vor dezvolta proiecte de conservare a pădurilor. Ideal pentru pasionații de natură și viitorii silvicultori."
+                  imageSrc="/logo-programe/P2.png"
                   details={{
-                    duration: "3 Zile (Weekend)",
-                    targetAudience: "Elevi de liceu și adulți",
+                    duration: "1/2/3 zile",
+                    targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună! Aș vrea să rezerv programul „P4: Supraviețuire & Munte” pentru un grup mixt de liceeni și adulți, pe durata unui weekend. Ce perioade libere aveți și care sunt condițiile logistice?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P2: Viața în inele - Tainele copacilor” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
                 />
               </motion.div>
 
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
-                  title="P5: Explorări Litorale"
-                  description="Studiul ecosistemelor de coastă, impactul poluării marine și proiecte de protecție a mediului în zona Mării Negre."
-                  fullDescription="Vom colecta mostre de apă, vom face observații asupra vieții marine și vom participa la acțiuni de curățare a plajelor. Oportunitate de a înțelege fragilitatea ecosistemelor acvatice."
-                  imageSrc="/poze-mantis/22.JPG"
+                  title="P3: Drumul sevei și al sângelui"
+                  description="Program care explorează conexiunea dintre plante și animale, rolul lor în ecosisteme și metode de conservare integrate."
+                  fullDescription="Participanții vor învăța despre interdependența dintre plante și animale, vor lua parte la activități de teren și vor dezvolta proiecte de conservare holistică. Ideal pentru cei interesați de ecologie și biologie."
+                  imageSrc="/logo-programe/P3.png"
                   details={{
-                    duration: "5 Zile (Tabără)",
-                    targetAudience: "Gimnaziu & Liceu",
+                    duration: "1/2/3 zile",
+                    targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună ziua! Suntem interesați de tabăra „P5: Explorări Litorale” pentru elevi de gimnaziu și liceu. Ne puteți oferi detalii despre calendarul disponibil pentru cele 5 zile și costurile implicate?"
-                />
-              </motion.div>
-
-              <motion.div variants={cardItemVariants}>
-                <ProgramEducational
-                  title="P6: Detectivii Pădurii"
-                  description="Jocuri și activități interactive pentru cei mici, axate pe recunoașterea copacilor, a urmelor de animale și a sunetelor naturii."
-                  fullDescription="O introducere jucăușă în silvicultură și cunoașterea naturii. Folosim povești și activități practice pentru a stimula curiozitatea copiilor."
-                  imageSrc="/poze-mantis/11.JPG"
-                  details={{
-                    duration: "4 Sesiuni",
-                    targetAudience: "Elevi de școală primară",
-                  }}
-                  contactMessage="Salutare! Aș dori să rezerv programul „P6: Detectivii Pădurii” pentru elevi de școală primară. Ce perioade aveți disponibile pentru cele 4 sesiuni și care sunt pașii următori pentru confirmare?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
                 />
               </motion.div>
             </div>
@@ -165,7 +118,8 @@ export default function ProgrameEducaționale() {
               Pregătit să colaborăm?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-mantis-bark/80">
-              Spune-ne ce program te interesează și îți oferim rapid toate detaliile despre calendar, logistică și pașii de înscriere.
+              Spune-ne ce program te interesează și îți oferim rapid toate
+              detaliile despre calendar, logistică și pașii de înscriere.
             </p>
             <Link
               href={{

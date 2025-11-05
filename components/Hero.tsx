@@ -32,7 +32,6 @@ export default function Hero() {
     const aboutSection = document.getElementById("about-us");
 
     if (!pasiuneSection || !aboutSection) {
-      // Modificăm condiția pentru a verifica ambele secțiuni
       return;
     }
 
@@ -40,33 +39,36 @@ export default function Hero() {
       window.clearTimeout(scrollTimeoutRef.current);
     }
 
-    // PASUL 1: Primul Scroll (rămâne neschimbat)
-    // Se derulează la secțiunea "pasiune-pentru-cunoastere", centrat
-    const rectPasiune = pasiuneSection.getBoundingClientRect();
-    const targetScrollPositionPasiune = window.scrollY + rectPasiune.top;
-    const offsetPasiune = 930; // Ajustează offset-ul după necesitate
-    window.scrollTo({
-      top: targetScrollPositionPasiune + offsetPasiune,
-      behavior: "smooth",
-    });
+    // --- ÎNCEPUTUL MODIFICĂRII ---
 
-    // PASUL 2: Al Doilea Scroll (modificare)
-    // Folosim setTimeout pentru a aștepta primul scroll și animația
-    const ANIMATION_DURATION_MS = 2000; // Poți ajusta această valoare.
+    // 1. Detectăm dacă suntem pe mobil.
+    // Folosim 768px ca breakpoint (standardul pentru 'md:' în Tailwind)
+    const isMobile = window.innerWidth < 768;
+
+    // 2. Setăm valorile în funcție de dispozitiv
+    // POȚI AJUSTA ACESTE VALORI
+    const offsetPasiune = isMobile ? 830 : 930;
+    const OFFSET_PX = isMobile ? -100 : -200;
+    const ANIMATION_DURATION_MS = isMobile ? 1500 : 2000; // Opțional: durată diferită // PASUL 1: Primul Scroll // Folosește acum variabilele dinamice
+
+    // --- SFÂRȘITUL MODIFICĂRII ---
+
+    const rectPasiune = pasiuneSection.getBoundingClientRect();
+    const targetScrollPositionPasiune = window.scrollY + rectPasiune.top; // const offsetPasiune = 850; // <--- SE ȘTERGE LINIA VECHE
+    window.scrollTo({
+      top: targetScrollPositionPasiune + offsetPasiune, // <--- SE FOLOSEȘTE NOUA VARIABILĂ
+      behavior: "smooth",
+    }); // PASUL 2: Al Doilea Scroll // const ANIMATION_DURATION_MS = 2000; // <--- SE ȘTERGE LINIA VECHE
 
     scrollTimeoutRef.current = window.setTimeout(() => {
-      // 1. Calculăm poziția secțiunii "about-us"
       const rect = aboutSection.getBoundingClientRect();
-
-      const targetScrollPosition = window.scrollY + rect.top;
-      const OFFSET_PX = -200; // Ajustează offset-ul după necesitate
-
+      const targetScrollPosition = window.scrollY + rect.top; // const OFFSET_PX = -200; // <--- SE ȘTERGE LINIA VECHE
       window.scrollTo({
-        top: targetScrollPosition + OFFSET_PX,
+        top: targetScrollPosition + OFFSET_PX, // <--- SE FOLOSEȘTE NOUA VARIABILĂ
         behavior: "smooth",
       });
-    }, ANIMATION_DURATION_MS); // Durata pentru a permite animația + primul scroll
-  }, []);
+    }, ANIMATION_DURATION_MS); // <--- SE FOLOSEȘTE NOUA VARIABILĂ
+  }, []); // Nu e nevoie să schimbi array-ul de dependențe
 
   useEffect(() => {
     return () => {

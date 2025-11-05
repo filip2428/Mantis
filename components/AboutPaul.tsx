@@ -34,26 +34,15 @@ export default function Author({
         <div className="relative md:col-span-5">
           {/* raport 4:5 pe mobil; pe desktop întinde pe înălțimea cardului */}
           <div className="relative aspect-[4/5] md:aspect-auto md:h-full">
-            {/* <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              priority={false}
-              className={clsx(
-                "object-cover",
-                "md:rounded-none", // muchie dreaptă comună
-                "rounded-t-2xl md:rounded-l-2xl" // colțuri pe mobil & stânga
-              )} 
-            /> */}
-            <DirectionAwareHover
-              className={clsx(
-                "object-cover",
+            <DirectionAwareHover // 1. Forțezi wrapper-ul să umple părintele
+              className="h-full w-full"
+              imageUrl={imageSrc}
+              imageAlt={imageAlt} // 2. (PRESUNUPUNERE) Folosești prop-ul corect pentru imaginea internă
+              imageClassName={clsx(
+                "h-full w-full object-cover", // Asigură-te că și imaginea umple spațiul
                 "md:rounded-none",
                 "rounded-t-2xl md:rounded-l-2xl"
               )}
-              imageUrl={imageSrc}
-              imageAlt={imageAlt}
             >
               <p>Paul Hac</p>
             </DirectionAwareHover>
