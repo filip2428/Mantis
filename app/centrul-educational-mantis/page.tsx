@@ -80,7 +80,7 @@ export default function CentrulEducationalMantisPage() {
                 variants={itemVariants}
               >
                 <Image
-                  src="/poze-mantis/centru-1.JPG"
+                  src="/poze-mantis/centru-1.jpg"
                   alt="Vedere generală Centru Mantis"
                   fill
                   sizes="(max-width: 768px) 100vw, 66vw"
@@ -93,7 +93,7 @@ export default function CentrulEducationalMantisPage() {
                   variants={itemVariants}
                 >
                   <Image
-                    src="/poze-mantis/centru-2.JPG"
+                    src="/poze-mantis/centru-2.jpg"
                     alt="Interior Centru Mantis"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -105,7 +105,7 @@ export default function CentrulEducationalMantisPage() {
                   variants={itemVariants}
                 >
                   <Image
-                    src="/poze-mantis/centru-3.JPG"
+                    src="/poze-mantis/centru-3.jpg"
                     alt="Curte Centru Mantis"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
