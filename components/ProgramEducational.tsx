@@ -79,7 +79,7 @@ export default function ProgramCard({
               width={192} // Latimea maximă dorită (ex: 192px = 48 * 4)
               height={192} // Inaltimea maximă dorită
               sizes="(max-width: 768px) 100vw, 33vw" // Păstrează sizes
-              className="max-w-[100%] max-h-100%] object-contain" // <-- Modificat: max-w, max-h, object-contain
+              className="max-w-[80%] max-h-80%] object-contain" // <-- Modificat: max-w, max-h, object-contain
               loading="lazy"
             />
           </div>

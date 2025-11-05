@@ -68,7 +68,7 @@ export default function ProgrameEducaționale() {
                   title="P1: Biodivers - Exploratorii lumii vii"
                   description="Program axat pe studiul ecosistemelor locale, metode practice de conservare și monitorizarea faunei."
                   fullDescription="Participanții vor învăța tehnici de monitorizare a faunei, vor lua parte la expediții de teren în arii protejate și vor dezvolta proiecte de reîmpădurire. Ideal pentru viitorii biologi și ecologi."
-                  imageSrc="/logo-programe/P1.png"
+                  imageSrc="/logo-programe/P1-copy.png"
                   details={{
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",
@@ -82,7 +82,7 @@ export default function ProgrameEducaționale() {
                   title="P2: Viața în inele - Tainele copacilor"
                   description="Program dedicat înțelegerii rolului copacilor în ecosisteme, tehnici de plantare și îngrijire a pădurilor."
                   fullDescription="Participanții vor învăța despre importanța copacilor, vor participa la sesiuni practice de plantare și vor dezvolta proiecte de conservare a pădurilor. Ideal pentru pasionații de natură și viitorii silvicultori."
-                  imageSrc="/logo-programe/P2.png"
+                  imageSrc="/logo-programe/P2-copy.png"
                   details={{
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",
@@ -96,7 +96,7 @@ export default function ProgrameEducaționale() {
                   title="P3: Drumul sevei și al sângelui"
                   description="Program care explorează conexiunea dintre plante și animale, rolul lor în ecosisteme și metode de conservare integrate."
                   fullDescription="Participanții vor învăța despre interdependența dintre plante și animale, vor lua parte la activități de teren și vor dezvolta proiecte de conservare holistică. Ideal pentru cei interesați de ecologie și biologie."
-                  imageSrc="/logo-programe/P3.png"
+                  imageSrc="/logo-programe/P3-copy.png"
                   details={{
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",

@@ -364,7 +364,7 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-2 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
       <Image
-        src="/SiglaMantisVerde.png"
+        src="/SiglaMantisVerde - Copy.png"
         alt="logo"
         width={62}
         height={62}

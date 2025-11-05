@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
                   src={logoSrc}
                   alt={`${brandName} Logo`}
                   fill
-                  sizes="160px"
+                  sizes="400px"
                   className="h-full w-full object-contain"
                   priority
                 />
