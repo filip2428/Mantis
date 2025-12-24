@@ -7,6 +7,8 @@ import Image from "next/image";
 import { MapPin, ArrowRight } from "lucide-react";
 import AnimatedPageHeader from "@/components/AnimatedPageHeader";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 // Datele de bază pentru locație (TE ROG SĂ LE ACTUALIZEZI)
 const LOCATIE_MANTIS = {
@@ -74,43 +76,108 @@ export default function CentrulEducationalMantisPage() {
               className="grid grid-cols-1 md:grid-cols-3 gap-6"
               variants={containerVariants}
             >
-              {/* Imaginile (Rămân neschimbate) */}
+              {/* Slider 1: Imaginea Mare */}
               <motion.div
                 className="md:col-span-2 relative h-96 rounded-xl overflow-hidden shadow-lg"
                 variants={itemVariants}
               >
-                <Image
-                  src="/poze-mantis/centru-1.jpg"
-                  alt="Vedere generală Centru Mantis"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  className="object-cover"
-                />
+                <Swiper
+                  modules={[Autoplay]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  className="w-full h-full"
+                >
+                  <SwiperSlide>
+                    <Image
+                      src="/poze-mantis/centru-1.jpg"
+                      alt="Vedere generală Centru Mantis"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
+                      className="object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/poze-mantis/terenuri-sportive.jpeg"
+                      alt="Interior Centru Mantis"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
+                      className="object-cover"
+                    />
+                  </SwiperSlide>
+                </Swiper>
               </motion.div>
               <div className="grid grid-cols-1 gap-6">
+                {/* Slider 2: Prima Imagine Mică */}
                 <motion.div
                   className="relative h-48 rounded-xl overflow-hidden shadow-lg"
                   variants={itemVariants}
                 >
-                  <Image
-                    src="/poze-mantis/centru-2.jpg"
-                    alt="Interior Centru Mantis"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
+                  <Swiper
+                    modules={[Autoplay]}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    className="w-full h-full"
+                  >
+                    <SwiperSlide>
+                      <Image
+                        src="/poze-mantis/centru-2.jpg"
+                        alt="Interior Centru Mantis"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Image
+                        src="/poze-mantis/sala-mese.jpeg"
+                        alt="Vedere Centru Mantis"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </SwiperSlide>
+                  </Swiper>
                 </motion.div>
+                {/* Slider 3: A Doua Imagine Mică */}
                 <motion.div
                   className="relative h-48 rounded-xl overflow-hidden shadow-lg"
                   variants={itemVariants}
                 >
-                  <Image
-                    src="/poze-mantis/centru-3.jpg"
-                    alt="Curte Centru Mantis"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
+                  <Swiper
+                    modules={[Autoplay]}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    className="w-full h-full"
+                  >
+                    <SwiperSlide>
+                      <Image
+                        src="/poze-mantis/centru-3.jpg"
+                        alt="Curte Centru Mantis"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Image
+                        src="/poze-mantis/camere-sista.jpeg"
+                        alt="Facilități Centru Mantis"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </SwiperSlide>
+                  </Swiper>
                 </motion.div>
               </div>
             </motion.div>
@@ -132,10 +199,13 @@ export default function CentrulEducationalMantisPage() {
               variants={containerVariants}
             >
               <motion.p className="md:w-1/2" variants={itemVariants}>
-                Centrul nostru este echipat pentru a susține atât activități
-                teoretice, cât și practice. Oferim un spațiu modern, adaptat
-                nevoilor de învățare ale grupurilor de elevi, punând accent pe
-                interacțiune și explorare directă a naturii.
+                Clădirea Centrului Educațional Mantis este amplasată într-un
+                cadru pitoresc, în Valea Celor 6 Izvoare (Șiștarovăț), La 42 km
+                de Arad și 67 km de Timișoara. Este un spațiu ideal pentru copii
+                și tineri, în care aceștia pot învăța despre natură prin
+                experiențe practice. Spațiul permite desfășurarea de activități,
+                jocuri și lecții în aer liber, dar și sesiuni și jocuri în
+                interior.
               </motion.p>
 
               <motion.div className="md:w-1/2" variants={itemVariants}>
@@ -145,31 +215,30 @@ export default function CentrulEducationalMantisPage() {
                 <ul className="list-disc list-inside space-y-2 text-mantis-green-700 marker:text-mantis-leaf-400 dark:text-mantis-leaf-300">
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Sălă de clasă dotată cu **tehnologie interactivă** și
-                      Wi-Fi.
+                      Sală de conferințe echipată cu televizor și sistem audio
                     </span>
                   </li>
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Echipamente de **observație în natură** (binocluri, lupe,
-                      seturi de colectare).
+                      Echipamente pentru activități și lecții în aer liber
                     </span>
                   </li>
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Acces la **laborator de microscopie** pentru studiul
-                      detaliat al probelor.
+                      Terenuri sportive: fotbal, volei, baschet, trasee în
+                      natură.
                     </span>
                   </li>
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Curte spațioasă și proximitatea pădurii pentru
-                      **activități de teren**.
+                      Curte spațioasă și proximitatea pădurii pentru activități
+                      de teren
                     </span>
                   </li>
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Spații de cazare și masă (la cerere).
+                      Spații de cazare și masă (la cerere - capacitate de70 de
+                      locuri).
                     </span>
                   </li>
                 </ul>

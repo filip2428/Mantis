@@ -43,6 +43,9 @@ export default function ProgrameEducaționale() {
         <AnimatedPageHeader
           title="Programe Educaționale"
           description="Aici vei găsi informații despre programele educaționale oferite de Mantis. Explorează opțiunile noastre pentru a descoperi noi orizonturi!"
+          //           description="În programa școlară din țara noastră s-au introdus, cu mai mult timp în urmă, două săptămâni în care școlile sunt încurajate să deruleze programe de educație non-formală sau să organizeze pentru elevi ieșiri, inclusiv în natură – Școala Altfel și Săptămâna Verde. Se întâmplă însă destul de des ca profesorii să nu găsească activități și locații potrivite pentru aceste săptămâni, fiind pentru ei o sursă suplimentară de stres.
+          // Asociația Mantis oferă programe educaționale atractive și interactive pentru Săptămâne Verde și Școala Altfel, dar și pentru alte perioade din an.  Clădirea Centrului de Educație Mantis, unde se derulează cele mai multe programe, dispune de echipamente, sală de conferințe, spații de cazare și spații pentru sport și relaxare. Este amplasată într-un cadru pitoresc, în Valea Celor 6 Izvoare (Șiștarovăț), La 42 km de Arad și 67 km de Timișoara. În cadrul programelor de educație facem experimente, dezbatem diferite teme, organizăm excursii în natură și ne distrăm sau învățăm prin jocuri.
+          // În viziunea noastră, ar fi ideal ca în țară să se dezvolte o rețea de centre de educație non-formală, gestionate de ONG-uri, iar școlile să primească un buget de la stat ca să poată duce copiii la aceste centre după un calendar stabilit de comun acord cu echipa de la centrul respectiv. Acest model funcționează eficient în Franța și credem că poate funcționa și în România. Milităm pentru ca școlile să primească finanțarea necesară pentru aceste activități de la stat și sprijinim alte organizații care doresc să înființeze centre de educație non-formală."
           onAnimationComplete={handleHeaderAnimationComplete}
         />
 
@@ -104,6 +107,63 @@ export default function ProgrameEducaționale() {
                   contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
                 />
               </motion.div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mt-12 max-w-4xl rounded-3xl bg-mantis-green-50/40 p-10 shadow-mantis-card border-l-4 border-mantis-green-600"
+          >
+            <h2 className="text-3xl font-heading font-bold text-mantis-bark mb-6">
+              Viziunea Noastră pentru Educație
+            </h2>
+            <div className="space-y-4 text-lg text-mantis-bark/85 leading-relaxed">
+              <p>
+                În programa școlară din țara noastră s-au introdus, cu mai mult
+                timp în urmă, două săptămâni în care școlile sunt încurajate să
+                deruleze programe de educație non-formală sau să organizeze
+                pentru elevi ieșiri, inclusiv în natură –{" "}
+                <span className="font-semibold">Școala Altfel</span> și{" "}
+                <span className="font-semibold">Săptămâna Verde</span>. Se
+                întâmplă însă destul de des ca profesorii să nu găsească
+                activități și locații potrivite pentru aceste săptămâni, fiind
+                pentru ei o sursă suplimentară de stres.
+              </p>
+              <p>
+                Asociația Mantis oferă programe educaționale atractive și
+                interactive pentru Săptămâne Verde și Școala Altfel, dar și
+                pentru alte perioade din an.{" "}
+                <Link
+                  href="/centrul-educational-mantis"
+                  className="text-mantis-green-600 font-semibold hover:underline"
+                >
+                  Clădirea Centrului de Educație Mantis
+                </Link>
+                , unde se derulează cele mai multe programe, dispune de
+                echipamente, sală de conferințe, spații de cazare și spații
+                pentru sport și relaxare. Este amplasată într-un cadru pitoresc,
+                în Valea Celor 6 Izvoare (Șiștarovăț), la 42 km de Arad și 67 km
+                de Timișoara. În cadrul programelor de educație facem
+                experimente, dezbatem diferite teme, organizăm excursii în
+                natură și ne distrăm sau învățăm prin jocuri.
+              </p>
+              <p>
+                În viziunea noastră, ar fi ideal ca în țară să se dezvolte o{" "}
+                <span className="font-semibold">
+                  rețea de centre de educație non-formală
+                </span>
+                , gestionate de ONG-uri, iar școlile să primească un buget de la
+                stat ca să poată duce copiii la aceste centre după un calendar
+                stabilit de comun acord cu echipa de la centrul respectiv. Acest
+                model funcționează eficient în Franța și credem că poate
+                funcționa și în România. Milităm pentru ca școlile să primească
+                finanțarea necesară pentru aceste activități de la stat și
+                sprijinim alte organizații care doresc să înființeze centre de
+                educație non-formală.
+              </p>
             </div>
           </motion.div>
 

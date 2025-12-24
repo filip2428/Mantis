@@ -234,7 +234,7 @@ export default function ConservationProjectCard({
                       />
 
                       {/* Placeholder de încărcare Swiper */}
-                      <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                      {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
                     </div>
                   </SwiperSlide>
                 ))}
