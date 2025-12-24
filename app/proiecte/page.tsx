@@ -31,7 +31,7 @@ const CONSERVATION_PROJECTS = [
     title: "Repopularea Râului cu Păstrăvi",
     short:
       "Proiect educațional și științific de repopulare a râului cu puiet de păstrăv, realizat împreună cu elevii.",
-    full: "Elevii participă activ la etapele de aclimatizare și eliberare a puieților. Proiectul include sesiuni de hidrobiologie și monitorizare a calității apei, oferind o experiență practică unică de conservare. (Detaliile complete...)",
+    full: "Cine are păstrăv în apele de munte, are aur. Acest pește nu este doar un foarte valoros element de biodiversitate, ci reprezintă și un simbol și o mândrie locală. Râurile bogate în pește indică bunăstare și comunități înțelepte și pot contribui la dezvoltarea unui turism sănătos. În țara noastră se întâlnesc trei specii diferite de păstrăv: indigen, curcubeu și  fântânel, însă doar păstrăvul indigen se găsește în mod nativ în apele noastre și este cel mai potrivit pentru repopulări. Așadar, ne propunem să populăm cât mai multe ape de munte cu păstrăv indigen. Înainte de fiecare acțiune de populare, mergem la școlile din zona respectivă și le prezentăm copiilor informații interesante despre păstrăv și îi încurajăm să respecte și să protejeze această podoabă locală. Copiii ne însoțesc apoi în teren și ne ajută să eliberăm puietul de păstrăv în apă. Credem că în acest fel se creează o legătură strânsă între pești și copii, care îi responsabilizează pe aceștia din urmă să aibă grijă de natură.",
     galleryImages: [
       "/poze-conservare/repopulare-valea-zugau/9.JPG", // Imagine principală
       "/poze-conservare/repopulare-valea-zugau/5.JPG",
@@ -44,49 +44,48 @@ const CONSERVATION_PROJECTS = [
     ],
   },
   {
-    title: "Reîmpădurirea Banatului",
+    title: "Dam Removal",
     short:
-      "Proiect pe termen lung axat pe restaurarea ecosistemelor forestiere degradate din zona Banatului prin plantări de specii native.",
-    full: "În cadrul acestui proiect amplu, Asociația Mantis colaborează cu autoritățile locale și voluntari pentru a planta anual mii de puieți. Obiectivul principal este de a sprijini biodiversitatea locală și de a îmbunătăți calitatea solului și a aerului în regiune. Proiectul include sesiuni de educație comunitară pentru a asigura sustenabilitatea inițiativei.",
+      "Redăm libertatea râurilor din România: Eliminăm barierele inutile pentru un ecosistem viu.",
+    full: "Râurile din Europa sunt fragmentate de peste 1,2 milioane de bariere, dar cel puțin 50.000 dintre acestea sunt scoase din uz și nu mai își mai îndeplinesc rolul pentru care au fost construite. Păstrarea lor în albiile râurilor este păguboasă deoarece blochează migrarea peștilor, libera deplasare a sedimentelor și uneori pot reprezenta și un risc pentru siguranța populației. Mai multe țări europene au ales în ultimii ani să elimine aceste bariere învechite și abandonate pentru a reface conectivitatea longitudinală a râurilor. Spre exemplu, în anul 2024 au fost eliminate în total 542 de bariere, în 23 de țări europene, în frunte cu Finlanda, Franța, Spania, Suedia, UK, Belgia, Elveția, Danemarca, Irlanda, Bosnia & Herțegovina  și altele. Cele mai multe dintre barierele eliminate au fost tuburi de podeț sau praguri de joasă înălțime (65% dintre ele au avut sub 2 m înălțime). În țara noastră, curentul eliminării barierelor scoase din uz de pe râuri a prins contur în anul 2023, atunci când s-a organizat o conferință internațională cu acest subiect în București. Mai multe organizații non-guvernamentale și instituții de stat s-au arătat interesate să se implice în acest domeniu, așa că au urmat și alte evenimente care au dezvoltat această direcție (webinars, schimburi de experiență, cursuri de pregătire a specialiștilor). Un punct de cotitură a fost reprezentat de publicarea la nivelul Uniunii Europene, în august 2024, a Legii pentru Restaurarea Naturii (Nature Restoration Law). Acest regulament european obligatoriu prevede inclusiv restaurarea a 25.000 de km de râuri cu curgere liberă. Organizația noastră se implică activ în identificarea și eliminarea barierelor învechite și scoase din uz de pe râurile din România pentru a crește sau reface valoarea ecologică a acestora. Vorbim despre acele bariere care nu își mai îndeplinesc rolul pentru care au fost construite și blochează inutil râurile noastre. De asemenea, suntem activi în coagularea mișcării Dam Removal în România și sprijinirea instituțiilor abilitate să îndeplinească cerințele legislației europene și naționale în acest domeniu.",
     galleryImages: [
-      "/poze-conservare/pastrav-1.JPG", // Imagine principală
-      "/poze-conservare/pastrav-2.JPG",
-      "/poze-conservare/pastrav-3.JPG",
+      "/poze-conservare/dam-removal/dam-removal-1.jpeg", // Imagine principală
+      "/poze-conservare/dam-removal/dam-removal-2.jpeg",
     ],
   },
-  {
-    title: "Monitorizarea Populației de Lilieci",
-    short:
-      "Studiu științific și acțiuni de protecție pentru coloniile de lilieci din peșterile din vestul României, vitale pentru ecosistem.",
-    full: "Liliecii sunt indicatori importanți ai sănătății mediului. Proiectul nostru implică monitorizarea lor prin metode non-invazive, marcarea și instalarea de camere video pentru a înțelege mai bine migrația și hrana lor. De asemenea, educăm publicul cu privire la importanța acestor mamifere și la distrugerea miturilor dăunătoare.",
-    galleryImages: [
-      "/poze-conservare/pastrav-1.JPG", // Imagine principală
-      "/poze-conservare/pastrav-2.JPG",
-      "/poze-conservare/pastrav-3.JPG",
-    ],
-  },
-  {
-    title: "Zone Umide: Refugii pentru Amfibieni",
-    short:
-      "Inițiativă dedicată restaurării și creării de zone umede artificiale pentru a proteja populațiile de broaște, triton și salamandre amenințate.",
-    full: "Amfibienii sunt extrem de vulnerabili la poluare și schimbările climatice. Prin crearea de noi habitate acvatice sigure și restaurarea celor existente, oferim acestor specii refugii vitale. Proiectul include ateliere practice de construcție de iazuri mici și cursuri de identificare a amfibienilor.",
-    galleryImages: [
-      "/poze-conservare/pastrav-1.JPG", // Imagine principală
-      "/poze-conservare/pastrav-2.JPG",
-      "/poze-conservare/pastrav-3.JPG",
-    ],
-  },
-  {
-    title: "Combaterea Speciilor Invazive",
-    short:
-      "Program de control al speciilor de plante invazive care amenință flora autohtonă în rezervațiile naturale locale, folosind metode ecologice.",
-    full: "Speciile invazive sufocă ecosistemele locale. Proiectul se concentrează pe cartografierea și eliminarea manuală sau controlată a plantelor precum salcâmul. Voluntarii joacă un rol crucial în acest proces, fiind instruiți să identifice și să raporteze focarele de invazie. Este esențial pentru menținerea biodiversității.",
-    galleryImages: [
-      "/poze-conservare/pastrav-1.JPG", // Imagine principală
-      "/poze-conservare/pastrav-2.JPG",
-      "/poze-conservare/pastrav-3.JPG",
-    ],
-  },
+  // {
+  //   title: "Monitorizarea Populației de Lilieci",
+  //   short:
+  //     "Studiu științific și acțiuni de protecție pentru coloniile de lilieci din peșterile din vestul României, vitale pentru ecosistem.",
+  //   full: "Liliecii sunt indicatori importanți ai sănătății mediului. Proiectul nostru implică monitorizarea lor prin metode non-invazive, marcarea și instalarea de camere video pentru a înțelege mai bine migrația și hrana lor. De asemenea, educăm publicul cu privire la importanța acestor mamifere și la distrugerea miturilor dăunătoare.",
+  //   galleryImages: [
+  //     "/poze-conservare/pastrav-1.JPG", // Imagine principală
+  //     "/poze-conservare/pastrav-2.JPG",
+  //     "/poze-conservare/pastrav-3.JPG",
+  //   ],
+  // },
+  // {
+  //   title: "Zone Umide: Refugii pentru Amfibieni",
+  //   short:
+  //     "Inițiativă dedicată restaurării și creării de zone umede artificiale pentru a proteja populațiile de broaște, triton și salamandre amenințate.",
+  //   full: "Amfibienii sunt extrem de vulnerabili la poluare și schimbările climatice. Prin crearea de noi habitate acvatice sigure și restaurarea celor existente, oferim acestor specii refugii vitale. Proiectul include ateliere practice de construcție de iazuri mici și cursuri de identificare a amfibienilor.",
+  //   galleryImages: [
+  //     "/poze-conservare/pastrav-1.JPG", // Imagine principală
+  //     "/poze-conservare/pastrav-2.JPG",
+  //     "/poze-conservare/pastrav-3.JPG",
+  //   ],
+  // },
+  // {
+  //   title: "Combaterea Speciilor Invazive",
+  //   short:
+  //     "Program de control al speciilor de plante invazive care amenință flora autohtonă în rezervațiile naturale locale, folosind metode ecologice.",
+  //   full: "Speciile invazive sufocă ecosistemele locale. Proiectul se concentrează pe cartografierea și eliminarea manuală sau controlată a plantelor precum salcâmul. Voluntarii joacă un rol crucial în acest proces, fiind instruiți să identifice și să raporteze focarele de invazie. Este esențial pentru menținerea biodiversității.",
+  //   galleryImages: [
+  //     "/poze-conservare/pastrav-1.JPG", // Imagine principală
+  //     "/poze-conservare/pastrav-2.JPG",
+  //     "/poze-conservare/pastrav-3.JPG",
+  //   ],
+  // },
 ];
 
 export default function ConservarePage() {

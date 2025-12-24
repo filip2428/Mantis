@@ -75,7 +75,7 @@ export default function ConservationProjectCard({
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-full object-cover"
-            loading="lazy"
+            // loading="lazy"
           />
         </div>
         <div className="flex flex-grow flex-col p-6">
@@ -158,7 +158,7 @@ export default function ConservationProjectCard({
                                 fill
                                 sizes="30vw"
                                 className="object-cover transition-transform duration-300 group-hover:scale-110"
-                                loading="lazy"
+                                // loading="lazy"
                               />
                               <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
                                 <span className="text-xs font-bold text-white">
@@ -174,11 +174,11 @@ export default function ConservationProjectCard({
                 )}
 
                 {/* Secțiunea DESCRIERE PROIECT */}
-                <div className="prose mt-8 max-w-none text-mantis-bark/80 prose-headings:text-mantis-bark dark:prose-invert">
-                  <h3 className="border-b pb-1 text-2xl font-semibold text-mantis-bark dark:text-gray-200">
+                <div className="mt-8 rounded-xl border-l-4 border-mantis-green-600 bg-mantis-green-50/40 dark:bg-mantis-green-950/20 px-6 py-6 backdrop-blur-sm">
+                  <h3 className="mb-4 text-2xl font-semibold text-mantis-bark dark:text-gray-100">
                     Detalii Proiect
                   </h3>
-                  <p className="whitespace-pre-line text-lg">
+                  <p className="whitespace-pre-line text-lg leading-relaxed text-mantis-bark/85 dark:text-gray-200 max-w-2xl">
                     {fullDescription}
                   </p>
                 </div>
@@ -230,7 +230,7 @@ export default function ConservationProjectCard({
                         fill
                         sizes="100vw"
                         className="h-full w-full max-h-full max-w-full object-contain"
-                        loading="lazy"
+                        // loading="lazy"
                       />
 
                       {/* Placeholder de încărcare Swiper */}

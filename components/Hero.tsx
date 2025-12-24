@@ -117,6 +117,14 @@ export default function Hero() {
                 Vezi programele
               </InteractiveHoverButton>
             </a>
+            <a href="/proiecte">
+              <InteractiveHoverButton
+                // APLICARE TEMA: Culoarea de acțiune (Verde Mantis)
+                className="mt-5 rounded-full border-black/10 px-10 py-3 text-mantis-green-700 shadow-mantis-soft hover:bg-mantis-green-700"
+              >
+                Vezi proiectele noastre
+              </InteractiveHoverButton>
+            </a>
           </motion.div>
           <motion.button
             type="button"
