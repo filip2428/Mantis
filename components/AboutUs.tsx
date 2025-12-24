@@ -4,10 +4,10 @@ import Author from "./AboutPaul";
 export default function AboutUs() {
   return (
     <>
-      <div className="container mx-auto rounded-3xl bg-mantis-green-200 p-8 pt-24 shadow-mantis-card backdrop-blur-sm">
-        <h1 className="mb-4 text-center text-3xl font-bold text-mantis-bark">
-          Fă cunoștință cu
-          <Highlight>Asociația Mantis</Highlight>
+      <div className="container mx-auto rounded-3xl bg-mantis-green p-8 pt-12 shadow-mantis-card backdrop-blur-sm">
+        <h1 className="mb-4 text-center text-3xl font-bold text-mantis-cream">
+          {`Fă cunoștință cu ${"\t"}`}
+          <Highlight className="text-mantis-bark">Asociația Mantis</Highlight>
         </h1>
         <Author
           name="Paul Hac"
@@ -26,34 +26,74 @@ export default function AboutUs() {
           move when scrolling.
         </p> */}
       </div>
-      <div className="my-20 max-w-3xl px-4 text-center text-lg text-mantis-bark/80 md:mx-auto">
-        <p className="leading-relaxed">
-          Asociația Mantis este o organizație non-guvernamentală dedicată
-          promovării educației în aer liber și a dezvoltării personale prin
-          experiențe practice în natură. Fondată în 2015, Mantis a crescut
-          constant, ajungând să ofere programe educaționale pentru mii de elevi
-          și profesori din întreaga țară.
+      <div className="my-20 max-w-3xl px-4 text-mantis-bark/80 md:mx-auto">
+        <p className="mb-8 text-center text-lg leading-relaxed">
+          Asociația Mantis este o organizație non-guvernamentală care se implică
+          în conservarea biodiversității, reconstrucția ecologică și promovarea
+          educației pentru natură. Este formată din specialiști în domeniul
+          științelor naturale și voluntari care își doresc râuri libere și pline
+          de viață, un mediu mai sănătos și generații tinere implicate în
+          conservare.
         </p>
-        <p className="mt-4 leading-relaxed">
-          Misiunea noastră este să cultivăm curiozitatea și caracterul tinerilor
-          prin activități care îi conectează cu mediul înconjurător și îi învață
-          să aprecieze frumusețea și complexitatea naturii. Credem că educația
-          nu se limitează la sălile de clasă și că experiențele reale în natură
-          pot transforma modul în care elevii înțeleg lumea și pe ei înșiși.
+
+        <p className="mb-6 text-center text-base font-semibold text-mantis-bark">
+          Domeniile noastre prioritare:
         </p>
-        <p className="mt-4 leading-relaxed">
-          Echipa Mantis este formată din profesioniști pasionați, inclusiv
-          educatori, biologi, ghizi montani și voluntari dedicați. Colaborăm
-          strâns cu școli, organizații și comunități locale pentru a dezvolta
-          programe adaptate nevoilor și intereselor participanților.
-        </p>
-        <p className="mt-4 leading-relaxed">
-          Pe lângă programele educaționale, Mantis organizează și evenimente
-          comunitare, campanii de conștientizare și proiecte de conservare a
-          mediului. Suntem mândri de impactul pe care l-am avut până acum și
-          suntem entuziasmați să continuăm să creștem și să inspirăm noi
-          generații de exploratori și protectori ai naturii.
-        </p>
+
+        <ul className="space-y-6 text-left">
+          <li className="flex gap-4">
+            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
+              1
+            </span>
+            <div>
+              <h3 className="font-semibold text-mantis-bark">
+                Râuri care să curgă liber (Dam Removal)
+              </h3>
+              <p className="mt-2 leading-relaxed">
+                Suntem implicați în eliminarea de pe apele curgătoare a
+                barierelor scoase din uz, care nu își mai îndeplinesc rolul
+                pentru care au fost construite și care blochează deplasarea
+                liberă a peștilor și a sedimentelor
+              </p>
+            </div>
+          </li>
+
+          <li className="flex gap-4">
+            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
+              2
+            </span>
+            <div>
+              <h3 className="font-semibold text-mantis-bark">
+                Păstrăv în apele de munte
+              </h3>
+              <p className="mt-2 leading-relaxed">
+                Inițiem proiecte de populare cu păstrăv a apelor de munte
+                deoarece noi credem că, în felul acesta, zonele respective devin
+                mai bogate – spiritual și economic. Implicăm copiii din
+                comunitățile locale în acțiunile de eliberare a puietului și îi
+                pregătim astfel să devină viitorii prieteni ai naturii
+              </p>
+            </div>
+          </li>
+
+          <li className="flex gap-4">
+            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
+              3
+            </span>
+            <div>
+              <h3 className="font-semibold text-mantis-bark">
+                Educație pentru natură
+              </h3>
+              <p className="mt-2 leading-relaxed">
+                Organizăm programe educaționale în natură pentru elevi, prin
+                care construim experiențe ce motivează, transformă și inspiră.
+                Centrul de Educație Mantis din localitatea Șiștarovăț ne ajută
+                să ne pliem bine și pe nevoile de programe dedicate Săptămânii
+                Verzi și Școlii Altfel
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   );

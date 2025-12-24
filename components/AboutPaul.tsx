@@ -28,7 +28,7 @@ export default function Author({
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-3xl bg-mantis-cream/70 p-0 shadow-mantis-card ring-1 ring-mantis-green-100 dark:bg-[#102a1b] dark:ring-[#1b3525] md:grid-cols-12 min-h-[40vh]"
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-3xl bg-mantis-cream p-0 shadow-mantis-card  dark:bg-[#102a1b] dark:ring-[#1b3525] md:grid-cols-12 min-h-[40vh]"
       >
         {/* Coloana stângă: POZA (ocupă stânga) */}
         <div className="relative md:col-span-5">

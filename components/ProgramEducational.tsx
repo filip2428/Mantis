@@ -71,7 +71,7 @@ export default function ProgramCard({
         className="h-full w-full cursor-pointer overflow-hidden rounded-3xl bg-white shadow-mantis-card transition-shadow hover:shadow-mantis-soft dark:bg-[#143921] flex flex-col border border-mantis-green-100/60"
       >
         {imageSrc && (
-          <div className="relative h-48 w-full overflow-hidden bg-mantis-cream flex-shrink-0 flex items-center justify-center">
+          <div className="relative h-48 w-full overflow-hidden bg-mantis-green flex-shrink-0 flex items-center justify-center">
             {" "}
             <Image
               src={imageSrc}
@@ -135,7 +135,7 @@ export default function ProgramCard({
           >
             <div className="relative flex-shrink-0">
               {imageSrc && (
-                <div className="h-64 w-full overflow-hidden bg-white flex items-center justify-center">
+                <div className="h-64 w-full overflow-hidden bg-mantis-green flex items-center justify-center">
                   <Image
                     src={imageSrc}
                     alt={title} // fill // <--- SE ȘTERGE ACEASTĂ PROPRIETATE

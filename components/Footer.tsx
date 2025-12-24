@@ -122,7 +122,8 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
               Rezervă-ți Locul!
             </h3>
             <p className="text-sm font-sans text-white/85">
-              Înscrie un grup și combină învățarea în natură cu distracția!
+              Interesat de un program educațional? Înscrie un grup și combină
+              învățarea în natură cu distracția!
             </p>
             <Link
               href="/contact"

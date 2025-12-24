@@ -37,8 +37,8 @@ export default function NavbarSite({
       ],
     },
     {
-      name: "Conservare",
-      link: "/conservare",
+      name: "Proiecte",
+      link: "/proiecte",
     },
     {
       name: "Contact",
