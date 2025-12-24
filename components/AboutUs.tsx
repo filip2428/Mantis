@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Highlight } from "./ui/hero-highlight";
 import Author from "./AboutPaul";
 
@@ -26,73 +27,81 @@ export default function AboutUs() {
           move when scrolling.
         </p> */}
       </div>
-      <div className="my-20 max-w-3xl px-4 text-mantis-bark/80 md:mx-auto">
-        <p className="mb-8 text-center text-lg leading-relaxed">
-          Asociația Mantis este o organizație non-guvernamentală care se implică
-          în conservarea biodiversității, reconstrucția ecologică și promovarea
-          educației pentru natură. Este formată din specialiști în domeniul
-          științelor naturale și voluntari care își doresc râuri libere și pline
-          de viață, un mediu mai sănătos și generații tinere implicate în
-          conservare.
-        </p>
+      <div className="my-20 max-w-4xl px-4 md:mx-auto">
+        <div className="mb-12 rounded-2xl bg-gradient-to-r from-mantis-green/5 via-mantis-green/10 to-mantis-green/5 p-8 backdrop-blur-sm border border-mantis-green/20">
+          <p className="text-center text-lg leading-relaxed text-mantis-bark ">
+            Asociația Mantis este o organizație non-guvernamentală care se
+            implică în conservarea biodiversității, reconstrucția ecologică și
+            promovarea educației pentru natură. Este formată din specialiști în
+            domeniul științelor naturale și voluntari care își doresc râuri
+            libere și pline de viață, un mediu mai sănătos și generații tinere
+            implicate în conservare.
+          </p>
+        </div>
 
-        <p className="mb-6 text-center text-base font-semibold text-mantis-bark">
+        <h1 className="mb-10 text-center text-2xl font-bold text-mantis-bark">
           Domeniile noastre prioritare:
-        </p>
+        </h1>
 
-        <ul className="space-y-6 text-left">
-          <li className="flex gap-4">
-            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
-              1
-            </span>
-            <div>
-              <h3 className="font-semibold text-mantis-bark">
-                Râuri care să curgă liber (Dam Removal)
-              </h3>
-              <p className="mt-2 leading-relaxed">
-                Suntem implicați în eliminarea de pe apele curgătoare a
-                barierelor scoase din uz, care nu își mai îndeplinesc rolul
-                pentru care au fost construite și care blochează deplasarea
-                liberă a peștilor și a sedimentelor
-              </p>
-            </div>
-          </li>
+        <ul className="space-y-5 text-left">
+          <Link href="/proiecte">
+            <li className="group relative flex gap-6 rounded-xl bg-gradient-to-r from-mantis-green/5 to-transparent p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-mantis-green/15 hover:to-mantis-green/5 hover:shadow-lg border border-mantis-green/10 hover:border-mantis-green/30 cursor-pointer">
+              <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mantis-green to-mantis-green/80 text-base font-bold text-mantis-cream shadow-md group-hover:shadow-lg transition-all duration-300">
+                1
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-mantis-bark text-base mb-2">
+                  Râuri care să curgă liber (Dam Removal)
+                </h3>
+                <p className="leading-relaxed text-mantis-bark/75">
+                  Suntem implicați în eliminarea de pe apele curgătoare a
+                  barierelor scoase din uz, care nu își mai îndeplinesc rolul
+                  pentru care au fost construite și care blochează deplasarea
+                  liberă a peștilor și a sedimentelor
+                </p>
+              </div>
+            </li>
+          </Link>
 
-          <li className="flex gap-4">
-            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
-              2
-            </span>
-            <div>
-              <h3 className="font-semibold text-mantis-bark">
-                Păstrăv în apele de munte
-              </h3>
-              <p className="mt-2 leading-relaxed">
-                Inițiem proiecte de populare cu păstrăv a apelor de munte
-                deoarece noi credem că, în felul acesta, zonele respective devin
-                mai bogate – spiritual și economic. Implicăm copiii din
-                comunitățile locale în acțiunile de eliberare a puietului și îi
-                pregătim astfel să devină viitorii prieteni ai naturii
-              </p>
-            </div>
-          </li>
+          <Link href="/proiecte">
+            <li className="group relative flex gap-6 rounded-xl bg-gradient-to-r from-mantis-green/5 to-transparent p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-mantis-green/15 hover:to-mantis-green/5 hover:shadow-lg border border-mantis-green/10 hover:border-mantis-green/30 cursor-pointer">
+              <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mantis-green to-mantis-green/80 text-base font-bold text-mantis-cream shadow-md group-hover:shadow-lg transition-all duration-300">
+                2
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-mantis-bark text-base mb-2">
+                  Păstrăv în apele de munte
+                </h3>
+                <p className="leading-relaxed text-mantis-bark/75">
+                  Inițiem proiecte de populare cu păstrăv a apelor de munte
+                  deoarece noi credem că, în felul acesta, zonele respective
+                  devin mai bogate – spiritual și economic. Implicăm copiii din
+                  comunitățile locale în acțiunile de eliberare a puietului și
+                  îi pregătim astfel să devină viitorii prieteni ai naturii
+                </p>
+              </div>
+            </li>
+          </Link>
 
-          <li className="flex gap-4">
-            <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-mantis-green/20 text-sm font-bold text-mantis-bark">
-              3
-            </span>
-            <div>
-              <h3 className="font-semibold text-mantis-bark">
-                Educație pentru natură
-              </h3>
-              <p className="mt-2 leading-relaxed">
-                Organizăm programe educaționale în natură pentru elevi, prin
-                care construim experiențe ce motivează, transformă și inspiră.
-                Centrul de Educație Mantis din localitatea Șiștarovăț ne ajută
-                să ne pliem bine și pe nevoile de programe dedicate Săptămânii
-                Verzi și Școlii Altfel
-              </p>
-            </div>
-          </li>
+          <Link href="/programe-educationale">
+            <li className="group relative flex gap-6 rounded-xl bg-gradient-to-r from-mantis-green/5 to-transparent p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-mantis-green/15 hover:to-mantis-green/5 hover:shadow-lg border border-mantis-green/10 hover:border-mantis-green/30 cursor-pointer">
+              <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mantis-green to-mantis-green/80 text-base font-bold text-mantis-cream shadow-md group-hover:shadow-lg transition-all duration-300">
+                3
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-mantis-bark text-base mb-2">
+                  Educație pentru natură
+                </h3>
+                <p className="leading-relaxed text-mantis-bark/75">
+                  Organizăm programe educaționale în natură pentru elevi, prin
+                  care construim experiențe ce motivează, transformă și inspiră.
+                  Centrul de Educație Mantis din localitatea Șiștarovăț ne ajută
+                  să ne pliem bine și pe nevoile de programe dedicate Săptămânii
+                  Verzi și Școlii Altfel
+                </p>
+              </div>
+            </li>
+          </Link>
         </ul>
       </div>
     </>
