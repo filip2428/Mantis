@@ -5,28 +5,6 @@ import Author from "./AboutPaul";
 export default function AboutUs() {
   return (
     <>
-      <div className="container mx-auto rounded-3xl bg-mantis-green p-8 pt-12 shadow-mantis-card backdrop-blur-sm">
-        <h1 className="mb-4 text-center text-3xl font-bold text-mantis-cream">
-          {`Fă cunoștință cu ${"\t"}`}
-          <Highlight className="text-mantis-bark">Asociația Mantis</Highlight>
-        </h1>
-        <Author
-          name="Paul Hac"
-          role="Fondator & creatorul proiectului"
-          imageSrc="/paul-hac.jpeg"
-          bio="Sunt pasionat de educația în natură și dezvoltarea de programe care conectează școala cu mediul real. La Mantis creez resurse și experiențe practice pentru profesori și elevi."
-          className="mt-12 px-4"
-          //   imageWidth={140} // mai mic
-          //   imageRounded="xl" // sau "full" pentru avatar rotund
-        />
-
-        {/* <p className="mb-10 text-center text-sm text-zinc-500">
-          For demo purpose we have kept the position as{" "}
-          <span className="font-medium">Sticky</span>. Keep in mind that this
-          component is <span className="font-medium">fixed</span> and will not
-          move when scrolling.
-        </p> */}
-      </div>
       <div className="my-20 max-w-4xl px-4 md:mx-auto">
         <div className="mb-12 rounded-2xl bg-gradient-to-r from-mantis-green/5 via-mantis-green/10 to-mantis-green/5 p-8 backdrop-blur-sm border border-mantis-green/20">
           <p className="text-center text-lg leading-relaxed text-mantis-bark ">
@@ -104,6 +82,28 @@ export default function AboutUs() {
           </Link>
         </ul>
       </div>
+      {/* <div className="container mx-auto rounded-3xl  p-8 pt-12 shadow-mantis-card backdrop-blur-sm border-8 border-mantis-green bg-white/50"> */}
+      {/* <h1 className="mb-4 text-center text-3xl font-bold text-mantis-cream">
+          {`Fă cunoștință cu ${"\t"}`}
+          <Highlight className="text-mantis-bark">Asociația Mantis</Highlight>
+        </h1>  */}
+      <Author
+        name="Paul Hac"
+        role="Fondator & creatorul proiectului"
+        imageSrc="/paul-hac-photo.jpeg"
+        bio={`Paul Hac este președintele Asociației Mantis și inițiatorul acestui proiect. Are o experiență de peste 20 de ani în managementul ariilor protejate și conservarea biodiversității. A fost implicat sau a inițiat proiecte de combatere a speciilor invazive de plante, prevenirea traficului cu specii protejate, refacerea conectivității longitudinale a râurilor și altele. ${"\n\n"}Un loc aparte în pregătirea profesională îl poartă educația pentru natură, fiind interesat să transmită generațiilor tinere pasiunea pentru cunoașterea naturii. În cadrul studiilor doctorale a cercetat ecologia galelor ce se formează pe plantele lemnoase în ecosistemele forestiere. A lucrat timp de 12 ani pentru Administrația Parcului Natural Lunca Mureșului (din care 7 ani în calitate de director de parc) și mai bine de 8 ani ca expert ecolog pentru organizația Fauna & Flora International. Este trainer în cadrul Centrului de Excelență pentru Natură ProPark. ${"\n\n"}În timpul liber, îi place să sculpteze în lemn și să forjeze.`}
+        className="mt-12 px-4"
+        //   imageWidth={140} // mai mic
+        //   imageRounded="xl" // sau "full" pentru avatar rotund
+      />
+
+      {/* <p className="mb-10 text-center text-sm text-zinc-500">
+          For demo purpose we have kept the position as{" "}
+          <span className="font-medium">Sticky</span>. Keep in mind that this
+          component is <span className="font-medium">fixed</span> and will not
+          move when scrolling.
+        </p> */}
+      {/* </div> */}
     </>
   );
 }

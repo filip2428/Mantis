@@ -76,7 +76,7 @@ export default function ProgrameEducaționale() {
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Biodivers - Exploratorii lumii vii” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Biodivers - Exploratorii lumii vii” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
               </motion.div>
 
@@ -90,7 +90,7 @@ export default function ProgrameEducaționale() {
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună ziua! Aș dori să rezerv programul „P2: Viața în inele - Tainele copacilor” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P2: Viața în inele - Tainele copacilor” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
               </motion.div>
 
@@ -104,7 +104,33 @@ export default function ProgrameEducaționale() {
                     duration: "1/2/3 zile",
                     targetAudience: "Elevi de gimnaziu și liceu",
                   }}
-                  contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
+                />
+              </motion.div>
+              <motion.div variants={cardItemVariants}>
+                <ProgramEducational
+                  title="P4: Dezvoltare înțeleaptă"
+                  description="Elevii explorează cum putem construi drumuri și orașe fără a răni natura printr-o activitate practică de modelat peisaje."
+                  fullDescription="Acest program abordează conceptul de dezvoltare durabilă, respectiv interacțiunea dintre nevoia de dezvoltare economică și protejarea naturii. Vom discuta subiecte precum: Este posibil să dezvoltăm infrastructura și să ținem cont și de natură? Care sunt principiile pe care ar trebui să le avem în vedere când extindem un proiect de infrastructură? Cum găsim echilibrul între bunăstarea economică și starea de bine? Programul include și o activitate practică extrem de apreciată de elevi, în cadrul căreia, în echipe mici, ei construiesc o suprafață de natură, care include ape, păduri, drumuri, localități șamd și se poartă discuții pe marginea fiecărui proiect în parte. "
+                  imageSrc="/logo-programe/P4-copy.png"
+                  details={{
+                    duration: "2,5 ore",
+                    targetAudience: "Elevi ai claselor V-XII",
+                  }}
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P4: Dezvoltare înțeleaptă” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
+                />
+              </motion.div>
+              <motion.div variants={cardItemVariants}>
+                <ProgramEducational
+                  title="P5: O gură de aer"
+                  description="O incursiune fascinantă în lumea respirației. Descoperă cum reușesc plantele, insectele și animalele să ia oxigenul necesar vieții."
+                  fullDescription="Vom învăța în cadrul acestui program despre cât de diferit și fascinant este modul în care respiră diferitele organisme de pe planetă. Cum ajunge oxigenul în sânge? Cum pătrunde aerul în plămâni? Chiar și plantele respiră? Au insectele plămâni? Cum respiră râmele? Cum funcționează branhiile? Acestea sunt câteva întrebări care își vor gasi răspunsul în cadrul lecției și activităților practice pregătite.  "
+                  imageSrc="/logo-programe/P5-copy.png"
+                  details={{
+                    duration: "2,5 ore",
+                    targetAudience: "Elevi ai claselor VII-XII",
+                  }}
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P4: O gură de aer” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
               </motion.div>
             </div>

@@ -34,12 +34,12 @@ const itemVariants: Variants = {
 
 // --- Datele Statice ---
 const DATE_CONTACT = {
-  NUME: "Paul Hac",
-  ROL: "Fondator & Coordonator Programe",
+  NUME: "Asociația Mantis",
+  ROL: "Pasiune pentru cunoaștere",
   EMAIL: "contact@mantis.ro",
   TELEFON: "+40 7xy zzz xxx",
   ADRESA_POSTALA: "Str. Principală nr 159, Șiștarovăț, Arad",
-  POZA_URL: "/paul-hac.jpeg",
+  POZA_URL: "/SiglaMantisVerde.png",
 };
 
 // --- Componenta de Fallback pentru Suspense ---
@@ -64,7 +64,7 @@ export default function ContactBody() {
     <>
       <AnimatedPageHeader
         title="Contact & Colaborare"
-        description="Vă stăm la dispoziție pentru întrebări, parteneriate sau detalii suplimentare despre programele noastre. Ne puteți contacta direct sau folosi formularul de mai jos."
+        description="Vă stăm la dispoziție pentru întrebări, parteneriate sau detalii suplimentare despre programele și proiectele noastre. Ne puteți contacta direct sau folosi formularul de mai jos."
         onAnimationComplete={handleHeaderAnimationComplete}
       />
 
@@ -118,10 +118,10 @@ export default function ContactBody() {
                 variants={itemVariants}
               >
                 <p className="text-xl leading-relaxed text-mantis-bark/80 dark:text-gray-300">
-                  „Ne face plăcere să auzim de la voi! Fie că doriți să
-                  înscrieți o clasă la un program sau să propuneți o colaborare,
-                  sunt aici pentru a vă oferi rapid toate detaliile necesare.
-                  Suntem dedicați educației și conservării.”
+                  Ne face plăcere să auzim de la voi! Fie că doriți să înscrieți
+                  o clasă la un program sau să propuneți o colaborare, sunt aici
+                  pentru a vă oferi rapid toate detaliile necesare. Suntem
+                  dedicați educației și conservării.
                 </p>
                 <div className="space-y-3 pt-4">
                   <div className="flex items-center text-lg text-mantis-bark dark:text-gray-200">

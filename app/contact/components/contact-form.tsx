@@ -148,7 +148,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-mantis-green-600 hover:bg-mantis-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mantis-green-500 transition duration-150"
       >
-        Trimite Cererea
+        Trimite
       </button>
     </form>
   );

@@ -114,7 +114,7 @@ export default function Hero() {
                 // APLICARE TEMA: Culoarea de acțiune (Verde Mantis)
                 className="mt-5 rounded-full border-black/10 px-10 py-3 text-mantis-green-700 shadow-mantis-soft hover:bg-mantis-green-700"
               >
-                Vezi programele
+                Vezi programele educaționale
               </InteractiveHoverButton>
             </a>
             <a href="/proiecte">
@@ -126,7 +126,7 @@ export default function Hero() {
               </InteractiveHoverButton>
             </a>
           </motion.div>
-          <motion.button
+          {/* <motion.button
             type="button"
             variants={item}
             onClick={handleArrowClick}
@@ -161,7 +161,7 @@ export default function Hero() {
                 />
               </svg>
             </motion.span>
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </section>

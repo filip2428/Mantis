@@ -31,9 +31,6 @@ export default function SocialBar() {
       <Item href="https://instagram.com/mantis">
         <Instagram className="size-5" />
       </Item>
-      <Item href="https://youtube.com/@mantis">
-        <Youtube className="size-5" />
-      </Item>
     </div>
   );
 }

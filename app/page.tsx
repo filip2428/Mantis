@@ -9,9 +9,9 @@ export default function Home() {
     <>
       <NavbarSite>
         <Hero />
-        <section id="pasiune-pentru-cunoastere">
+        {/* <section id="pasiune-pentru-cunoastere">
           <TextReveal>Pasiune pentru cunoaștere</TextReveal>
-        </section>
+          </section> */}
         <section id="about-us">
           <AboutUs />
         </section>

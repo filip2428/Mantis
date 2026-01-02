@@ -37,8 +37,12 @@ export default function NavbarSite({
       ],
     },
     {
-      name: "Proiecte",
-      link: "/proiecte",
+      name: "Conservare și Reconstrucție",
+      // link: "/proiecte",
+      children: [
+        { name: "Dam Removal", link: "/proiecte/dam-removal" },
+        { name: "Populare cu păstrăv", link: "/proiecte/populare-cu-pastrav" },
+      ],
     },
     {
       name: "Contact",
@@ -80,7 +84,7 @@ export default function NavbarSite({
                 return (
                   <Link
                     key={`m-${idx}`}
-                    href={item.link}
+                    href={item.link || "#"}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="w-full rounded-md px-2 py-2 text-left text-mantis-green-700 transition-colors hover:bg-mantis-cream/80 hover:text-mantis-green-800 dark:text-neutral-200 dark:hover:bg-[#1b3525]"
                   >
@@ -88,7 +92,6 @@ export default function NavbarSite({
                   </Link>
                 );
               }
-
               // Accordion
               return (
                 <MobileAccordion
