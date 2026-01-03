@@ -364,10 +364,11 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-2 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
       <Image
-        src="/SiglaMantisVerde - Copy.png"
+        // src="/SiglaMantisVerde - Copy.png"
+        src="/mantis-noBg-cpy.png"
         alt="logo"
-        width={62}
-        height={62}
+        width={80}
+        height={80}
         className="drop-shadow-[0_12px_20px_rgba(47,109,71,0.25)]"
         priority
       />

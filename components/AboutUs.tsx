@@ -22,7 +22,7 @@ export default function AboutUs() {
         </h1>
 
         <ul className="space-y-5 text-left">
-          <Link href="/proiecte">
+          <Link href="/proiecte/dam-removal">
             <li className="group relative flex gap-6 rounded-xl bg-gradient-to-r from-mantis-green/5 to-transparent p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-mantis-green/15 hover:to-mantis-green/5 hover:shadow-lg border border-mantis-green/10 hover:border-mantis-green/30 cursor-pointer">
               <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mantis-green to-mantis-green/80 text-base font-bold text-mantis-cream shadow-md group-hover:shadow-lg transition-all duration-300">
                 1
@@ -41,7 +41,7 @@ export default function AboutUs() {
             </li>
           </Link>
 
-          <Link href="/proiecte">
+          <Link href="/proiecte/populare-cu-pastrav">
             <li className="group relative flex gap-6 rounded-xl bg-gradient-to-r from-mantis-green/5 to-transparent p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-mantis-green/15 hover:to-mantis-green/5 hover:shadow-lg border border-mantis-green/10 hover:border-mantis-green/30 cursor-pointer">
               <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mantis-green to-mantis-green/80 text-base font-bold text-mantis-cream shadow-md group-hover:shadow-lg transition-all duration-300">
                 2

@@ -9,15 +9,15 @@ export default function Home() {
     <>
       <NavbarSite>
         <Hero />
-        {/* <section id="pasiune-pentru-cunoastere">
+        <section id="pasiune-pentru-cunoastere">
           <TextReveal>Pasiune pentru cunoaștere</TextReveal>
-          </section> */}
+        </section>
         <section id="about-us">
           <AboutUs />
         </section>
         <ProgrameSlider />
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/SiglaMantis+slogan.png" />
+      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
     </>
   );
 }

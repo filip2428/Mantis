@@ -39,7 +39,7 @@ const DATE_CONTACT = {
   EMAIL: "contact@mantis.ro",
   TELEFON: "+40 7xy zzz xxx",
   ADRESA_POSTALA: "Str. Principală nr 159, Șiștarovăț, Arad",
-  POZA_URL: "/SiglaMantisVerde.png",
+  POZA_URL: "/mantis-1024.png",
 };
 
 // --- Componenta de Fallback pentru Suspense ---

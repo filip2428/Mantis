@@ -28,7 +28,7 @@ const itemVariants = {
 // =======================================================
 const CONSERVATION_PROJECTS = [
   {
-    title: "Repopulare Valea Zugăului",
+    title: "Repopulare Valea Zugăului cu Păstrăvi",
     short:
       "Repopularea Văii Zugăului cu păstrăv, împreună cu elevii din zonă. Dezna, Județul Arad",
     full: "Proiectul s-a desfășurat în luna septembrie 2024, în colaborare cu Școala Gimnazială Dezna din județul Arad. Am vizitat școala pentru a le oferi elevilor informații despre păstrăv și importanța sa în ecosistemele acvatice montane. Copiii au fost foarte entuziasmați să afle despre acest pește și să participe la acțiunea de repopulare. Ulterior, am mers împreună cu elevii la Valea Zugăului, unde am eliberat puietul de păstrăv în apă. Această experiență practică a fost extrem de valoroasă pentru copii, care au învățat să aprecieze și să protejeze natura din jurul lor. Proiectul a avut un impact pozitiv atât asupra mediului, cât și asupra comunității locale, consolidând legătura dintre oameni și natură.",
@@ -153,7 +153,7 @@ export default function ConservarePage() {
           </div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/SiglaMantis+slogan.png" />
+      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
     </>
   );
 }

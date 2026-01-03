@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useRouter } from "next/navigation"; // <-- 1. Importă useRouter
+import ConservationProjectCard from "./ConservationProjectCard";
 
 export default function ProgrameSlider() {
   const router = useRouter(); // <-- 2. Inițializează routerul
@@ -65,6 +66,19 @@ export default function ProgrameSlider() {
           />
         </SwiperSlide>
         <SwiperSlide
+          onClick={() => handleRedirect("/proiecte/dam-removal")}
+          className="cursor-pointer"
+        >
+          <ConservationProjectCard
+            title="Barajul de pe Râul Mureș, Arad"
+            shortDescription="Proiectul pentru înlăturarea barajului x. Râul Y, Județul Z"
+            fullDescription="* "
+            galleryImages={["/poze-conservare/dam-removal/dam-removal-1.jpeg"]}
+            // contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
+            disableModal={true}
+          />
+        </SwiperSlide>
+        <SwiperSlide
           onClick={() => handleRedirect("/programe-educationale")}
           className="cursor-pointer"
         >
@@ -82,14 +96,27 @@ export default function ProgrameSlider() {
           />
         </SwiperSlide>
         <SwiperSlide
+          onClick={() => handleRedirect("/proiecte/populare-cu-pastrav")}
+          className="cursor-pointer"
+        >
+          <ConservationProjectCard
+            title="Repopulare Valea Zugăului cu Păstrăvi"
+            shortDescription="Repopularea Văii Zugăului cu păstrăv, împreună cu elevii din zonă. Dezna, Județul Arad"
+            fullDescription="* "
+            galleryImages={["/poze-conservare/repopulare-valea-zugau/9.JPG"]}
+            // contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
+            disableModal={true}
+          />
+        </SwiperSlide>
+        <SwiperSlide
           onClick={() => handleRedirect("/programe-educationale")}
           className="cursor-pointer"
         >
           <ProgramEducational
-            title="P3: Drumul sevei și al sângelui - Circulația care susține viața"
-            description="Program care explorează conexiunea dintre plante și animale, rolul lor în ecosisteme și metode de conservare integrate."
-            fullDescription="Participanții vor învăța despre interdependența dintre plante și animale, vor lua parte la activități de teren și vor dezvolta proiecte de conservare holistică. Ideal pentru cei interesați de ecologie și biologie. "
-            imageSrc="/logo-programe/P3-copy.png"
+            title={`P4: Dezvoltare înțeleaptă - Construim cu natura`}
+            description={`Elevii explorează cum putem construi drumuri și orașe fără a răni natura printr-o activitate practică de modelat peisaje.${"\t\n"}`}
+            fullDescription="Acest program abordează conceptul de dezvoltare durabilă, respectiv interacțiunea dintre nevoia de dezvoltare economică și protejarea naturii. Vom discuta subiecte precum: Este posibil să dezvoltăm infrastructura și să ținem cont și de natură? Care sunt principiile pe care ar trebui să le avem în vedere când extindem un proiect de infrastructură? Cum găsim echilibrul între bunăstarea economică și starea de bine? Programul include și o activitate practică extrem de apreciată de elevi, în cadrul căreia, în echipe mici, ei construiesc o suprafață de natură, care include ape, păduri, drumuri, localități șamd și se poartă discuții pe marginea fiecărui proiect în parte. "
+            imageSrc="/logo-programe/P4-copy.png"
             details={{
               duration: "1/2/3 zile",
               targetAudience: "Elevi de gimnaziu și liceu",

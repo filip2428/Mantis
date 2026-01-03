@@ -13,6 +13,7 @@ interface ProjectCardProps {
   shortDescription: string;
   fullDescription: string;
   galleryImages: string[];
+  disableModal?: boolean;
 }
 
 export default function ConservationProjectCard({
@@ -20,6 +21,7 @@ export default function ConservationProjectCard({
   shortDescription,
   fullDescription,
   galleryImages,
+  disableModal = false,
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
@@ -65,8 +67,10 @@ export default function ConservationProjectCard({
       <motion.div
         whileHover={{ y: -5 }}
         transition={{ duration: 0.2 }}
-        onClick={() => setIsOpen(true)}
-        className="h-full w-full cursor-pointer overflow-hidden rounded-3xl bg-white shadow-mantis-card transition-shadow hover:shadow-mantis-soft dark:bg-[#143921] flex flex-col border border-mantis-green-100/60"
+        onClick={() => !disableModal && setIsOpen(true)}
+        className={`h-full w-full overflow-hidden rounded-3xl bg-white shadow-mantis-card transition-shadow hover:shadow-mantis-soft dark:bg-[#143921] flex flex-col border border-mantis-green-100/60 ${
+          !disableModal ? "cursor-pointer" : ""
+        }`}
       >
         <div className="relative h-56 w-full overflow-hidden bg-mantis-cream flex-shrink-0">
           <Image

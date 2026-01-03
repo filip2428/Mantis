@@ -41,7 +41,7 @@ export default function Author({
               imageUrl={imageSrc}
               imageAlt={imageAlt} // 2. (PRESUNUPUNERE) Folosești prop-ul corect pentru imaginea internă
               imageClassName={clsx(
-                "h-full w-full object-cover" // Asigură-te că și imaginea umple spațiul
+                "h-full w-full object-cover object-bottom pt-2" // Imaginea se aliniază la baza containerului
               )}
             >
               <p>Paul Hac</p>
