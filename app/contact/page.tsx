@@ -13,7 +13,7 @@ export default function ContactPage() {
             componentei client de mai jos. */}
         <ContactBody />
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
+      <Footer brandName="Mantis" />
     </>
   );
 }

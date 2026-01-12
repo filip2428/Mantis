@@ -25,7 +25,7 @@ const Item = ({ href, children }: ItemProps) => (
 export default function SocialBar() {
   return (
     <div className="flex gap-3 text-mantis-green-600">
-      <Item href="https://facebook.com/mantis">
+      <Item href="https://www.facebook.com/profile.php?id=61580369347496">
         <Facebook className="size-5" />
       </Item>
       <Item href="https://instagram.com/mantis">

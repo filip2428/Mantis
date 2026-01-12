@@ -4,23 +4,31 @@ import Link from "next/link";
 import { Mail, Facebook, Instagram, MapPin } from "lucide-react";
 
 interface FooterProps {
-  logoSrc: string;
+  logoSrc?: string;
   brandName: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
+const Footer: React.FC<FooterProps> = ({
+  logoSrc = "/mantis-cu-text-removebg-preview.png",
+  brandName,
+}) => {
   const currentYear = new Date().getFullYear();
 
   const NAV_LINKS = [
     { name: "Acasă", href: "/" },
     { name: "Programe", href: "/programe-educationale" },
     { name: "Centrul Mantis", href: "/centrul-educational-mantis" },
-    { name: "Conservare", href: "/conservare" },
+    { name: "Dam Removal", href: "/proiecte/dam-removal" },
+    { name: "Populare cu păstrăv", href: "/proiecte/populare-cu-pastrav" },
     { name: "Contact", href: "/contact" },
   ];
 
   const SOCIAL_LINKS = [
-    { icon: Facebook, href: "https://facebook.com/mantis", name: "Facebook" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61580369347496",
+      name: "Facebook",
+    },
     {
       icon: Instagram,
       href: "https://instagram.com/mantis",
@@ -102,7 +110,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, brandName }) => {
             <div className="space-y-2 text-white/85">
               <div className="flex items-center text-sm font-sans">
                 <MapPin className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-100" />
-                <span>Șiștarovăț, Arad</span>
+                <span>Arad, Arad</span>
               </div>
               <div className="flex items-center text-sm font-sans">
                 <Mail className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-100" />

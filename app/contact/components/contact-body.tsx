@@ -37,7 +37,7 @@ const DATE_CONTACT = {
   NUME: "Asociația Mantis",
   ROL: "Pasiune pentru cunoaștere",
   EMAIL: "contact@mantis.ro",
-  TELEFON: "+40 7xy zzz xxx",
+  TELEFON: "+40 724 270 186",
   ADRESA_POSTALA: "Str. Principală nr 159, Șiștarovăț, Arad",
   POZA_URL: "/mantis-1024.png",
 };

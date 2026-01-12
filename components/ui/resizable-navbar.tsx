@@ -365,10 +365,11 @@ export const NavbarLogo = () => {
     >
       <Image
         // src="/SiglaMantisVerde - Copy.png"
-        src="/mantis-noBg-cpy.png"
+        // src="/mantis-noBg-cpy.png"
+        src="/mantis-cu-text-removebg-preview.png"
         alt="logo"
-        width={80}
-        height={80}
+        width={105}
+        height={105}
         className="drop-shadow-[0_12px_20px_rgba(47,109,71,0.25)]"
         priority
       />

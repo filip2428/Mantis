@@ -8,10 +8,12 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 
+import { ReactNode } from "react";
+
 interface ProjectCardProps {
   title: string;
   shortDescription: string;
-  fullDescription: string;
+  fullDescription: ReactNode;
   galleryImages: string[];
   disableModal?: boolean;
 }
@@ -182,9 +184,9 @@ export default function ConservationProjectCard({
                   <h3 className="mb-4 text-2xl font-semibold text-mantis-bark dark:text-gray-100">
                     Detalii Proiect
                   </h3>
-                  <p className="whitespace-pre-line text-lg leading-relaxed text-mantis-bark/85 dark:text-gray-200 max-w-2xl">
+                  <div className="text-lg leading-relaxed text-mantis-bark/85 dark:text-gray-200">
                     {fullDescription}
-                  </p>
+                  </div>
                 </div>
               </div>
             </motion.div>

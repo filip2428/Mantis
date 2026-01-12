@@ -17,7 +17,7 @@ export default function Home() {
         </section>
         <ProgrameSlider />
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
+      <Footer brandName="Mantis" />
     </>
   );
 }

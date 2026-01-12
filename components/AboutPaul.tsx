@@ -15,7 +15,7 @@ type Props = {
 
 export default function Author({
   name,
-  role = "Fondator & creatorul proiectului",
+  role = "Președintele Asociației și Fondatorul Proiectului",
   bio,
   imageSrc,
   imageAlt = name,

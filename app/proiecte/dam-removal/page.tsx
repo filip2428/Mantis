@@ -28,9 +28,75 @@ const itemVariants = {
 // =======================================================
 const CONSERVATION_PROJECTS = [
   {
-    title: "Barajul x",
-    short: "Înlăturarea barajului x. Râul Y, Județul Z",
-    full: "*",
+    title: "Îndepărtarea pragului de la Chizătău",
+    short: "Pragul de la Chizătău, râul Bega, județul Timiș",
+    full: (
+      <div className="space-y-5">
+        <p>
+          În apropierea localității <strong>Chizătău</strong> din județului
+          Timiș a funcționat o moară pe apă, care este dezafectată de mai mult
+          timp. Pragul de captare de pe râul Bega a rămas în albie, fără să mai
+          îndeplinească vreun rol efectiv, dar blochează libera deplasare a
+          faunei acvatice și a sedimentelor.
+        </p>
+
+        <p>
+          <strong>Asociația Mantis</strong>, împreună cu{" "}
+          <strong>Fauna & Flora</strong> și{" "}
+          <strong>Administrația Bazinală de Apă Banat</strong>
+          colectează date și încearcă să atragă fonduri pentru reconstrucția
+          ecologică a râului în acea zonă, prin îndepărtarea din albie a
+          pragului scos din uz.
+        </p>
+
+        {/* <div className="bg-mantis-green-100/30 dark:bg-mantis-green-950/30 rounded-lg p-4 border-l-4 border-mantis-green-600"> */}
+        <h1 className="font-semibold text-mantis-bark dark:text-gray-100 mb-2">
+          Caracteristici ale Râului Bega
+        </h1>
+        <p className=" leading-relaxed">
+          <strong>Râul Bega </strong>izvorăşte din Munţii Poiana Ruscă la o
+          altitudine de 890 m, de sub Vârful Padeş. Suprafaţa bazinului de
+          recepţie, care este de 4.470 km2, are o orientare generală est-vest,
+          iar lungimea cursului de apă este de <strong>170 km</strong>. Lungimea
+          reţelei hidrografice din bazinul hidrografic Bega este de 1.418 km iar
+          densitatea acesteia este de 0,32 km/ km2. Râul Bega se varsă pe
+          teritoriul Serbiei în râul Tisa.
+        </p>
+        {/* </div> */}
+
+        <div>
+          <h2 className="font-semibold text-mantis-bark dark:text-gray-100 mb-3">
+            Fauna Acvatică Identificată
+          </h2>
+          <p className=" leading-relaxed">
+            În sectorul de referință, pe râul Bega au fost identificate specii
+            de pești precum mreana (<em>Barbus barbus</em>), porcușorul dunărean
+            (<em>Gobio obtusirostris</em>), boarța (<em>Rhodeus amarus</em>),
+            scobarul (<em>Chondrostoma nasus</em>), știuca (<em>Esox lucius</em>
+            ), porcușorul comun (<em>Gobio gobio</em>), chișcarul (
+            <em>Eudontomyzon danfordi</em>), zvârluga (<em>Cobitis taenia</em>)
+            și altele.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-semibold text-mantis-bark dark:text-gray-100 mb-3">
+            Status
+          </h2>
+          <p className=" leading-relaxed">
+            Colectare date. Atragere de fonduri
+          </p>
+        </div>
+
+        {/* <div className="bg-mantis-bark/5 dark:bg-white/5 rounded-lg p-4 border-l-4 border-mantis-bark">
+          <p className="text-sm font-semibold text-mantis-bark dark:text-gray-200">
+            <strong>Status:</strong>{" "}
+            <span className="text-mantis-green-600">Colectare date</span> •{" "}
+            <span className="text-orange-600">Atragere de fonduri</span>
+          </p>
+        </div> */}
+      </div>
+    ),
     galleryImages: [
       "/poze-conservare/dam-removal/dam-removal-1.jpeg", // Imagine principală
       "/poze-conservare/dam-removal/dam-removal-2.jpeg",
@@ -171,7 +237,7 @@ export default function ConservarePage() {
           </div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
+      <Footer brandName="Mantis" />
     </>
   );
 }

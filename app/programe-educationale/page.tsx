@@ -68,7 +68,7 @@ export default function ProgrameEducaționale() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
-                  title="P1: Biodivers - Exploratorii lumii vii"
+                  title="P1: Biodivers - Exploratori ai lumii vii"
                   description="Program axat pe studiul ecosistemelor locale, metode practice de conservare și monitorizarea faunei."
                   fullDescription="Participanții vor învăța tehnici de monitorizare a faunei, vor lua parte la expediții de teren în arii protejate și vor dezvolta proiecte de reîmpădurire. Ideal pentru viitorii biologi și ecologi."
                   imageSrc="/logo-programe/P1-copy.png"
@@ -219,7 +219,7 @@ export default function ProgrameEducaționale() {
           </motion.div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
+      <Footer brandName="Mantis" />
     </>
   );
 }

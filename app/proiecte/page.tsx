@@ -131,7 +131,7 @@ export default function ConservarePage() {
           </div>
         </motion.div>
       </NavbarSite>
-      <Footer brandName="Mantis" logoSrc="/mantis-text.png" />
+      <Footer brandName="Mantis" />
     </>
   );
 }

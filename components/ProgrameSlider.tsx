@@ -53,7 +53,7 @@ export default function ProgrameSlider() {
           className="cursor-pointer"
         >
           <ProgramEducational
-            title="P1: Biodivers - Exploratorii lumii vii"
+            title="P1: Biodivers - Exploratori ai lumii vii"
             description="Program axat pe studiul ecosistemelor locale, metode practice de conservare și monitorizarea faunei."
             fullDescription="Participanții vor învăța tehnici de monitorizare a faunei, vor lua parte la expediții de teren în arii protejate și vor dezvolta proiecte de reîmpădurire. Ideal pentru viitorii biologi și ecologi."
             imageSrc="/logo-programe/P1-copy.png"
