@@ -43,7 +43,7 @@ const CONSERVATION_PROJECTS = [
         <p>
           <strong>Asociația Mantis</strong>, împreună cu{" "}
           <strong>Fauna & Flora</strong> și{" "}
-          <strong>Administrația Bazinală de Apă Banat</strong>
+          <strong>Administrația Bazinală de Apă Banat </strong>
           colectează date și încearcă să atragă fonduri pentru reconstrucția
           ecologică a râului în acea zonă, prin îndepărtarea din albie a
           pragului scos din uz.

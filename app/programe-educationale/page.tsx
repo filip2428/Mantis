@@ -212,7 +212,7 @@ export default function ProgrameEducaționale() {
                 pathname: "/contact",
                 query: { message: contactCtaMessage },
               }}
-              className="inline-flex items-center justify-center rounded-xl bg-mantis-green-600 px-8 py-3 text-lg font-semibold text-white shadow-mantis-soft transition hover:bg-mantis-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mantis-green-500"
+              className="inline-flex items-center justify-center rounded-xl bg-mantis-green-600 px-8 py-3 text-lg font-semibold text-white shadow-mantis-soft transition hover:bg-mantis-green-700 focus-visible:outline  focus-visible:outline-offset-2 focus-visible:outline-mantis-green-500"
             >
               Contactează-ne acum
             </Link>
