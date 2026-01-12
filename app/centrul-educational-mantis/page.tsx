@@ -237,7 +237,7 @@ export default function CentrulEducationalMantisPage() {
                   </li>
                   <li>
                     <span className="text-mantis-bark/80 dark:text-gray-300">
-                      Spații de cazare și masă (la cerere - capacitate de70 de
+                      Spații de cazare și masă (la cerere - capacitate de 70 de
                       locuri).
                     </span>
                   </li>
