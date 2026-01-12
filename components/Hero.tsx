@@ -100,9 +100,8 @@ export default function Hero() {
             // APLICARE TEMA: font-sans
             className="mt-8 max-w-2xl text-base font-sans text-mantis-bark/80 md:text-lg"
           >
-            Cultivăm curiozitatea și caracterul prin experiențe reale în natură
-            — programe pentru profesori și elevi care transformă lecțiile în
-            descoperiri.
+            Cultivăm pasiunea pentru cunoaștere a naturii în rândul tinerilor și
+            inițiem proiecte de conservare cu impact pozitiv real
           </motion.p>
 
           <motion.div

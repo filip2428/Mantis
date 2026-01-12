@@ -115,10 +115,10 @@ const Footer: React.FC<FooterProps> = ({
               <div className="flex items-center text-sm font-sans">
                 <Mail className="mr-2 h-4 w-4 flex-shrink-0 text-mantis-leaf-100" />
                 <a
-                  href="mailto:contact@mantis.ro"
+                  href="mailto:contact@asociatia-mantis.ro"
                   className="transition-colors hover:text-mantis-leaf-100"
                 >
-                  contact@mantis.ro
+                  contact@asociatia-mantis.ro
                 </a>
               </div>
             </div>

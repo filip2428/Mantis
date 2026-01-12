@@ -99,7 +99,7 @@ const CONSERVATION_PROJECTS = [
     ),
     galleryImages: [
       "/poze-conservare/dam-removal/dam-removal-1.jpeg", // Imagine principală
-      "/poze-conservare/dam-removal/dam-removal-2.jpeg",
+      // "/poze-conservare/dam-removal/dam-removal-2.jpeg",
     ],
   },
 ];

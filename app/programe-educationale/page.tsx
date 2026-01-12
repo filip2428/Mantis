@@ -69,26 +69,26 @@ export default function ProgrameEducaționale() {
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P1: Biodivers - Exploratori ai lumii vii"
-                  description="Program axat pe studiul ecosistemelor locale, metode practice de conservare și monitorizarea faunei."
-                  fullDescription="Participanții vor învăța tehnici de monitorizare a faunei, vor lua parte la expediții de teren în arii protejate și vor dezvolta proiecte de reîmpădurire. Ideal pentru viitorii biologi și ecologi."
+                  description="Program educațional despre biodiversitate, combinând teoria interactivă cu explorarea practică a speciilor în natură"
+                  fullDescription="Acest program îi ajută pe elevi să înțeleagă și să se apropie de complexitatea lumii vii. Vom căuta să răspundem la întrebări precum: Câte specii sunt pe Terra? Cum au fost speciile grupate? De ce dispar unele specii? Care sunt speciile amenințate cu dispariția? După lecția și discuția din sală, vom merge în natură să descoperim cât mai multe grupe de specii. "
                   imageSrc="/logo-programe/P1-copy.png"
                   details={{
-                    duration: "1/2/3 zile",
-                    targetAudience: "Elevi de gimnaziu și liceu",
+                    duration: "3,5 ore ",
+                    targetAudience: "Elevi ai claselor V - XII",
                   }}
-                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Biodivers - Exploratorii lumii vii” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
+                  contactMessage="Bună ziua! Aș dori să rezerv programul „P1: Biodivers - Exploratori ai lumii vii” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
               </motion.div>
 
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P2: Viața în inele - Tainele copacilor"
-                  description="Program dedicat înțelegerii rolului copacilor în ecosisteme, tehnici de plantare și îngrijire a pădurilor."
-                  fullDescription="Participanții vor învăța despre importanța copacilor, vor participa la sesiuni practice de plantare și vor dezvolta proiecte de conservare a pădurilor. Ideal pentru pasionații de natură și viitorii silvicultori."
+                  description="Program educațional despre biologia arborilor, incluzând determinarea vârstei, recunoașterea speciilor și activități practice"
+                  fullDescription="Programul are ca țintă principală lumea arborilor și arbuștilor și abordează teme foarte interesante, precum: Cât de mult trăiesc arborii? Oare putem să le determinăm vârsta? Cum cresc arborii în grosime și înălțime? Cum putem să recunoaștem un arbore? Curiozități din lumea arborilor și arbuștilor. După lecția din sală, ne așteaptă activități practice interesante – numărăm inele anuale, recunoaștem speciile după frunze și fructe. "
                   imageSrc="/logo-programe/P2-copy.png"
                   details={{
-                    duration: "1/2/3 zile",
-                    targetAudience: "Elevi de gimnaziu și liceu",
+                    duration: "3 ore",
+                    targetAudience: "Elevi ai claselor V - XII",
                   }}
                   contactMessage="Bună ziua! Aș dori să rezerv programul „P2: Viața în inele - Tainele copacilor” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
@@ -97,12 +97,12 @@ export default function ProgrameEducaționale() {
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P3: Drumul sevei și al sângelui"
-                  description="Program care explorează conexiunea dintre plante și animale, rolul lor în ecosisteme și metode de conservare integrate."
-                  fullDescription="Participanții vor învăța despre interdependența dintre plante și animale, vor lua parte la activități de teren și vor dezvolta proiecte de conservare holistică. Ideal pentru cei interesați de ecologie și biologie."
+                  description="Explorare comparativă între sistemul circulator uman și cel al arborilor, prin experimente și demonstrații practice"
+                  fullDescription="În cadrul acestui program facem o paralelă între circulația sângelui în corpul uman și circulația sevei la arbori și răspundem la întrebări precum: Dacă sângele este roșu, de ce sunt venele albastre? Cum funcționează inima? Unde sunt și cum arată ”venele” și ”arterele” arborilor? Și totuși, cum poate să urce seva în arbori?  Pe lângă lecția propriu-zisă, avem pregătite experimente și demonstrații captivante. "
                   imageSrc="/logo-programe/P3-copy.png"
                   details={{
-                    duration: "1/2/3 zile",
-                    targetAudience: "Elevi de gimnaziu și liceu",
+                    duration: "3 ore",
+                    targetAudience: "Elevi ai claselor VII - XII",
                   }}
                   contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă și cu pașii de înscriere?"
                 />
@@ -110,7 +110,7 @@ export default function ProgrameEducaționale() {
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P4: Dezvoltare înțeleaptă"
-                  description="Elevii explorează cum putem construi drumuri și orașe fără a răni natura printr-o activitate practică de modelat peisaje."
+                  description="Elevii explorează cum putem construi drumuri și orașe fără a răni natura printr-o activitate practică de modelat peisaje"
                   fullDescription="Acest program abordează conceptul de dezvoltare durabilă, respectiv interacțiunea dintre nevoia de dezvoltare economică și protejarea naturii. Vom discuta subiecte precum: Este posibil să dezvoltăm infrastructura și să ținem cont și de natură? Care sunt principiile pe care ar trebui să le avem în vedere când extindem un proiect de infrastructură? Cum găsim echilibrul între bunăstarea economică și starea de bine? Programul include și o activitate practică extrem de apreciată de elevi, în cadrul căreia, în echipe mici, ei construiesc o suprafață de natură, care include ape, păduri, drumuri, localități șamd și se poartă discuții pe marginea fiecărui proiect în parte. "
                   imageSrc="/logo-programe/P4-copy.png"
                   details={{
@@ -123,7 +123,7 @@ export default function ProgrameEducaționale() {
               <motion.div variants={cardItemVariants}>
                 <ProgramEducational
                   title="P5: O gură de aer"
-                  description="O incursiune fascinantă în lumea respirației. Descoperă cum reușesc plantele, insectele și animalele să ia oxigenul necesar vieții."
+                  description="O incursiune fascinantă în lumea respirației. Descoperă cum reușesc plantele, insectele și animalele să ia oxigenul necesar vieții"
                   fullDescription="Vom învăța în cadrul acestui program despre cât de diferit și fascinant este modul în care respiră diferitele organisme de pe planetă. Cum ajunge oxigenul în sânge? Cum pătrunde aerul în plămâni? Chiar și plantele respiră? Au insectele plămâni? Cum respiră râmele? Cum funcționează branhiile? Acestea sunt câteva întrebări care își vor gasi răspunsul în cadrul lecției și activităților practice pregătite.  "
                   imageSrc="/logo-programe/P5-copy.png"
                   details={{

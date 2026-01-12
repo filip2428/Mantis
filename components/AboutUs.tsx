@@ -39,8 +39,8 @@ export default function AboutUs() {
           variants={itemVariants}
           className="text-lg text-mantis-bark/70 max-w-2xl mx-auto leading-relaxed"
         >
-          Descoperă organizația care dedică pasiunea ei conservării naturii și
-          educației pentru generații viitoare
+          Descoperă organizația care se implică în educarea tinerilor și
+          conservarea naturii prin experiențe și proiecte palpabile
         </motion.p>
       </motion.section>
 

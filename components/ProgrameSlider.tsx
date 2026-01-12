@@ -70,8 +70,8 @@ export default function ProgrameSlider() {
           className="cursor-pointer"
         >
           <ConservationProjectCard
-            title="Barajul de pe Râul Mureș, Arad"
-            shortDescription="Proiectul pentru înlăturarea barajului x. Râul Y, Județul Z"
+            title="Îndepărtarea pragului de la Chizătău"
+            shortDescription="Proiectul pentru îndepartarea Pragului de la Chizătău, râul Bega, județul Timiș"
             fullDescription="* "
             galleryImages={["/poze-conservare/dam-removal/dam-removal-1.jpeg"]}
             // contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"

@@ -36,7 +36,7 @@ const itemVariants: Variants = {
 const DATE_CONTACT = {
   NUME: "Asociația Mantis",
   ROL: "Pasiune pentru cunoaștere",
-  EMAIL: "contact@mantis.ro",
+  EMAIL: "contact@asociatia-mantis.ro",
   TELEFON: "+40 724 270 186",
   ADRESA_POSTALA: "Str. Principală nr 159, Șiștarovăț, Arad",
   POZA_URL: "/mantis-1024.png",
@@ -64,7 +64,7 @@ export default function ContactBody() {
     <>
       <AnimatedPageHeader
         title="Contact & Colaborare"
-        description="Vă stăm la dispoziție pentru întrebări, parteneriate sau detalii suplimentare despre programele și proiectele noastre. Ne puteți contacta direct sau folosi formularul de mai jos."
+        description=""
         onAnimationComplete={handleHeaderAnimationComplete}
       />
 
@@ -118,10 +118,9 @@ export default function ContactBody() {
                 variants={itemVariants}
               >
                 <p className="text-xl leading-relaxed text-mantis-bark/80 dark:text-gray-300">
-                  Ne face plăcere să auzim de la voi! Fie că doriți să înscrieți
-                  o clasă la un program sau să propuneți o colaborare, sunt aici
-                  pentru a vă oferi rapid toate detaliile necesare. Suntem
-                  dedicați educației și conservării.
+                  Vă stăm la dispoziție pentru întrebări, parteneriate sau
+                  detalii suplimentare despre programele și proiectele noastre.
+                  Ne puteți contacta direct sau folosind formularul de mai jos.
                 </p>
                 <div className="space-y-3 pt-4">
                   <div className="flex items-center text-lg text-mantis-bark dark:text-gray-200">
@@ -143,11 +142,6 @@ export default function ContactBody() {
                     >
                       {DATE_CONTACT.TELEFON}
                     </a>
-                  </div>
-                  <div className="flex items-start text-lg text-mantis-bark dark:text-gray-200">
-                    <MapPin className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-mantis-green-600" />
-                    Adresă Corespondență:{" "}
-                    <span className="ml-2">{DATE_CONTACT.ADRESA_POSTALA}</span>
                   </div>
                 </div>
               </motion.div>

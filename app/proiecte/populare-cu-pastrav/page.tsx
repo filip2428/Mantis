@@ -28,10 +28,47 @@ const itemVariants = {
 // =======================================================
 const CONSERVATION_PROJECTS = [
   {
-    title: "Repopulare Valea Zugăului cu Păstrăvi",
+    title: "Repopulare Valea Zugăului cu Păstrăv",
     short:
       "Repopularea Văii Zugăului cu păstrăv, împreună cu elevii din zonă. Dezna, Județul Arad",
-    full: "Proiectul s-a desfășurat în luna septembrie 2024, în colaborare cu Școala Gimnazială Dezna din județul Arad. Am vizitat școala pentru a le oferi elevilor informații despre păstrăv și importanța sa în ecosistemele acvatice montane. Copiii au fost foarte entuziasmați să afle despre acest pește și să participe la acțiunea de repopulare. Ulterior, am mers împreună cu elevii la Valea Zugăului, unde am eliberat puietul de păstrăv în apă. Această experiență practică a fost extrem de valoroasă pentru copii, care au învățat să aprecieze și să protejeze natura din jurul lor. Proiectul a avut un impact pozitiv atât asupra mediului, cât și asupra comunității locale, consolidând legătura dintre oameni și natură.",
+    full: (
+      <div className="space-y-5">
+        <p>
+          În anul 2024, împreună cu Direcția Silvică Arad, am început o acțiune
+          de populare cu păstrăv indigen a Văii Zugăului, în apropiere de
+          localitatea Dezna, județul Arad.
+        </p>
+
+        <p>
+          După ce au participat la o lecție despre pești, în general, și
+          păstrăv, în particular, copiii de la Școala Gimnazială Dezna au
+          participat la acțiunea de populare și au ajutat la transportul și
+          eliberarea puietului în apă.
+        </p>
+
+        <h2 className="font-semibold text-mantis-bark dark:text-gray-100 mb-3">
+          Receptivitate și Implicare Comunității
+        </h2>
+        <p className="leading-relaxed">
+          Proiectul a fost extrem de bine primit și susținut de comunitatea
+          locală și de către presa regională.
+        </p>
+
+        <h2 className="font-semibold text-mantis-bark dark:text-gray-100 mb-3">
+          Viitor
+        </h2>
+        <p className="leading-relaxed">
+          Intenționăm să continuăm acțiunile de populare din această zonă.
+        </p>
+
+        <div>
+          <h2 className="font-semibold text-mantis-bark dark:text-gray-100 mb-3">
+            Status
+          </h2>
+          <p className=" leading-relaxed">Inițiat. În derulare</p>
+        </div>
+      </div>
+    ),
     galleryImages: [
       "/poze-conservare/repopulare-valea-zugau/9.JPG", // Imagine principală
       "/poze-conservare/repopulare-valea-zugau/5.JPG",
@@ -57,8 +94,8 @@ export default function ConservarePage() {
       <NavbarSite>
         {/* Antetul Animă */}
         <AnimatedPageHeader
-          title="Repopularea Râurilor cu Păstrăvi"
-          description="Conducem inițiativa de repopulare a râurilor din România cu păstrăvi"
+          title="Repopularea Râurilor cu Păstrăv"
+          description="Conducem inițiativa de repopulare a râurilor din România cu păstrăv"
           onAnimationComplete={handleHeaderAnimationComplete}
         />
 
