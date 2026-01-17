@@ -18,7 +18,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "Mantis",
-  description: "Programe educaționale pentru copii",
+  description: "Site-ul oficial al Asociației Mantis",
 };
 
 export default function RootLayout({
