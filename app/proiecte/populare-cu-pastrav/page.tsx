@@ -112,7 +112,7 @@ export default function ConservarePage() {
               className="mx-auto mb-20 max-w-4xl rounded-3xl bg-white/80 p-8 text-center shadow-mantis-card"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2, margin: "50px" }}
               variants={containerVariants}
             >
               <h2 className="mb-4 text-3xl font-bold text-mantis-bark dark:text-white">
