@@ -50,7 +50,7 @@ export default function Author({
         </div>
 
         {/* Coloana dreaptă: TEXT */}
-        <div className="md:col-span-7 flex flex-col justify-center p-4 md:p-10 md:overflow-y-auto md:max-h-[60vh]">
+        <div className="md:col-span-7 flex flex-col justify-center p-4 md:p-10 md:max-h-[60vh]">
           <h2 className="text-2xl font-extrabold tracking-tight text-mantis-bark dark:text-neutral-50">
             {name}
           </h2>

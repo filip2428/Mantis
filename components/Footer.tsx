@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Facebook, Instagram, MapPin } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 interface FooterProps {
   logoSrc?: string;
@@ -13,6 +15,15 @@ const Footer: React.FC<FooterProps> = ({
   brandName,
 }) => {
   const currentYear = new Date().getFullYear();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const NAV_LINKS = [
     { name: "Acasă", href: "/" },
@@ -45,6 +56,7 @@ const Footer: React.FC<FooterProps> = ({
           <div className="col-span-2 md:col-span-2 lg:col-span-2 flex flex-col space-y-4">
             <Link
               href="/"
+              onClick={handleLogoClick}
               className="inline-flex items-center justify-center rounded-2xl bg-white/70  shadow-lg shadow-black/30 ring-1 ring-white/15 backdrop-blur"
             >
               <div className="relative h-48 w-40">

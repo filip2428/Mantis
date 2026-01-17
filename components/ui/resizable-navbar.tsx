@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 
 import React, { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { IconChevronDown } from "@tabler/icons-react";
 
@@ -71,9 +72,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
         React.isValidElement(child)
           ? React.cloneElement(
               child as React.ReactElement<{ visible?: boolean }>,
-              { visible }
+              { visible },
             )
-          : child
+          : child,
       )}
     </motion.div>
   );
@@ -102,7 +103,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible &&
           "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
-        className
+        className,
       )}
     >
       {children}
@@ -129,7 +130,7 @@ export const NavItems = ({
     <div
       className={cn(
         "hidden lg:flex flex-1 items-center justify-center gap-2 text-sm font-medium text-mantis-green-700",
-        className
+        className,
       )}
     >
       {items.map((item, idx) => {
@@ -160,7 +161,7 @@ export const NavItems = ({
                   size={16}
                   className={cn(
                     "transition-transform duration-200",
-                    open === idx ? "rotate-180" : "rotate-0"
+                    open === idx ? "rotate-180" : "rotate-0",
                   )}
                   aria-hidden="true"
                 />
@@ -187,7 +188,7 @@ export const NavItems = ({
                   // poziționare + hover-bridge (elimină “golul”)
                   "absolute left-1/2 top-full z-[200] w-56 -translate-x-1/2 overflow-hidden rounded-xl border border-mantis-green-100/70 bg-white p-1.5 shadow-xl shadow-mantis-card/40 dark:border-[#1b3525] dark:bg-[#102a1b] pointer-events-auto",
                   // creează o zonă invizibilă de 8px deasupra, ca să nu se închidă când treci de pe buton pe meniu
-                  "before:absolute before:-top-2 before:left-0 before:h-2 before:w-full before:content-['']"
+                  "before:absolute before:-top-2 before:left-0 before:h-2 before:w-full before:content-['']",
                 )}
                 onPointerEnter={() => setOpen(idx)} // rămâne deschis când ești pe meniu
                 onBlur={(e) => {
@@ -242,7 +243,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py- lg:hidden",
         visible &&
           "bg-mantis-cream/95 shadow-mantis-soft backdrop-blur-md dark:bg-[#102a1b]/90",
-        className
+        className,
       )}
     >
       {children}
@@ -258,7 +259,7 @@ export const MobileNavHeader = ({
     <div
       className={cn(
         "flex w-full flex-row items-center justify-between",
-        className
+        className,
       )}
     >
       {children}
@@ -333,7 +334,7 @@ export const MobileNavMenu = ({
           exit={{ opacity: 0 }}
           className={cn(
             "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-white px-4 py-8 shadow-mantis-card dark:bg-[#102a1b]",
-            className
+            className,
           )}
         >
           {children}
@@ -358,9 +359,19 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const pathname = usePathname();
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <Link
       href="/"
+      onClick={handleLogoClick}
       className="relative z-20 mr-2 flex items-center space-x-3 px-6 py-1 text-sm font-semibold text-mantis-bark"
     >
       <Image
