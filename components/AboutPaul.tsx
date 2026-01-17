@@ -35,13 +35,13 @@ export default function Author({
         {/* Coloana stângă: POZA (ocupă stânga) */}
         <div className="relative md:col-span-5 overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none">
           {/* raport 4:5 pe mobil; pe desktop întinde pe înălțimea cardului */}
-          <div className="relative aspect-[4/5] md:aspect-auto md:h-full px-10 py-20">
+          <div className="relative aspect-[4/5] md:aspect-auto md:h-full px-4 py-6 md:px-10 md:py-20">
             <DirectionAwareHover // 1. Forțezi wrapper-ul să umple părintele
               className="h-full w-full"
               imageUrl={imageSrc}
               imageAlt={imageAlt} // 2. (PRESUNUPUNERE) Folosești prop-ul corect pentru imaginea internă
               imageClassName={clsx(
-                "h-full w-full object-cover object-bottom pt-2" // Imaginea se aliniază la baza containerului
+                "h-full w-full object-cover object-bottom pt-2", // Imaginea se aliniază la baza containerului
               )}
             >
               <p>Paul Hac</p>
@@ -50,7 +50,7 @@ export default function Author({
         </div>
 
         {/* Coloana dreaptă: TEXT */}
-        <div className="md:col-span-7 flex flex-col justify-center p-6 md:p-10 overflow-y-auto max-h-[60vh] md:max-h-none">
+        <div className="md:col-span-7 flex flex-col justify-center p-4 md:p-10 md:overflow-y-auto md:max-h-[60vh]">
           <h2 className="text-2xl font-extrabold tracking-tight text-mantis-bark dark:text-neutral-50">
             {name}
           </h2>
