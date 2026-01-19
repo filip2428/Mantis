@@ -28,7 +28,7 @@ export default function SocialBar() {
       <Item href="https://www.facebook.com/profile.php?id=61580369347496">
         <Facebook className="size-5" />
       </Item>
-      <Item href="https://instagram.com/mantis">
+      <Item href="https://www.instagram.com/asociatia_mantis/">
         <Instagram className="size-5" />
       </Item>
     </div>

@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/mantis",
+      href: "https://www.instagram.com/asociatia_mantis/",
       name: "Instagram",
     },
   ];
