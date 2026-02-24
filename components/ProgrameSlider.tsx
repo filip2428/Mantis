@@ -65,7 +65,7 @@ export default function ProgrameSlider() {
             disableModal={true}
           />
         </SwiperSlide>
-        <SwiperSlide
+        {/* <SwiperSlide
           onClick={() => handleRedirect("/proiecte/dam-removal")}
           className="cursor-pointer"
         >
@@ -77,7 +77,7 @@ export default function ProgrameSlider() {
             // contactMessage="Bună ziua! Aș dori să rezerv programul „P3: Drumul sevei și al sângelui” pentru un grup de elevi. Mă puteți ajuta cu disponibilitatea pentru următoarea perioadă de (X) zile și cu pașii de înscriere?"
             disableModal={true}
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide
           onClick={() => handleRedirect("/programe-educationale")}
           className="cursor-pointer"
