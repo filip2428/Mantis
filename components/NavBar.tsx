@@ -40,7 +40,7 @@ export default function NavbarSite({
       name: "Conservare și Reconstrucție",
       // link: "/proiecte",
       children: [
-        { name: "Dam Removal", link: "/proiecte/dam-removal" },
+        // { name: "Dam Removal", link: "/proiecte/dam-removal" },
         { name: "Populare cu păstrăv", link: "/proiecte/populare-cu-pastrav" },
       ],
     },
