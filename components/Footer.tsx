@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({
     { name: "Acasă", href: "/" },
     { name: "Programe", href: "/programe-educationale" },
     { name: "Centrul Mantis", href: "/centrul-educational-mantis" },
-    { name: "Dam Removal", href: "/proiecte/dam-removal" },
+    // { name: "Dam Removal", href: "/proiecte/dam-removal" },
     { name: "Populare cu păstrăv", href: "/proiecte/populare-cu-pastrav" },
     { name: "Contact", href: "/contact" },
   ];
